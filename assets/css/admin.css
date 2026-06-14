@@ -1,6 +1,6 @@
 /**
- * Anchor — admin settings screen styles. Card layout, inline-help popovers, and
- * a dark-mode-aware palette that follows the OS preference.
+ * Anchor — admin settings screen styles. Card layout and a dark-mode-aware
+ * palette that follows the OS preference.
  */
 
 .anchor-admin {
@@ -33,67 +33,11 @@
 	margin: 16px 0 4px;
 }
 
-/* Inline help affordance. */
-.anchor-help {
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
-	width: 18px;
-	height: 18px;
-	margin-left: 6px;
-	padding: 0;
-	border: 1px solid var( --anchor-accent );
-	border-radius: 50%;
-	background: transparent;
-	color: var( --anchor-accent );
-	font-size: 11px;
-	font-weight: 700;
-	line-height: 1;
-	cursor: help;
-	vertical-align: middle;
-}
-
-.anchor-help:hover,
-.anchor-help:focus-visible {
-	background: var( --anchor-accent );
-	color: #fff;
-}
-
-.anchor-help:focus-visible {
-	outline: 2px solid var( --anchor-accent );
-	outline-offset: 2px;
-}
-
-.anchor-tip {
-	max-width: 320px;
-	margin: 0;
-	padding: 10px 12px;
-	border: 1px solid var( --anchor-card-border );
-	border-radius: 6px;
-	background: #fff;
-	color: #1e1e1e;
-	font-size: 13px;
-	line-height: 1.5;
-	box-shadow: 0 4px 16px rgba( 0, 0, 0, 0.16 );
-}
-
-/* Fallback positioning when the native Popover API is unavailable and the
- * script toggles [hidden] instead. */
-.anchor-tip[hidden] {
-	display: none;
-}
-
 @media ( prefers-color-scheme: dark ) {
 	.anchor-admin {
 		--anchor-card-bg: #1e1e1e;
 		--anchor-card-fg: #f0f0f1;
 		--anchor-card-border: #3c434a;
 		--anchor-accent: #72aee6;
-	}
-
-	.anchor-tip {
-		background: #2c3338;
-		color: #f0f0f1;
-		border-color: #3c434a;
 	}
 }

@@ -22,14 +22,6 @@
 		return;
 	}
 
-	// Respect the device gates server-side defaults already applied via CSS, but
-	// also bail early in JS if this surface is disabled, so we never reveal it.
-	var isMobile = window.matchMedia( '(max-width: 768px)' ).matches;
-	if ( ( isMobile && config.showOnMobile === false ) ||
-		( ! isMobile && config.showOnDesktop === false ) ) {
-		return;
-	}
-
 	/* ---- Reveal on scroll ------------------------------------------------ */
 
 	var anchorTarget =

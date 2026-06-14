@@ -49,12 +49,5 @@ final class Plugin
                 $service->registerHooks();
             }
         }
-
-        /**
-         * Fires after the plugin has fully booted.
-         *
-         * @param Plugin $plugin The booted plugin instance.
-         */
-        do_action('anchor/booted', $this);
     }
 }

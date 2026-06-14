@@ -11,8 +11,7 @@ use Anchor\Contract\HasHooks;
 /**
  * Admin settings page registered as a WooCommerce submenu ("WooCommerce →
  * Anchor"). Stores settings in the `anchor_settings` option (array): the master
- * toggle, bar position, device gates, scroll threshold and which elements
- * (thumbnail / price / quantity) appear.
+ * toggle and the scroll threshold.
  *
  * All output is escaped; all input is sanitised and clamped on save. The screen
  * uses manage_woocommerce so shop managers can configure it.
@@ -22,15 +21,9 @@ final class Settings implements HasHooks
     private const OPTION = 'anchor_settings';
     private const PAGE   = 'anchor-settings';
 
-    /** Allowed bar positions (mapped to CSS classes by the template). */
-    private const POSITIONS = ['bottom', 'top'];
-
     /** Scroll-threshold bounds, in pixels. */
     private const MIN_THRESHOLD = 0;
     private const MAX_THRESHOLD = 5000;
-
-    /** Incremented to give each inline-help control a unique id/anchor. */
-    private int $helpSeq = 0;
 
     public function registerHooks(): void
     {
@@ -50,14 +43,6 @@ final class Settings implements HasHooks
             ANCHOR_URL . 'assets/css/admin.css',
             [],
             \Anchor\VERSION,
-        );
-
-        wp_enqueue_script(
-            'anchor-admin',
-            ANCHOR_URL . 'assets/js/admin.js',
-            [],
-            \Anchor\VERSION,
-            ['in_footer' => true, 'strategy' => 'defer'],
         );
     }
 
@@ -105,7 +90,7 @@ final class Settings implements HasHooks
 
             <div class="anchor-intro">
                 <p>
-                    <?php esc_html_e('Anchor shows a slim, sticky add-to-cart bar on your product pages once the shopper scrolls past the main button. It keeps the price and buy button one tap away on long pages — and stays in sync with WooCommerce variations. The bar is fixed to the viewport, so it never shifts your layout.', 'anchor'); ?>
+                    <?php esc_html_e('Anchor shows a slim, sticky add-to-cart bar at the bottom of your product pages once the shopper scrolls past the main button. It keeps the price and buy button one tap away on long pages — and stays in sync with WooCommerce variations. The bar is fixed to the viewport, so it never shifts your layout.', 'anchor'); ?>
                 </p>
             </div>
 
@@ -117,10 +102,7 @@ final class Settings implements HasHooks
                     <table class="form-table" role="presentation">
                         <tbody>
                             <tr>
-                                <th scope="row">
-                                    <?php esc_html_e('Enable the bar', 'anchor'); ?>
-                                    <?php $this->help(__('The master switch. When off, the sticky bar never renders and its CSS/JS are not loaded — zero front-end impact.', 'anchor')); ?>
-                                </th>
+                                <th scope="row"><?php esc_html_e('Enable the bar', 'anchor'); ?></th>
                                 <td>
                                     <label for="anchor_enabled">
                                         <input
@@ -132,58 +114,14 @@ final class Settings implements HasHooks
                                         />
                                         <?php esc_html_e('Show the sticky add-to-cart bar on single product pages.', 'anchor'); ?>
                                     </label>
+                                    <p class="description">
+                                        <?php esc_html_e('When off, the bar never renders and its CSS/JS are not loaded — zero front-end impact.', 'anchor'); ?>
+                                    </p>
                                 </td>
                             </tr>
-                            <tr>
-                                <th scope="row">
-                                    <label for="anchor_position"><?php esc_html_e('Position', 'anchor'); ?></label>
-                                    <?php $this->help(__('Bottom is the most common and works well on mobile. Top suits stores with a sticky header you want to complement.', 'anchor')); ?>
-                                </th>
-                                <td>
-                                    <select id="anchor_position" name="<?php echo esc_attr(self::OPTION); ?>[position]">
-                                        <?php
-                                        $current   = (string) ($settings['position'] ?? 'bottom');
-                                        $posLabels = [
-                                            'bottom' => __('Bottom of the screen', 'anchor'),
-                                            'top'    => __('Top of the screen', 'anchor'),
-                                        ];
-                                        foreach (self::POSITIONS as $pos) :
-                                            ?>
-                                            <option value="<?php echo esc_attr($pos); ?>" <?php selected($current, $pos); ?>>
-                                                <?php echo esc_html($posLabels[$pos] ?? $pos); ?>
-                                            </option>
-                                        <?php endforeach; ?>
-                                    </select>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <div class="anchor-card">
-                    <h2><?php esc_html_e('Where to show it', 'anchor'); ?></h2>
-                    <table class="form-table" role="presentation">
-                        <tbody>
-                            <?php
-                            $this->checkboxRow(
-                                'show_on_desktop',
-                                __('Desktop', 'anchor'),
-                                __('Show the bar on desktop screens (wider than 768px).', 'anchor'),
-                                $settings,
-                                __('Turn off if you only want the bar on phones, where long product pages make scrolling back up costly.', 'anchor'),
-                            );
-                            $this->checkboxRow(
-                                'show_on_mobile',
-                                __('Mobile', 'anchor'),
-                                __('Show the bar on mobile screens (768px and narrower).', 'anchor'),
-                                $settings,
-                                __('Mobile shoppers benefit most from a one-tap buy bar. Leave this on for the biggest conversion lift.', 'anchor'),
-                            );
-                            ?>
                             <tr>
                                 <th scope="row">
                                     <label for="anchor_scroll_threshold"><?php esc_html_e('Scroll threshold (px)', 'anchor'); ?></label>
-                                    <?php $this->help(__('How far past the main add-to-cart button the shopper must scroll before the bar appears. Lower reveals it sooner; higher waits longer. 300 is a good default.', 'anchor')); ?>
                                 </th>
                                 <td>
                                     <input
@@ -200,7 +138,7 @@ final class Settings implements HasHooks
                                         <?php
                                         printf(
                                             /* translators: 1: minimum px, 2: maximum px. */
-                                            esc_html__('Pixels scrolled past the main add-to-cart form (%1$d–%2$d).', 'anchor'),
+                                            esc_html__('How far past the main add-to-cart form the shopper must scroll before the bar appears (%1$d–%2$d). 300 is a good default.', 'anchor'),
                                             (int) self::MIN_THRESHOLD,
                                             (int) self::MAX_THRESHOLD,
                                         );
@@ -212,109 +150,9 @@ final class Settings implements HasHooks
                     </table>
                 </div>
 
-                <div class="anchor-card">
-                    <h2><?php esc_html_e('What to show in the bar', 'anchor'); ?></h2>
-                    <table class="form-table" role="presentation">
-                        <tbody>
-                            <?php
-                            $this->checkboxRow(
-                                'show_thumbnail',
-                                __('Product thumbnail', 'anchor'),
-                                __('Show a small product image in the bar.', 'anchor'),
-                                $settings,
-                                __('A thumbnail reassures shoppers which product they are buying. It is hidden automatically on small screens to save space.', 'anchor'),
-                            );
-                            $this->checkboxRow(
-                                'show_price',
-                                __('Price', 'anchor'),
-                                __('Show the product price in the bar.', 'anchor'),
-                                $settings,
-                                __('On variable products the price updates automatically as the shopper picks options, matching the native form.', 'anchor'),
-                            );
-                            $this->checkboxRow(
-                                'show_quantity',
-                                __('Quantity field', 'anchor'),
-                                __('Show a quantity input in the bar.', 'anchor'),
-                                $settings,
-                                __('Lets shoppers buy more than one without scrolling back up. Hidden automatically for sold-individually products.', 'anchor'),
-                            );
-                            ?>
-                        </tbody>
-                    </table>
-                </div>
-
-                <?php
-                /**
-                 * Fires after Anchor's own settings cards, before the submit
-                 * button. PRO add-ons render their extra settings cards here.
-                 * Any fields they print are saved under the same option and
-                 * preserved by the sanitize filter below.
-                 *
-                 * @param array<string, mixed> $settings Resolved settings.
-                 * @param string               $option   The option name.
-                 */
-                do_action('anchor_admin_settings_after_cards', $settings, self::OPTION);
-                ?>
-
                 <?php submit_button(); ?>
             </form>
         </div>
-        <?php
-    }
-
-    /**
-     * Render an accessible inline-help affordance: a "?" button that toggles a
-     * popover describing the adjacent setting. Uses the native Popover API and is
-     * wired via aria-describedby; the bundled script supplies a fallback for
-     * browsers without Popover support.
-     */
-    private function help(string $text): void
-    {
-        $id = 'anchor-help-' . (++$this->helpSeq);
-        ?>
-        <button
-            type="button"
-            class="anchor-help"
-            aria-label="<?php esc_attr_e('More information', 'anchor'); ?>"
-            aria-describedby="<?php echo esc_attr($id); ?>"
-            aria-expanded="false"
-            popovertarget="<?php echo esc_attr($id); ?>"
-        >?</button>
-        <div id="<?php echo esc_attr($id); ?>" class="anchor-tip" role="tooltip" popover hidden>
-            <?php echo esc_html($text); ?>
-        </div>
-        <?php
-    }
-
-    /**
-     * Render a single checkbox row in the form-table.
-     *
-     * @param array<string, mixed> $settings
-     */
-    private function checkboxRow(string $key, string $label, string $help, array $settings, string $tip = ''): void
-    {
-        $id = 'anchor_' . $key;
-        ?>
-        <tr>
-            <th scope="row">
-                <?php echo esc_html($label); ?>
-                <?php if ($tip !== '') {
-                    $this->help($tip);
-                } ?>
-            </th>
-            <td>
-                <label for="<?php echo esc_attr($id); ?>">
-                    <input
-                        type="checkbox"
-                        id="<?php echo esc_attr($id); ?>"
-                        name="<?php echo esc_attr(self::OPTION); ?>[<?php echo esc_attr($key); ?>]"
-                        value="1"
-                        <?php checked((bool) ($settings[$key] ?? false), true); ?>
-                    />
-                    <?php echo esc_html($help); ?>
-                </label>
-            </td>
-        </tr>
         <?php
     }
 
@@ -330,27 +168,13 @@ final class Settings implements HasHooks
             $raw = [];
         }
 
-        $position = isset($raw['position']) ? sanitize_key((string) $raw['position']) : 'bottom';
-
-        if (! in_array($position, self::POSITIONS, true)) {
-            $position = 'bottom';
-        }
-
         $threshold = isset($raw['scroll_threshold']) ? absint($raw['scroll_threshold']) : 300;
         $threshold = max(self::MIN_THRESHOLD, min(self::MAX_THRESHOLD, $threshold));
 
-        $sanitized = [
+        return [
             'enabled'          => ! empty($raw['enabled']),
-            'position'         => $position,
-            'show_on_desktop'  => ! empty($raw['show_on_desktop']),
-            'show_on_mobile'   => ! empty($raw['show_on_mobile']),
             'scroll_threshold' => $threshold,
-            'show_quantity'    => ! empty($raw['show_quantity']),
-            'show_thumbnail'   => ! empty($raw['show_thumbnail']),
-            'show_price'       => ! empty($raw['show_price']),
         ];
-
-        return (array) apply_filters('anchor_sanitize_settings', $sanitized, $raw);
     }
 
     /**

@@ -20,28 +20,17 @@
 	position: fixed;
 	left: 0;
 	right: 0;
+	bottom: 0;
 	z-index: var( --anchor-z );
 	background: var( --anchor-bg );
 	color: var( --anchor-fg );
+	border-top: 1px solid var( --anchor-border );
 	box-shadow: var( --anchor-shadow );
 	box-sizing: border-box;
 	transform: translateY( 110% );
 	opacity: 0;
 	visibility: hidden;
 	transition: transform 0.28s ease, opacity 0.28s ease, visibility 0.28s;
-}
-
-.anchor-bar--bottom {
-	bottom: 0;
-	border-top: 1px solid var( --anchor-border );
-}
-
-.anchor-bar--top {
-	top: 0;
-	bottom: auto;
-	border-bottom: 1px solid var( --anchor-border );
-	box-shadow: 0 2px 16px rgba( 0, 0, 0, 0.12 );
-	transform: translateY( -110% );
 }
 
 .anchor-bar.is-visible {
@@ -58,19 +47,6 @@
 	margin: 0 auto;
 	padding: var( --anchor-pad );
 	box-sizing: border-box;
-}
-
-.anchor-bar__media {
-	flex: 0 0 auto;
-	line-height: 0;
-}
-
-.anchor-bar__thumb {
-	width: 48px;
-	height: 48px;
-	object-fit: cover;
-	border-radius: var( --anchor-radius );
-	display: block;
 }
 
 .anchor-bar__info {
@@ -114,15 +90,6 @@
 	margin: 0;
 }
 
-.anchor-bar__qty {
-	width: 4.5em;
-	padding: 6px 8px;
-	border: 1px solid var( --anchor-border );
-	border-radius: var( --anchor-radius );
-	box-sizing: border-box;
-	font: inherit;
-}
-
 .anchor-bar__button {
 	white-space: nowrap;
 	cursor: pointer;
@@ -139,12 +106,7 @@
 	outline-offset: 2px;
 }
 
-/* Device gates. */
 @media ( max-width: 768px ) {
-	.anchor-bar--hide-mobile {
-		display: none !important;
-	}
-
 	.anchor-bar__inner {
 		gap: 10px;
 		padding: 10px;
@@ -152,17 +114,6 @@
 
 	.anchor-bar__title {
 		font-size: 0.95em;
-	}
-
-	/* On small screens, prioritise the action; thumbnail is optional chrome. */
-	.anchor-bar__media {
-		display: none;
-	}
-}
-
-@media ( min-width: 769px ) {
-	.anchor-bar--hide-desktop {
-		display: none !important;
 	}
 }
 

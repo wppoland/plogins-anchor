@@ -60,10 +60,7 @@ final class StickyBar implements HasHooks
             'anchor',
             'anchorConfig',
             [
-                'position'        => (string) $settings['position'],
                 'scrollThreshold' => (int) $settings['scroll_threshold'],
-                'showOnDesktop'   => (bool) $settings['show_on_desktop'],
-                'showOnMobile'    => (bool) $settings['show_on_mobile'],
             ],
         );
     }
@@ -108,13 +105,6 @@ final class StickyBar implements HasHooks
         }
 
         if (! function_exists('is_product') || ! is_product()) {
-            return false;
-        }
-
-        $settings = $this->settings();
-
-        // If both surfaces are disabled there is nothing to show anywhere.
-        if (empty($settings['show_on_desktop']) && empty($settings['show_on_mobile'])) {
             return false;
         }
 

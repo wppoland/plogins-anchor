@@ -24,32 +24,12 @@ if (! $product instanceof \WC_Product) {
     return;
 }
 
-$position      = ($settings['position'] ?? 'bottom') === 'top' ? 'top' : 'bottom';
-$showOnDesktop = ! empty($settings['show_on_desktop']);
-$showOnMobile  = ! empty($settings['show_on_mobile']);
-$showQuantity  = ! empty($settings['show_quantity']);
-$showThumbnail = ! empty($settings['show_thumbnail']);
-$showPrice     = ! empty($settings['show_price']);
-
 $isVariable = $product->is_type('variable');
 
-$classes = sprintf(
-    'anchor-bar anchor-bar--%s%s%s',
-    sanitize_html_class($position),
-    $showOnDesktop ? '' : ' anchor-bar--hide-desktop',
-    $showOnMobile ? '' : ' anchor-bar--hide-mobile',
-);
-
-$productUrl = $product->get_permalink();
-$addToCartUrl = method_exists($product, 'add_to_cart_url') ? $product->add_to_cart_url() : $productUrl;
-
-// Quantity bounds, mirroring WooCommerce's native quantity input.
-$minQty  = 1;
-$maxQty  = $product->get_max_purchase_quantity();
-$stepQty = 1;
+$productUrl   = $product->get_permalink();
 ?>
 <div
-    class="<?php echo esc_attr($classes); ?>"
+    class="anchor-bar"
     id="anchor-bar"
     role="region"
     aria-label="<?php esc_attr_e('Add to cart', 'anchor'); ?>"
@@ -60,28 +40,13 @@ $stepQty = 1;
     hidden
 >
     <div class="anchor-bar__inner">
-        <?php if ($showThumbnail) : ?>
-            <div class="anchor-bar__media" aria-hidden="true">
-                <?php
-                echo wp_kses_post(
-                    $product->get_image(
-                        'woocommerce_gallery_thumbnail',
-                        ['class' => 'anchor-bar__thumb', 'loading' => 'lazy', 'decoding' => 'async'],
-                    ),
-                );
-                ?>
-            </div>
-        <?php endif; ?>
-
         <div class="anchor-bar__info">
             <a class="anchor-bar__title" href="<?php echo esc_url($productUrl); ?>">
                 <?php echo esc_html($product->get_name()); ?>
             </a>
-            <?php if ($showPrice) : ?>
-                <span class="anchor-bar__price" data-anchor-price>
-                    <?php echo wp_kses_post($product->get_price_html()); ?>
-                </span>
-            <?php endif; ?>
+            <span class="anchor-bar__price" data-anchor-price>
+                <?php echo wp_kses_post($product->get_price_html()); ?>
+            </span>
         </div>
 
         <?php if ($isVariable) : ?>
@@ -103,22 +68,6 @@ $stepQty = 1;
                     data-anchor-form
                     hidden
                 >
-                    <?php if ($showQuantity) : ?>
-                        <label class="screen-reader-text" for="anchor-qty">
-                            <?php esc_html_e('Quantity', 'anchor'); ?>
-                        </label>
-                        <input
-                            type="number"
-                            id="anchor-qty"
-                            class="anchor-bar__qty"
-                            name="quantity"
-                            value="<?php echo esc_attr((string) $minQty); ?>"
-                            min="<?php echo esc_attr((string) $minQty); ?>"
-                            <?php echo $maxQty > 0 ? 'max="' . esc_attr((string) $maxQty) . '"' : ''; ?>
-                            step="<?php echo esc_attr((string) $stepQty); ?>"
-                            inputmode="numeric"
-                        />
-                    <?php endif; ?>
                     <input type="hidden" name="add-to-cart" value="<?php echo esc_attr((string) $product->get_id()); ?>" />
                     <input type="hidden" name="product_id" value="<?php echo esc_attr((string) $product->get_id()); ?>" />
                     <input type="hidden" name="variation_id" value="0" data-anchor-variation-id />
@@ -140,22 +89,6 @@ $stepQty = 1;
                 action="<?php echo esc_url($productUrl); ?>"
                 data-anchor-form
             >
-                <?php if ($showQuantity && ! $product->is_sold_individually()) : ?>
-                    <label class="screen-reader-text" for="anchor-qty">
-                        <?php esc_html_e('Quantity', 'anchor'); ?>
-                    </label>
-                    <input
-                        type="number"
-                        id="anchor-qty"
-                        class="anchor-bar__qty"
-                        name="quantity"
-                        value="<?php echo esc_attr((string) $minQty); ?>"
-                        min="<?php echo esc_attr((string) $minQty); ?>"
-                        <?php echo $maxQty > 0 ? 'max="' . esc_attr((string) $maxQty) . '"' : ''; ?>
-                        step="<?php echo esc_attr((string) $stepQty); ?>"
-                        inputmode="numeric"
-                    />
-                <?php endif; ?>
                 <input type="hidden" name="add-to-cart" value="<?php echo esc_attr((string) $product->get_id()); ?>" />
                 <button type="submit" class="button alt anchor-bar__button" data-anchor-add>
                     <?php echo esc_html($product->single_add_to_cart_text()); ?>

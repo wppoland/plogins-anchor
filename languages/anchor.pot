@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-06-14T13:38:36+00:00\n"
+"POT-Creation-Date: 2026-06-14T21:54:56+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: anchor\n"
@@ -43,146 +43,49 @@ msgstr ""
 msgid "Anchor - Sticky Add to Cart Bar for WooCommerce requires WooCommerce to be active."
 msgstr ""
 
-#: src/Admin/Settings.php:68
+#: src/Admin/Settings.php:53
 msgid "Anchor — Sticky Add to Cart Bar"
 msgstr ""
 
-#: src/Admin/Settings.php:69
+#: src/Admin/Settings.php:54
 msgid "Anchor"
 msgstr ""
 
-#: src/Admin/Settings.php:108
-msgid "Anchor shows a slim, sticky add-to-cart bar on your product pages once the shopper scrolls past the main button. It keeps the price and buy button one tap away on long pages — and stays in sync with WooCommerce variations. The bar is fixed to the viewport, so it never shifts your layout."
+#: src/Admin/Settings.php:93
+msgid "Anchor shows a slim, sticky add-to-cart bar at the bottom of your product pages once the shopper scrolls past the main button. It keeps the price and buy button one tap away on long pages — and stays in sync with WooCommerce variations. The bar is fixed to the viewport, so it never shifts your layout."
 msgstr ""
 
-#: src/Admin/Settings.php:116
+#: src/Admin/Settings.php:101
 msgid "Display"
 msgstr ""
 
-#: src/Admin/Settings.php:121
+#: src/Admin/Settings.php:105
 msgid "Enable the bar"
 msgstr ""
 
-#: src/Admin/Settings.php:122
-msgid "The master switch. When off, the sticky bar never renders and its CSS/JS are not loaded — zero front-end impact."
-msgstr ""
-
-#: src/Admin/Settings.php:133
+#: src/Admin/Settings.php:115
 msgid "Show the sticky add-to-cart bar on single product pages."
 msgstr ""
 
-#: src/Admin/Settings.php:139
-msgid "Position"
+#: src/Admin/Settings.php:118
+msgid "When off, the bar never renders and its CSS/JS are not loaded — zero front-end impact."
 msgstr ""
 
-#: src/Admin/Settings.php:140
-msgid "Bottom is the most common and works well on mobile. Top suits stores with a sticky header you want to complement."
-msgstr ""
-
-#: src/Admin/Settings.php:147
-msgid "Bottom of the screen"
-msgstr ""
-
-#: src/Admin/Settings.php:148
-msgid "Top of the screen"
-msgstr ""
-
-#: src/Admin/Settings.php:164
-msgid "Where to show it"
-msgstr ""
-
-#: src/Admin/Settings.php:170
-msgid "Desktop"
-msgstr ""
-
-#: src/Admin/Settings.php:171
-msgid "Show the bar on desktop screens (wider than 768px)."
-msgstr ""
-
-#: src/Admin/Settings.php:173
-msgid "Turn off if you only want the bar on phones, where long product pages make scrolling back up costly."
-msgstr ""
-
-#: src/Admin/Settings.php:177
-msgid "Mobile"
-msgstr ""
-
-#: src/Admin/Settings.php:178
-msgid "Show the bar on mobile screens (768px and narrower)."
-msgstr ""
-
-#: src/Admin/Settings.php:180
-msgid "Mobile shoppers benefit most from a one-tap buy bar. Leave this on for the biggest conversion lift."
-msgstr ""
-
-#: src/Admin/Settings.php:185
+#: src/Admin/Settings.php:124
 msgid "Scroll threshold (px)"
 msgstr ""
 
-#: src/Admin/Settings.php:186
-msgid "How far past the main add-to-cart button the shopper must scroll before the bar appears. Lower reveals it sooner; higher waits longer. 300 is a good default."
-msgstr ""
-
 #. translators: 1: minimum px, 2: maximum px.
-#: src/Admin/Settings.php:203
+#: src/Admin/Settings.php:141
 #, php-format
-msgid "Pixels scrolled past the main add-to-cart form (%1$d–%2$d)."
+msgid "How far past the main add-to-cart form the shopper must scroll before the bar appears (%1$d–%2$d). 300 is a good default."
 msgstr ""
 
-#: src/Admin/Settings.php:216
-msgid "What to show in the bar"
-msgstr ""
-
-#: src/Admin/Settings.php:222
-msgid "Product thumbnail"
-msgstr ""
-
-#: src/Admin/Settings.php:223
-msgid "Show a small product image in the bar."
-msgstr ""
-
-#: src/Admin/Settings.php:225
-msgid "A thumbnail reassures shoppers which product they are buying. It is hidden automatically on small screens to save space."
-msgstr ""
-
-#: src/Admin/Settings.php:229
-msgid "Price"
-msgstr ""
-
-#: src/Admin/Settings.php:230
-msgid "Show the product price in the bar."
-msgstr ""
-
-#: src/Admin/Settings.php:232
-msgid "On variable products the price updates automatically as the shopper picks options, matching the native form."
-msgstr ""
-
-#: src/Admin/Settings.php:236
-msgid "Quantity field"
-msgstr ""
-
-#: src/Admin/Settings.php:237
-msgid "Show a quantity input in the bar."
-msgstr ""
-
-#: src/Admin/Settings.php:239
-msgid "Lets shoppers buy more than one without scrolling back up. Hidden automatically for sold-individually products."
-msgstr ""
-
-#: src/Admin/Settings.php:265
-msgid "More information"
-msgstr ""
-
-#: templates/sticky-bar.php:55
-#: templates/sticky-bar.php:131
+#: templates/sticky-bar.php:35
+#: templates/sticky-bar.php:80
 msgid "Add to cart"
 msgstr ""
 
-#: templates/sticky-bar.php:96
+#: templates/sticky-bar.php:61
 msgid "Choose options"
-msgstr ""
-
-#: templates/sticky-bar.php:108
-#: templates/sticky-bar.php:145
-msgid "Quantity"
 msgstr ""
