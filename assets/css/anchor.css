@@ -1,0 +1,185 @@
+/**
+ * Anchor — sticky add-to-cart bar (front-end styles).
+ *
+ * The bar is position:fixed and starts hidden, so it never occupies document
+ * flow and causes zero Cumulative Layout Shift. Colours and spacing are exposed
+ * as custom properties so themes can re-skin without overriding selectors.
+ */
+
+.anchor-bar {
+	--anchor-bg: #ffffff;
+	--anchor-fg: #1e1e1e;
+	--anchor-muted: #50575e;
+	--anchor-border: rgba( 0, 0, 0, 0.1 );
+	--anchor-shadow: 0 -2px 16px rgba( 0, 0, 0, 0.12 );
+	--anchor-radius: 8px;
+	--anchor-gap: 16px;
+	--anchor-pad: 12px;
+	--anchor-z: 99990;
+
+	position: fixed;
+	left: 0;
+	right: 0;
+	z-index: var( --anchor-z );
+	background: var( --anchor-bg );
+	color: var( --anchor-fg );
+	box-shadow: var( --anchor-shadow );
+	box-sizing: border-box;
+	transform: translateY( 110% );
+	opacity: 0;
+	visibility: hidden;
+	transition: transform 0.28s ease, opacity 0.28s ease, visibility 0.28s;
+}
+
+.anchor-bar--bottom {
+	bottom: 0;
+	border-top: 1px solid var( --anchor-border );
+}
+
+.anchor-bar--top {
+	top: 0;
+	bottom: auto;
+	border-bottom: 1px solid var( --anchor-border );
+	box-shadow: 0 2px 16px rgba( 0, 0, 0, 0.12 );
+	transform: translateY( -110% );
+}
+
+.anchor-bar.is-visible {
+	transform: translateY( 0 );
+	opacity: 1;
+	visibility: visible;
+}
+
+.anchor-bar__inner {
+	display: flex;
+	align-items: center;
+	gap: var( --anchor-gap );
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: var( --anchor-pad );
+	box-sizing: border-box;
+}
+
+.anchor-bar__media {
+	flex: 0 0 auto;
+	line-height: 0;
+}
+
+.anchor-bar__thumb {
+	width: 48px;
+	height: 48px;
+	object-fit: cover;
+	border-radius: var( --anchor-radius );
+	display: block;
+}
+
+.anchor-bar__info {
+	flex: 1 1 auto;
+	min-width: 0;
+	display: flex;
+	flex-direction: column;
+	gap: 2px;
+}
+
+.anchor-bar__title {
+	font-weight: 600;
+	color: var( --anchor-fg );
+	text-decoration: none;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.anchor-bar__title:hover,
+.anchor-bar__title:focus-visible {
+	text-decoration: underline;
+}
+
+.anchor-bar__price {
+	color: var( --anchor-muted );
+	font-size: 0.95em;
+}
+
+.anchor-bar__price del {
+	opacity: 0.6;
+	margin-right: 4px;
+}
+
+.anchor-bar__actions,
+.anchor-bar__form {
+	flex: 0 0 auto;
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	margin: 0;
+}
+
+.anchor-bar__qty {
+	width: 4.5em;
+	padding: 6px 8px;
+	border: 1px solid var( --anchor-border );
+	border-radius: var( --anchor-radius );
+	box-sizing: border-box;
+	font: inherit;
+}
+
+.anchor-bar__button {
+	white-space: nowrap;
+	cursor: pointer;
+}
+
+.anchor-bar__button[disabled] {
+	opacity: 0.5;
+	cursor: not-allowed;
+}
+
+/* Keyboard focus: always visible, never removed. */
+.anchor-bar :focus-visible {
+	outline: 2px solid currentColor;
+	outline-offset: 2px;
+}
+
+/* Device gates. */
+@media ( max-width: 768px ) {
+	.anchor-bar--hide-mobile {
+		display: none !important;
+	}
+
+	.anchor-bar__inner {
+		gap: 10px;
+		padding: 10px;
+	}
+
+	.anchor-bar__title {
+		font-size: 0.95em;
+	}
+
+	/* On small screens, prioritise the action; thumbnail is optional chrome. */
+	.anchor-bar__media {
+		display: none;
+	}
+}
+
+@media ( min-width: 769px ) {
+	.anchor-bar--hide-desktop {
+		display: none !important;
+	}
+}
+
+/* Dark-mode aware: follow the OS preference for the bar surface. */
+@media ( prefers-color-scheme: dark ) {
+	.anchor-bar {
+		--anchor-bg: #1e1e1e;
+		--anchor-fg: #f0f0f1;
+		--anchor-muted: #c3c4c7;
+		--anchor-border: rgba( 255, 255, 255, 0.15 );
+		--anchor-shadow: 0 -2px 16px rgba( 0, 0, 0, 0.5 );
+	}
+}
+
+/* Honour reduced-motion: no slide/fade, just an instant show/hide. */
+@media ( prefers-reduced-motion: reduce ) {
+	.anchor-bar {
+		transition: none;
+	}
+}
