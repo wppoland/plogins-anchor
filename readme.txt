@@ -66,6 +66,14 @@ No. The stylesheet and script load only on single product pages, the script is
 deferred, and the bar is fixed to the viewport and hidden until it is needed.
 Because it starts outside the document flow, showing it does not shift the page.
 
+= Can I change when the bar appears? =
+
+Yes. Set the scroll threshold in pixels under **WooCommerce → Anchor** (0–5000).
+
+= Does it work on simple products? =
+
+Yes. On simple products the bar shows the title, price and add-to-cart button. On variable products it tracks the selected variation.
+
 == Screenshots ==
 
 1. The sticky add-to-cart bar on a product page.
