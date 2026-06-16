@@ -144,6 +144,15 @@ final class Settings implements HasHooks
                                         );
                                         ?>
                                     </p>
+                                    <span class="anchor-hint">
+                                        <?php
+                                        printf(
+                                            /* translators: %s: the configured threshold in pixels, e.g. "300 px". */
+                                            esc_html__('Lower means the bar shows up sooner; higher keeps it hidden longer. Right now it appears after %s of scrolling.', 'anchor'),
+                                            '<code>' . esc_html((string) (int) ($settings['scroll_threshold'] ?? 300)) . ' px</code>',
+                                        );
+                                        ?>
+                                    </span>
                                 </td>
                             </tr>
                         </tbody>

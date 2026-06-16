@@ -1,13 +1,23 @@
 /**
- * Anchor — admin settings screen styles. Card layout and a dark-mode-aware
- * palette that follows the OS preference.
+ * Anchor — admin settings screen styles. Native WordPress card layout with a
+ * restrained brass section accent that echoes the storefront bar (family
+ * consistency), and a dark-mode-aware palette that follows the OS preference.
+ *
+ * Contrast (computed, WCAG):
+ *   Light card (#fff):   accent #8a6a31 = 5.02:1  (text AA 4.5:1 + UI 3:1 pass)
+ *   Light wrap (#f0f0f1):accent #8a6a31 = 4.40:1  (UI 3:1 pass)
+ *   Dark card (#1e1e1e): accent #c89b53 = 6.56:1  (text AA 4.5:1 + UI 3:1 pass)
+ * The storefront's mid brass (#c89b53) is only ~2.5:1 on white, so light mode
+ * uses the deeper brass to stay above AA — never eyeballed.
  */
 
 .anchor-admin {
 	--anchor-card-bg: #fff;
 	--anchor-card-fg: #1e1e1e;
 	--anchor-card-border: #dcdcde;
-	--anchor-accent: #2271b1;
+	/* Deep brass: AA-safe on the white admin surface (5.02:1). */
+	--anchor-accent: #8a6a31;
+	--anchor-accent-soft: rgba( 138, 106, 49, 0.08 );
 	max-width: 780px;
 }
 
@@ -31,6 +41,30 @@
 .anchor-card h2 {
 	font-size: 15px;
 	margin: 16px 0 4px;
+	/* The one distinctive touch: a slim brass rule echoing the storefront bar's
+	   mooring line. Decorative (border, not text), kept above 3:1. */
+	padding-left: 12px;
+	border-left: 3px solid var( --anchor-accent );
+	line-height: 1.2;
+}
+
+/* Inline "show, don't just tell" hint for the scroll threshold. */
+.anchor-hint {
+	display: inline-block;
+	margin-top: 8px;
+	padding: 4px 10px;
+	border-radius: 4px;
+	background: var( --anchor-accent-soft );
+	color: var( --anchor-card-fg );
+	font-size: 12px;
+	line-height: 1.5;
+}
+
+.anchor-hint code {
+	background: transparent;
+	padding: 0;
+	color: var( --anchor-accent );
+	font-weight: 600;
 }
 
 @media ( prefers-color-scheme: dark ) {
@@ -38,6 +72,12 @@
 		--anchor-card-bg: #1e1e1e;
 		--anchor-card-fg: #f0f0f1;
 		--anchor-card-border: #3c434a;
-		--anchor-accent: #72aee6;
+		/* Mid brass reads brightly on the dark card (6.56:1). */
+		--anchor-accent: #c89b53;
+		--anchor-accent-soft: rgba( 200, 155, 83, 0.12 );
+	}
+
+	.anchor-intro {
+		color: #bcc2c7;
 	}
 }
