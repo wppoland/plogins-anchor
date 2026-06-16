@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-06-14T21:54:56+00:00\n"
+"POT-Creation-Date: 2026-06-16T20:23:09+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: anchor\n"
@@ -79,6 +79,12 @@ msgstr ""
 #: src/Admin/Settings.php:141
 #, php-format
 msgid "How far past the main add-to-cart form the shopper must scroll before the bar appears (%1$d–%2$d). 300 is a good default."
+msgstr ""
+
+#. translators: %s: the configured threshold in pixels, e.g. "300 px".
+#: src/Admin/Settings.php:151
+#, php-format
+msgid "Lower means the bar shows up sooner; higher keeps it hidden longer. Right now it appears after %s of scrolling."
 msgstr ""
 
 #: templates/sticky-bar.php:35
