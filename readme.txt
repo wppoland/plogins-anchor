@@ -9,34 +9,39 @@ Stable tag: 0.1.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-A sticky add-to-cart bar that appears on scroll, boosting conversions on long WooCommerce product pages.
+Keeps the add-to-cart button in reach on long WooCommerce product pages with a sticky bar that appears on scroll.
 
 == Description ==
 
-Anchor adds a slim, sticky add-to-cart bar to the bottom of your WooCommerce
-single product pages. It stays out of the way until the shopper scrolls past the
-main add-to-cart button, then slides into view with the product title, price and
-a buy button — so the purchase is always one tap away, even on long pages.
+Anchor adds a slim sticky add-to-cart bar to the bottom of your WooCommerce
+single product pages. It stays hidden until the shopper scrolls past the main
+add-to-cart button, then slides into view showing the product title, price and a
+buy button, so the add-to-cart control is still reachable on long pages.
 
-The bar is **variation-aware**: on variable products it mirrors WooCommerce's
-native variations form, updating the price, availability and the buy button as
-the shopper picks options. Anchor adds no jQuery of its own — it simply listens
-to the events WooCommerce already emits.
+On variable products the bar follows the native variations form. As the shopper
+picks options, the price, stock status and the buy button update to match the
+selected variation. Anchor does not load its own copy of jQuery; it listens to
+the variation events WooCommerce already fires.
 
-Because the bar is fixed to the edge of the viewport and starts hidden, it never
-occupies document flow and causes **zero Cumulative Layout Shift**.
+The bar is positioned with CSS `position: fixed` and starts hidden, so it sits
+outside the document flow and does not push other content around or cause
+layout shift when it appears.
+
+Anchor is not on the WordPress.org directory yet, so if you want to read the
+code, report a bug or suggest a change, the repository is at
+https://github.com/wppoland/anchor.
 
 = Features =
 
-* Sticky add-to-cart bar on single product pages, revealed on scroll.
-* Configurable scroll threshold (how far past the main button to reveal).
+* Sticky add-to-cart bar on single product pages, revealed once the shopper scrolls past the main button.
+* Scroll threshold you set in pixels (0 to 5000), so you decide how far down the bar kicks in.
 * Shows the product title, price and a buy button.
-* Variation-aware: price and availability stay in sync with the native form.
-* Accessible: ARIA region, keyboard operable, visible focus, screen-reader text.
-* Respects prefers-reduced-motion and is dark-mode aware.
-* No layout shift — the bar is fixed and starts hidden.
-* Translation ready (POT included) and clean uninstall.
-* HPOS and cart/checkout blocks compatible.
+* On variable products the price and stock status track the variation the shopper has selected.
+* Marked up as an ARIA region with a visible focus state and screen-reader label.
+* Honours prefers-reduced-motion and has a dark-mode style.
+* The bar is fixed to the viewport and starts hidden, so it does not cause layout shift.
+* Ships with a POT file for translation, and deleting the plugin removes the two options it stores.
+* Declares HPOS and cart/checkout blocks compatibility.
 
 == Installation ==
 
@@ -58,8 +63,8 @@ page and the bar's price, availability and buy button update to match.
 = Will it slow my product pages down or shift the layout? =
 
 No. The stylesheet and script load only on single product pages, the script is
-deferred, and the bar is fixed to the viewport and hidden until needed, so it
-never causes Cumulative Layout Shift.
+deferred, and the bar is fixed to the viewport and hidden until it is needed.
+Because it starts outside the document flow, showing it does not shift the page.
 
 == Screenshots ==
 
