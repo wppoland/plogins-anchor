@@ -3,19 +3,38 @@
  *
  * The bar is position:fixed and starts hidden, so it never occupies document
  * flow and causes zero Cumulative Layout Shift. Colours and spacing are exposed
- * as custom properties so themes can re-skin without overriding selectors.
+ * as themeable custom properties (with theme-inheriting fallbacks) so themes can
+ * re-skin Anchor without overriding selectors.
+ *
+ * The bar's world is nautical: it is the anchor that keeps the buy button within
+ * reach. So the surface is a deep harbour navy, the accent is weathered ship's
+ * brass, and the one earned moment — the bar arriving as you scroll past the main
+ * button — reads as an anchor catching hold: the bar settles into the foot of the
+ * screen and a taut brass mooring line draws across its top edge, left to right.
  */
 
 .anchor-bar {
-	--anchor-bg: #ffffff;
-	--anchor-fg: #1e1e1e;
-	--anchor-muted: #50575e;
-	--anchor-border: rgba( 0, 0, 0, 0.1 );
-	--anchor-shadow: 0 -2px 16px rgba( 0, 0, 0, 0.12 );
-	--anchor-radius: 8px;
+	/* Surface + ink. Fall back to theme colours where a theme exposes them. */
+	--anchor-bg: var( --wp--preset--color--contrast, #11202b );
+	--anchor-fg: var( --wp--preset--color--base, #f3f6f8 );
+	--anchor-muted: #9fb3c0;
+
+	/* Weathered ship's brass — the plugin's signature accent (not default blue). */
+	--anchor-brass: #c89b53;
+	--anchor-brass-bright: #e8c987;
+	--anchor-brass-deep: #8a6a31;
+
+	--anchor-border: rgba( 200, 155, 83, 0.28 );
+	--anchor-shadow: 0 -10px 30px rgba( 6, 16, 24, 0.45 );
+	--anchor-radius: 10px;
 	--anchor-gap: 16px;
 	--anchor-pad: 12px;
+	--anchor-line: 3px; /* thickness of the mooring line along the top edge */
 	--anchor-z: 99990;
+
+	/* Settle timing: a short slide, then the line draws taut. */
+	--anchor-rise: 0.34s;
+	--anchor-draw: 0.5s;
 
 	position: fixed;
 	left: 0;
@@ -30,13 +49,64 @@
 	transform: translateY( 110% );
 	opacity: 0;
 	visibility: hidden;
-	transition: transform 0.28s ease, opacity 0.28s ease, visibility 0.28s;
+	transition:
+		transform var( --anchor-rise ) cubic-bezier( 0.16, 0.84, 0.34, 1 ),
+		opacity var( --anchor-rise ) ease,
+		visibility var( --anchor-rise );
+}
+
+/*
+ * The mooring line. A thin brass rule pinned to the top edge of the bar. It sits
+ * scaled to nothing until the bar catches, then draws taut from left to right —
+ * the rope pulling tight as the anchor sets. Presentation only; ::before never
+ * affects layout (the bar's own border-top reserves the visual space).
+ */
+.anchor-bar::before {
+	content: "";
+	position: absolute;
+	top: calc( var( --anchor-line ) * -1 );
+	left: 0;
+	right: 0;
+	height: var( --anchor-line );
+	background: linear-gradient(
+		90deg,
+		var( --anchor-brass-deep ) 0%,
+		var( --anchor-brass-bright ) 45%,
+		var( --anchor-brass ) 100%
+	);
+	transform: scaleX( 0 );
+	transform-origin: left center;
+	transition: transform var( --anchor-draw ) cubic-bezier( 0.22, 1, 0.36, 1 );
+	pointer-events: none;
 }
 
 .anchor-bar.is-visible {
 	transform: translateY( 0 );
 	opacity: 1;
 	visibility: visible;
+}
+
+/* The catch: a fractional settle once the slide lands, like a chain snapping taut. */
+.anchor-bar.is-settled {
+	animation: anchor-set var( --anchor-rise ) cubic-bezier( 0.34, 1.56, 0.64, 1 );
+}
+
+.anchor-bar.is-visible::before {
+	transform: scaleX( 1 );
+	/* Hold the slide back a beat so the line draws *after* the bar has caught. */
+	transition-delay: calc( var( --anchor-rise ) * 0.55 );
+}
+
+@keyframes anchor-set {
+	0% {
+		transform: translateY( 0 );
+	}
+	55% {
+		transform: translateY( 2px );
+	}
+	100% {
+		transform: translateY( 0 );
+	}
 }
 
 .anchor-bar__inner {
@@ -81,6 +151,12 @@
 	margin-right: 4px;
 }
 
+.anchor-bar__price ins {
+	color: var( --anchor-brass-bright );
+	text-decoration: none;
+	font-weight: 600;
+}
+
 .anchor-bar__actions,
 .anchor-bar__form {
 	flex: 0 0 auto;
@@ -90,19 +166,74 @@
 	margin: 0;
 }
 
+/*
+ * The buy button reads as a brass shackle — the fitting the anchor line clips
+ * into. Solid weathered brass with a faceted top highlight; dark ink for contrast.
+ */
 .anchor-bar__button {
 	white-space: nowrap;
 	cursor: pointer;
+	border: 0;
+	border-radius: 7px;
+	padding: 10px 20px;
+	font-weight: 600;
+	color: #1a130a;
+	background: linear-gradient(
+		180deg,
+		var( --anchor-brass-bright ) 0%,
+		var( --anchor-brass ) 52%,
+		var( --anchor-brass-deep ) 100%
+	);
+	box-shadow:
+		inset 0 1px 0 rgba( 255, 245, 220, 0.55 ),
+		0 1px 2px rgba( 0, 0, 0, 0.35 );
+	transition: transform 0.12s ease, box-shadow 0.12s ease, filter 0.12s ease;
+}
+
+.anchor-bar__button:hover {
+	filter: brightness( 1.06 );
+}
+
+/* Press = the shackle taking the load: it seats down a hair. */
+.anchor-bar__button:active {
+	transform: translateY( 1px );
+	box-shadow:
+		inset 0 1px 0 rgba( 255, 245, 220, 0.35 ),
+		0 0 0 rgba( 0, 0, 0, 0 );
+}
+
+/*
+ * Secondary "choose options" button: an outlined brass ring, not a filled
+ * shackle. The ring is a meaningful control boundary, so it uses the solid
+ * brass accent (>=3:1 against the surface) rather than the faint hairline
+ * token used for the bar's decorative top edge.
+ */
+.anchor-bar__button--choose {
+	color: var( --anchor-brass-bright );
+	background: transparent;
+	border: 1px solid var( --anchor-brass );
+	box-shadow: none;
+}
+
+.anchor-bar__button--choose:hover {
+	filter: none;
+	border-color: var( --anchor-brass-bright );
+	background: rgba( 200, 155, 83, 0.1 );
 }
 
 .anchor-bar__button[disabled] {
-	opacity: 0.5;
+	opacity: 0.45;
 	cursor: not-allowed;
+	filter: grayscale( 0.4 );
 }
 
-/* Keyboard focus: always visible, never removed. */
+.anchor-bar__button[disabled]:active {
+	transform: none;
+}
+
+/* Keyboard focus: always visible, never removed. Brass ring matches the world. */
 .anchor-bar :focus-visible {
-	outline: 2px solid currentColor;
+	outline: 2px solid var( --anchor-brass-bright );
 	outline-offset: 2px;
 }
 
@@ -115,22 +246,63 @@
 	.anchor-bar__title {
 		font-size: 0.95em;
 	}
-}
 
-/* Dark-mode aware: follow the OS preference for the bar surface. */
-@media ( prefers-color-scheme: dark ) {
-	.anchor-bar {
-		--anchor-bg: #1e1e1e;
-		--anchor-fg: #f0f0f1;
-		--anchor-muted: #c3c4c7;
-		--anchor-border: rgba( 255, 255, 255, 0.15 );
-		--anchor-shadow: 0 -2px 16px rgba( 0, 0, 0, 0.5 );
+	.anchor-bar__button {
+		padding: 9px 16px;
 	}
 }
 
-/* Honour reduced-motion: no slide/fade, just an instant show/hide. */
+/*
+ * Light themes: when the OS / theme is light, lift the surface to a pale dock
+ * grey so the brass still reads but the bar sits quietly against a bright page.
+ */
+@media ( prefers-color-scheme: light ) {
+	.anchor-bar {
+		--anchor-bg: var( --wp--preset--color--base, #ffffff );
+		--anchor-fg: var( --wp--preset--color--contrast, #15212b );
+		--anchor-muted: #5c6b75;
+		--anchor-border: rgba( 138, 106, 49, 0.32 );
+		--anchor-shadow: 0 -8px 24px rgba( 17, 32, 43, 0.16 );
+	}
+
+	.anchor-bar__price ins {
+		color: var( --anchor-brass-deep );
+	}
+
+	.anchor-bar__button--choose {
+		color: var( --anchor-brass-deep );
+		/* On a bright surface, mid brass (#c89b53) is only ~2.5:1; deep brass
+		   keeps the control ring at >=3:1 (≈5:1). */
+		border-color: var( --anchor-brass-deep );
+	}
+
+	.anchor-bar__button--choose:hover {
+		border-color: var( --anchor-brass );
+	}
+}
+
+/*
+ * Honour reduced-motion: no slide, no settle, no draw. The bar and its mooring
+ * line simply appear in place. The accent and hierarchy are unchanged.
+ */
 @media ( prefers-reduced-motion: reduce ) {
 	.anchor-bar {
+		transition: opacity var( --anchor-rise ) ease, visibility var( --anchor-rise );
+	}
+
+	.anchor-bar.is-settled {
+		animation: none;
+	}
+
+	.anchor-bar::before {
+		transition: none;
+	}
+
+	.anchor-bar.is-visible::before {
+		transition-delay: 0s;
+	}
+
+	.anchor-bar__button {
 		transition: none;
 	}
 }

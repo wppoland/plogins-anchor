@@ -34,12 +34,21 @@
 		threshold = 300;
 	}
 
+	var hasCaught = false;
+
 	function show() {
 		if ( bar.hasAttribute( 'hidden' ) ) {
 			bar.hidden = false;
 		}
 		bar.setAttribute( 'aria-hidden', 'false' );
 		bar.classList.add( 'is-visible' );
+
+		// Presentation only: play the "anchor catches" settle once, the first time
+		// the bar lands. Re-show on later scrolls just slides; it doesn't re-settle.
+		if ( ! hasCaught ) {
+			hasCaught = true;
+			bar.classList.add( 'is-settled' );
+		}
 	}
 
 	function hide() {
