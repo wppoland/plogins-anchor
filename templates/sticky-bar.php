@@ -44,7 +44,14 @@ $productUrl   = $product->get_permalink();
             <a class="anchor-bar__title" href="<?php echo esc_url($productUrl); ?>">
                 <?php echo esc_html($product->get_name()); ?>
             </a>
-            <span class="anchor-bar__price" data-anchor-price>
+            <span
+                class="anchor-bar__price"
+                data-anchor-price
+                <?php if ($isVariable) : ?>
+                aria-live="polite"
+                aria-atomic="true"
+                <?php endif; ?>
+            >
                 <?php echo wp_kses_post($product->get_price_html()); ?>
             </span>
         </div>
