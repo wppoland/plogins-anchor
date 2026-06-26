@@ -91,7 +91,7 @@ Yes. On simple products the bar shows the title, price and add-to-cart button. O
 == External Services ==
 
 Anchor does not connect to any external services. It sends no data off your site
-and loads nothing from a third-party CDN — its stylesheet and script (`assets/css/anchor.css`
+and loads nothing from a third-party CDN; its stylesheet and script (`assets/css/anchor.css`
 and `assets/js/anchor.js`) are served from your own install, and the front-end script reads
 only a small `anchorConfig` object (the scroll threshold) that WordPress prints inline.
 
