@@ -55,8 +55,8 @@ msgstr ""
 "aktywnej wtyczki WooCommerce."
 
 #: src/Admin/Settings.php:53
-msgid "Anchor — Sticky Add to Cart Bar"
-msgstr "Anchor — Przyklejony pasek dodawania do koszyka"
+msgid "Anchor: Sticky Add to Cart Bar"
+msgstr "Anchor, Przyklejony pasek dodawania do koszyka"
 
 #: src/Admin/Settings.php:54
 msgid "Anchor"
@@ -66,12 +66,12 @@ msgstr "Anchor"
 msgid ""
 "Anchor shows a slim, sticky add-to-cart bar at the bottom of your product "
 "pages once the shopper scrolls past the main button. It keeps the price and "
-"buy button one tap away on long pages — and stays in sync with WooCommerce "
+"buy button one tap away on long pages, and stays in sync with WooCommerce "
 "variations. The bar is fixed to the viewport, so it never shifts your layout."
 msgstr ""
 "Anchor wyświetla wąski, przyklejony pasek dodawania do koszyka na dole stron "
 "produktów, gdy klient przewinie poza główny przycisk. Na długich stronach "
-"utrzymuje cenę i przycisk zakupu w zasięgu jednego dotknięcia — i pozostaje "
+"utrzymuje cenę i przycisk zakupu w zasięgu jednego dotknięcia, i pozostaje "
 "zsynchronizowany z wariantami WooCommerce. Pasek jest przypięty do okna "
 "przeglądarki, więc nigdy nie przesuwa układu strony."
 
@@ -91,11 +91,11 @@ msgstr ""
 
 #: src/Admin/Settings.php:118
 msgid ""
-"When off, the bar never renders and its CSS/JS are not loaded — zero front-"
+"When off, the bar never renders and its CSS/JS are not loaded, zero front-"
 "end impact."
 msgstr ""
 "Po wyłączeniu pasek w ogóle się nie renderuje, a jego pliki CSS/JS nie są "
-"ładowane — zerowy wpływ na front-end."
+"ładowane, zerowy wpływ na front-end."
 
 #: src/Admin/Settings.php:124
 msgid "Scroll threshold (px)"

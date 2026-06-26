@@ -44,7 +44,7 @@ msgid "Anchor - Sticky Add to Cart Bar for WooCommerce requires WooCommerce to b
 msgstr ""
 
 #: src/Admin/Settings.php:53
-msgid "Anchor — Sticky Add to Cart Bar"
+msgid "Anchor: Sticky Add to Cart Bar"
 msgstr ""
 
 #: src/Admin/Settings.php:54
@@ -52,7 +52,7 @@ msgid "Anchor"
 msgstr ""
 
 #: src/Admin/Settings.php:93
-msgid "Anchor shows a slim, sticky add-to-cart bar at the bottom of your product pages once the shopper scrolls past the main button. It keeps the price and buy button one tap away on long pages — and stays in sync with WooCommerce variations. The bar is fixed to the viewport, so it never shifts your layout."
+msgid "Anchor shows a slim, sticky add-to-cart bar at the bottom of your product pages once the shopper scrolls past the main button. It keeps the price and buy button one tap away on long pages, and stays in sync with WooCommerce variations. The bar is fixed to the viewport, so it never shifts your layout."
 msgstr ""
 
 #: src/Admin/Settings.php:101
@@ -68,7 +68,7 @@ msgid "Show the sticky add-to-cart bar on single product pages."
 msgstr ""
 
 #: src/Admin/Settings.php:118
-msgid "When off, the bar never renders and its CSS/JS are not loaded — zero front-end impact."
+msgid "When off, the bar never renders and its CSS/JS are not loaded, zero front-end impact."
 msgstr ""
 
 #: src/Admin/Settings.php:124

@@ -50,7 +50,7 @@ final class Settings implements HasHooks
     {
         add_submenu_page(
             'woocommerce',
-            __('Anchor — Sticky Add to Cart Bar', 'anchor'),
+            __('Anchor: Sticky Add to Cart Bar', 'anchor'),
             __('Anchor', 'anchor'),
             'manage_woocommerce',
             self::PAGE,
@@ -90,7 +90,7 @@ final class Settings implements HasHooks
 
             <div class="anchor-intro">
                 <p>
-                    <?php esc_html_e('Anchor shows a slim, sticky add-to-cart bar at the bottom of your product pages once the shopper scrolls past the main button. It keeps the price and buy button one tap away on long pages — and stays in sync with WooCommerce variations. The bar is fixed to the viewport, so it never shifts your layout.', 'anchor'); ?>
+                    <?php esc_html_e('Anchor shows a slim, sticky add-to-cart bar at the bottom of your product pages once the shopper scrolls past the main button. It keeps the price and buy button one tap away on long pages, and stays in sync with WooCommerce variations. The bar is fixed to the viewport, so it never shifts your layout.', 'anchor'); ?>
                 </p>
             </div>
 
@@ -115,7 +115,7 @@ final class Settings implements HasHooks
                                         <?php esc_html_e('Show the sticky add-to-cart bar on single product pages.', 'anchor'); ?>
                                     </label>
                                     <p class="description">
-                                        <?php esc_html_e('When off, the bar never renders and its CSS/JS are not loaded — zero front-end impact.', 'anchor'); ?>
+                                        <?php esc_html_e('When off, the bar never renders and its CSS/JS are not loaded, zero front-end impact.', 'anchor'); ?>
                                     </p>
                                 </td>
                             </tr>
