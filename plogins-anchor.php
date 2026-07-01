@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name:       Plogins Anchor for WooCommerce
+ * Plugin Name:       Plogins Anchor - Sticky Add to Cart for WooCommerce
  * Plugin URI:        https://plogins.com/plogins-anchor/
  * Description:        A sticky add-to-cart bar that appears on scroll, boosting conversions on long product pages.
  * Version:           0.1.3
