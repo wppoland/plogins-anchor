@@ -25,11 +25,19 @@ final class Settings implements HasHooks
     private const MIN_THRESHOLD = 0;
     private const MAX_THRESHOLD = 5000;
 
+    private ?ProUpsell $proUpsell = null;
+
+    private function proUpsell(): ProUpsell
+    {
+        return $this->proUpsell ??= new ProUpsell();
+    }
+
     public function registerHooks(): void
     {
         add_action('admin_menu', [$this, 'addMenuPage']);
         add_action('admin_init', [$this, 'registerSettings']);
         add_action('admin_enqueue_scripts', [$this, 'enqueueAssets']);
+        $this->proUpsell()->registerHooks();
     }
 
     public function enqueueAssets(string $hook): void
@@ -88,12 +96,15 @@ final class Settings implements HasHooks
         <div class="wrap anchor-admin">
             <h1><?php echo esc_html(get_admin_page_title()); ?></h1>
 
+            <?php $this->proUpsell()->banner(); ?>
+
             <div class="anchor-intro">
                 <p>
                     <?php esc_html_e('Anchor shows a slim, sticky add-to-cart bar at the bottom of your product pages once the shopper scrolls past the main button. It keeps the price and buy button one tap away on long pages, and stays in sync with WooCommerce variations. The bar is fixed to the viewport, so it never shifts your layout.', 'plogins-anchor'); ?>
                 </p>
             </div>
 
+            <div class="anchor-cols">
             <form method="post" action="options.php">
                 <?php settings_fields(self::PAGE); ?>
 
@@ -174,6 +185,11 @@ final class Settings implements HasHooks
 
                 <?php submit_button(); ?>
             </form>
+
+                <?php $this->proUpsell()->aside(); ?>
+            </div>
+
+            <?php $this->proUpsell()->cards(); ?>
         </div>
         <?php
     }

@@ -81,3 +81,84 @@
 		color: #bcc2c7;
 	}
 }
+
+/* ------------------------------------------------------------------ *
+ * PRO upsell — dismissible banner, sidebar promo, "what PRO adds"
+ * locked cards. Pure advertising (no disabled inputs), scoped to
+ * .anchor-admin, using the plugin's own brass accent. The CTA buttons
+ * use a fixed deep brass (--anchor-pro-cta #8a6a31) so white text
+ * clears WCAG AA (5.02:1) in both light and dark admin schemes; the
+ * lighter/flipping --anchor-accent is decorative only.
+ * ------------------------------------------------------------------ */
+.anchor-admin {
+	--anchor-pro-cta: #8a6a31;
+	--anchor-pro-muted: #646970;
+	--anchor-pro-radius: 8px;
+	--anchor-pro-radius-sm: 6px;
+	--anchor-pro-gap: 20px;
+}
+
+/* Two-column wrapper (form + promo aside); single column on narrow screens. */
+.anchor-admin .anchor-cols { display: grid; gap: var(--anchor-pro-gap); grid-template-columns: 1fr; align-items: start; }
+@media (min-width: 1100px) {
+	.anchor-admin .anchor-cols { grid-template-columns: minmax(0, 1fr) 280px; }
+}
+
+/* Top banner */
+.anchor-admin .anchor-pro-banner {
+	display: flex;
+	align-items: center;
+	gap: 14px;
+	margin: 0 0 var(--anchor-pro-gap);
+	padding: 12px 16px;
+	border: 1px solid color-mix(in srgb, var(--anchor-accent) 30%, #dcdcde);
+	border-inline-start: 4px solid var(--anchor-accent);
+	border-radius: var(--anchor-pro-radius);
+	background: color-mix(in srgb, var(--anchor-accent) 7%, #fff);
+}
+.anchor-admin .anchor-pro-banner__tag,
+.anchor-admin .anchor-pro-card__badge,
+.anchor-admin .anchor-pro-aside__eyebrow {
+	font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
+}
+.anchor-admin .anchor-pro-banner__tag { flex: 0 0 auto; padding: 2px 8px; border-radius: 999px; color: #fff; background: var(--anchor-pro-cta); }
+.anchor-admin .anchor-pro-banner__text { flex: 1 1 auto; margin: 0; color: #1d2327; }
+.anchor-admin .anchor-pro-banner__sub { margin-inline-start: 4px; color: var(--anchor-pro-muted); }
+.anchor-admin .anchor-pro-banner__price { margin-inline-start: 6px; color: var(--anchor-pro-muted); font-weight: 600; white-space: nowrap; }
+.anchor-admin .anchor-pro-banner__dismiss { flex: 0 0 auto; font-size: 18px; line-height: 1; text-decoration: none; color: var(--anchor-pro-muted); padding: 4px; border-radius: 4px; }
+.anchor-admin .anchor-pro-banner__dismiss:hover { color: #1d2327; background: rgba(0, 0, 0, .05); }
+
+/* Accent CTA buttons (override WP blue with the readable deep-brass accent) */
+.anchor-admin .anchor-pro-banner__cta.button-primary,
+.anchor-admin .anchor-pro-aside__cta.button-primary {
+	background: var(--anchor-pro-cta); border-color: color-mix(in srgb, var(--anchor-pro-cta) 80%, #000); color: #fff; text-shadow: none; box-shadow: none;
+}
+.anchor-admin .anchor-pro-banner__cta.button-primary:hover,
+.anchor-admin .anchor-pro-aside__cta.button-primary:hover { background: color-mix(in srgb, var(--anchor-pro-cta) 88%, #000); }
+
+/* Sidebar promo card */
+.anchor-admin .anchor-pro-aside {
+	background: #fff; border: 1px solid #dcdcde; border-top: 3px solid var(--anchor-accent); border-radius: var(--anchor-pro-radius); padding: 18px 20px; position: sticky; top: 40px;
+}
+.anchor-admin .anchor-pro-aside__eyebrow { margin: 0 0 4px; color: var(--anchor-pro-cta); }
+.anchor-admin .anchor-pro-aside__heading { margin: 0 0 12px; font-size: 16px; line-height: 1.3; padding-left: 0; border-left: 0; }
+.anchor-admin .anchor-pro-aside__list { margin: 0 0 16px; padding: 0; list-style: none; }
+.anchor-admin .anchor-pro-aside__list li { display: flex; align-items: flex-start; gap: 8px; padding: 5px 0; color: #1d2327; font-size: 13px; }
+.anchor-admin .anchor-pro-aside__lock::before,
+.anchor-admin .anchor-pro-card__lock::before { content: "\f160"; font-family: dashicons; font-size: 15px; line-height: 1.2; color: var(--anchor-accent); }
+.anchor-admin .anchor-pro-aside__cta { width: 100%; text-align: center; }
+.anchor-admin .anchor-pro-aside__price { margin: 10px 0 0; font-size: 12px; color: var(--anchor-pro-muted); text-align: center; }
+
+/* "What PRO adds" locked cards */
+.anchor-admin .anchor-pro-cards { max-width: 60rem; margin: var(--anchor-pro-gap) 0 0; }
+.anchor-admin .anchor-pro-cards__title { font-size: 15px; margin: 0 0 12px; padding-left: 0; border-left: 0; }
+.anchor-admin .anchor-pro-cards__grid { display: grid; gap: 14px; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); }
+.anchor-admin .anchor-pro-card { position: relative; padding: 16px; border: 1px solid #dcdcde; border-radius: var(--anchor-pro-radius-sm); background: color-mix(in srgb, var(--anchor-accent) 3%, #fff); }
+.anchor-admin .anchor-pro-card__badge { position: absolute; top: 12px; inset-inline-end: 12px; padding: 1px 7px; border-radius: 999px; color: var(--anchor-pro-cta); border: 1px solid color-mix(in srgb, var(--anchor-accent) 40%, #fff); }
+.anchor-admin .anchor-pro-card__lock { display: inline-block; margin-bottom: 6px; }
+.anchor-admin .anchor-pro-card__title { margin: 0 0 6px; font-size: 14px; line-height: 1.3; }
+.anchor-admin .anchor-pro-card__desc { margin: 0; font-size: 12.5px; line-height: 1.5; color: var(--anchor-pro-muted); }
+
+@media (prefers-reduced-motion: no-preference) {
+	.anchor-admin .anchor-pro-banner__cta, .anchor-admin .anchor-pro-aside__cta { transition: background-color .15s ease, border-color .15s ease; }
+}
