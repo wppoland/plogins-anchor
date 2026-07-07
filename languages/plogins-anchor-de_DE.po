@@ -7,22 +7,22 @@ msgstr ""
 "POT-Creation-Date: 2026-06-16T20:23:09+00:00\n"
 "PO-Revision-Date: 2026-07-07 00:00+0000\n"
 "Last-Translator: WPPoland <kontakt@wppoland.com>\n"
-"Language-Team: Polish <pl@li.org>\n"
-"Language: pl_PL\n"
+"Language-Team: German <de@li.org>\n"
+"Language: de_DE\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Domain: plogins-anchor\n"
-"Plural-Forms: nplurals=3; plural=(n == 1 ? 0 : n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14) ? 1 : 2);\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 msgid "Anchor - Sticky Add to Cart Bar for WooCommerce"
-msgstr "Anchor - przyklejony pasek dodawania do koszyka dla WooCommerce"
+msgstr "Anchor - Sticky Add-to-Cart-Leiste für WooCommerce"
 
 msgid "https://plogins.com/anchor/"
 msgstr "https://plogins.com/anchor/"
 
 msgid "A sticky add-to-cart bar that appears on scroll, boosting conversions on long product pages."
-msgstr "Przyklejony pasek dodawania do koszyka, który pojawia się podczas przewijania i pomaga zwiększać konwersję na długich stronach produktów."
+msgstr "Eine fixierte Add-to-Cart-Leiste, die beim Scrollen erscheint und Conversions auf langen Produktseiten verbessert."
 
 msgid "WPPoland"
 msgstr "WPPoland"
@@ -31,40 +31,40 @@ msgid "https://plogins.com/"
 msgstr "https://plogins.com/"
 
 msgid "Anchor - Sticky Add to Cart Bar for WooCommerce requires WooCommerce to be active."
-msgstr "Anchor - przyklejony pasek dodawania do koszyka dla WooCommerce wymaga aktywnego WooCommerce."
+msgstr "Anchor – Sticky Add to Cart Bar für WooCommerce erfordert, dass WooCommerce aktiv ist."
 
 msgid "Anchor: Sticky Add to Cart Bar"
-msgstr "Anchor: przyklejony pasek dodawania do koszyka"
+msgstr "Anchor: Sticky Add-to-Cart-Leiste"
 
 msgid "Anchor"
 msgstr "Anchor"
 
 msgid "Anchor shows a slim, sticky add-to-cart bar at the bottom of your product pages once the shopper scrolls past the main button. It keeps the price and buy button one tap away on long pages, and stays in sync with WooCommerce variations. The bar is fixed to the viewport, so it never shifts your layout."
-msgstr "Anchor pokazuje wąski, przyklejony pasek dodawania do koszyka u dołu strony produktu, gdy kupujący przewinie główny przycisk. Na długich stronach cena i przycisk zakupu pozostają pod ręką, a pasek synchronizuje się z wariantami WooCommerce. Jest przypięty do okna przeglądarki, więc nie przesuwa układu strony."
+msgstr "Anchor zeigt unten auf der Produktseite eine schmale, fixierte Add-to-Cart-Leiste, sobald der Käufer am Hauptbutton vorbeiscrollt. Auf langen Seiten bleiben Preis und Kaufbutton jederzeit erreichbar, und die Leiste bleibt mit WooCommerce-Varianten synchron. Sie ist am Browserfenster fixiert und verschiebt daher nie das Layout."
 
 msgid "Display"
-msgstr "Wyświetlanie"
+msgstr "Anzeige"
 
 msgid "Enable the bar"
-msgstr "Włącz pasek"
+msgstr "Leiste aktivieren"
 
 msgid "Show the sticky add-to-cart bar on single product pages."
-msgstr "Wyświetlaj przyklejony pasek dodawania do koszyka na stronach pojedynczych produktów."
+msgstr "Sticky Add-to-Cart-Leiste auf einzelnen Produktseiten anzeigen."
 
 msgid "When off, the bar never renders and its CSS/JS are not loaded, zero front-end impact."
-msgstr "Gdy opcja jest wyłączona, pasek nie jest renderowany, a jego CSS/JS nie są ładowane, więc nie wpływa na front-end."
+msgstr "Wenn deaktiviert, wird die Leiste nicht ausgegeben und ihre CSS/JS-Dateien werden nicht geladen, also ohne Frontend-Auswirkung."
 
 msgid "Scroll threshold (px)"
-msgstr "Próg przewinięcia (px)"
+msgstr "Scrollschwelle (px)"
 
 msgid "How far past the main add-to-cart form the shopper must scroll before the bar appears (%1$d–%2$d). 300 is a good default."
-msgstr "Jak daleko poza główny formularz dodawania do koszyka klient musi przewinąć, zanim pojawi się pasek (%1$d–%2$d). 300 to dobra wartość domyślna."
+msgstr "Wie weit der Käufer über das Hauptformular zum Hinzufügen in den Warenkorb hinaus scrollen muss, bevor die Leiste erscheint (%1$d–%2$d). 300 ist ein guter Standardwert."
 
 msgid "Lower means the bar shows up sooner; higher keeps it hidden longer. Right now it appears after %s of scrolling."
-msgstr "Niższa wartość oznacza, że pasek pojawi się wcześniej, wyższa ukryje go na dłużej. Teraz pojawia się po przewinięciu o %s."
+msgstr "Ein niedrigerer Wert zeigt die Leiste früher an, ein höherer hält sie länger verborgen. Aktuell erscheint sie nach %s Scrollen."
 
 msgid "Add to cart"
-msgstr "Dodaj do koszyka"
+msgstr "In den Warenkorb legen"
 
 msgid "Choose options"
-msgstr "Wybierz opcje"
+msgstr "Optionen auswählen"
