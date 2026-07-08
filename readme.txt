@@ -5,7 +5,7 @@ Requires at least: 6.5
 Tested up to: 7.0
 Requires PHP: 8.1
 Requires Plugins: woocommerce
-Stable tag: 1.0.1
+Stable tag: 1.0.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -104,7 +104,14 @@ All of Anchor's data stays in your database: it stores two autoloaded-off option
 and keeps no per-product data. Both options are removed when you delete the plugin.
 Anchor sends no email and makes no HTTP requests of its own.
 
+== Translations ==
+
+Plogins Anchor includes Polish, German and Spanish translations for the plugin interface. The text domain is `plogins-anchor`, so WordPress.org language packs can also override or extend these bundled translations.
+
 == Changelog ==
+
+= 1.0.2 =
+* Added bundled Polish, German and Spanish translations for the plugin interface.
 
 = 1.0.1 =
 * First stable release.

@@ -13,58 +13,118 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Domain: plogins-anchor\n"
-"Plural-Forms: nplurals=3; plural=(n == 1 ? 0 : n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n == 1 ? 0 : n % 10 >= 2 && n % 10 <= 4 && "
+"(n % 100 < 12 || n % 100 > 14) ? 1 : 2);\n"
 
+#. Plugin Name of the plugin
+#: anchor.php
 msgid "Anchor - Sticky Add to Cart Bar for WooCommerce"
 msgstr "Anchor - przyklejony pasek dodawania do koszyka dla WooCommerce"
 
+#. Plugin URI of the plugin
+#: anchor.php
 msgid "https://plogins.com/anchor/"
 msgstr "https://plogins.com/anchor/"
 
-msgid "A sticky add-to-cart bar that appears on scroll, boosting conversions on long product pages."
-msgstr "Przyklejony pasek dodawania do koszyka, który pojawia się podczas przewijania i pomaga zwiększać konwersję na długich stronach produktów."
+#. Description of the plugin
+#: anchor.php
+msgid ""
+"A sticky add-to-cart bar that appears on scroll, boosting conversions on "
+"long product pages."
+msgstr ""
+"Przyklejony pasek dodawania do koszyka, który pojawia się podczas "
+"przewijania i pomaga zwiększać konwersję na długich stronach produktów."
 
+#. Author of the plugin
+#: anchor.php
 msgid "WPPoland"
 msgstr "WPPoland"
 
+#. Author URI of the plugin
+#: anchor.php
 msgid "https://plogins.com/"
 msgstr "https://plogins.com/"
 
-msgid "Anchor - Sticky Add to Cart Bar for WooCommerce requires WooCommerce to be active."
-msgstr "Anchor - przyklejony pasek dodawania do koszyka dla WooCommerce wymaga aktywnego WooCommerce."
+#: anchor.php:47
+msgid ""
+"Anchor - Sticky Add to Cart Bar for WooCommerce requires WooCommerce to be "
+"active."
+msgstr ""
+"Anchor - przyklejony pasek dodawania do koszyka dla WooCommerce wymaga "
+"aktywnego WooCommerce."
 
+#: src/Admin/Settings.php:53
 msgid "Anchor: Sticky Add to Cart Bar"
 msgstr "Anchor: przyklejony pasek dodawania do koszyka"
 
+#: src/Admin/Settings.php:54
 msgid "Anchor"
 msgstr "Anchor"
 
-msgid "Anchor shows a slim, sticky add-to-cart bar at the bottom of your product pages once the shopper scrolls past the main button. It keeps the price and buy button one tap away on long pages, and stays in sync with WooCommerce variations. The bar is fixed to the viewport, so it never shifts your layout."
-msgstr "Anchor pokazuje wąski, przyklejony pasek dodawania do koszyka u dołu strony produktu, gdy kupujący przewinie główny przycisk. Na długich stronach cena i przycisk zakupu pozostają pod ręką, a pasek synchronizuje się z wariantami WooCommerce. Jest przypięty do okna przeglądarki, więc nie przesuwa układu strony."
+#: src/Admin/Settings.php:93
+msgid ""
+"Anchor shows a slim, sticky add-to-cart bar at the bottom of your product "
+"pages once the shopper scrolls past the main button. It keeps the price and "
+"buy button one tap away on long pages, and stays in sync with WooCommerce "
+"variations. The bar is fixed to the viewport, so it never shifts your layout."
+msgstr ""
+"Anchor pokazuje wąski, przyklejony pasek dodawania do koszyka u dołu strony "
+"produktu, gdy kupujący przewinie stronę poniżej głównego przycisku. Na "
+"długich stronach cena i "
+"przycisk zakupu pozostają pod ręką, a pasek synchronizuje się z wariantami "
+"WooCommerce. Jest przypięty do okna przeglądarki, więc nie przesuwa układu "
+"strony."
 
+#: src/Admin/Settings.php:101
 msgid "Display"
 msgstr "Wyświetlanie"
 
+#: src/Admin/Settings.php:105
 msgid "Enable the bar"
 msgstr "Włącz pasek"
 
+#: src/Admin/Settings.php:115
 msgid "Show the sticky add-to-cart bar on single product pages."
-msgstr "Wyświetlaj przyklejony pasek dodawania do koszyka na stronach pojedynczych produktów."
+msgstr ""
+"Wyświetlaj przyklejony pasek dodawania do koszyka na stronach pojedynczych "
+"produktów."
 
-msgid "When off, the bar never renders and its CSS/JS are not loaded, zero front-end impact."
-msgstr "Gdy opcja jest wyłączona, pasek nie jest renderowany, a jego CSS/JS nie są ładowane, więc nie wpływa na front-end."
+#: src/Admin/Settings.php:118
+msgid ""
+"When off, the bar never renders and its CSS/JS are not loaded, zero front-"
+"end impact."
+msgstr ""
+"Gdy opcja jest wyłączona, pasek nie jest renderowany, a jego CSS/JS nie są "
+"ładowane, więc nie wpływa na front-end."
 
+#: src/Admin/Settings.php:124
 msgid "Scroll threshold (px)"
 msgstr "Próg przewinięcia (px)"
 
-msgid "How far past the main add-to-cart form the shopper must scroll before the bar appears (%1$d–%2$d). 300 is a good default."
-msgstr "Jak daleko poza główny formularz dodawania do koszyka klient musi przewinąć, zanim pojawi się pasek (%1$d–%2$d). 300 to dobra wartość domyślna."
+#. translators: 1: minimum px, 2: maximum px.
+#: src/Admin/Settings.php:141
+#, php-format
+msgid ""
+"How far past the main add-to-cart form the shopper must scroll before the "
+"bar appears (%1$d–%2$d). 300 is a good default."
+msgstr ""
+"Jak daleko poza główny formularz dodawania do koszyka klient musi przewinąć, "
+"zanim pojawi się pasek (%1$d–%2$d). 300 to dobra wartość domyślna."
 
-msgid "Lower means the bar shows up sooner; higher keeps it hidden longer. Right now it appears after %s of scrolling."
-msgstr "Niższa wartość oznacza, że pasek pojawi się wcześniej, wyższa ukryje go na dłużej. Teraz pojawia się po przewinięciu o %s."
+#. translators: %s: the configured threshold in pixels, e.g. "300 px".
+#: src/Admin/Settings.php:151
+#, php-format
+msgid ""
+"Lower means the bar shows up sooner; higher keeps it hidden longer. Right "
+"now it appears after %s of scrolling."
+msgstr ""
+"Niższa wartość oznacza, że pasek pojawi się wcześniej, wyższa ukryje go na "
+"dłużej. Teraz pojawia się po przewinięciu o %s."
 
+#: templates/sticky-bar.php:35 templates/sticky-bar.php:80
 msgid "Add to cart"
 msgstr "Dodaj do koszyka"
 
+#: templates/sticky-bar.php:61
 msgid "Choose options"
 msgstr "Wybierz opcje"

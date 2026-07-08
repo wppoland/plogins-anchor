@@ -12,59 +12,117 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Domain: plogins-anchor\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Domain: plogins-anchor\n"
 
+#. Plugin Name of the plugin
+#: anchor.php
 msgid "Anchor - Sticky Add to Cart Bar for WooCommerce"
 msgstr "Anchor - Sticky Add-to-Cart-Leiste für WooCommerce"
 
+#. Plugin URI of the plugin
+#: anchor.php
 msgid "https://plogins.com/anchor/"
 msgstr "https://plogins.com/anchor/"
 
-msgid "A sticky add-to-cart bar that appears on scroll, boosting conversions on long product pages."
-msgstr "Eine fixierte Add-to-Cart-Leiste, die beim Scrollen erscheint und Conversions auf langen Produktseiten verbessert."
+#. Description of the plugin
+#: anchor.php
+msgid ""
+"A sticky add-to-cart bar that appears on scroll, boosting conversions on "
+"long product pages."
+msgstr ""
+"Eine fixierte Add-to-Cart-Leiste, die beim Scrollen erscheint und "
+"Conversions auf langen Produktseiten verbessert."
 
+#. Author of the plugin
+#: anchor.php
 msgid "WPPoland"
 msgstr "WPPoland"
 
+#. Author URI of the plugin
+#: anchor.php
 msgid "https://plogins.com/"
 msgstr "https://plogins.com/"
 
-msgid "Anchor - Sticky Add to Cart Bar for WooCommerce requires WooCommerce to be active."
-msgstr "Anchor – Sticky Add to Cart Bar für WooCommerce erfordert, dass WooCommerce aktiv ist."
+#: anchor.php:47
+msgid ""
+"Anchor - Sticky Add to Cart Bar for WooCommerce requires WooCommerce to be "
+"active."
+msgstr ""
+"Anchor – Sticky Add to Cart Bar für WooCommerce erfordert, dass WooCommerce "
+"aktiv ist."
 
+#: src/Admin/Settings.php:53
 msgid "Anchor: Sticky Add to Cart Bar"
 msgstr "Anchor: Sticky Add-to-Cart-Leiste"
 
+#: src/Admin/Settings.php:54
 msgid "Anchor"
 msgstr "Anchor"
 
-msgid "Anchor shows a slim, sticky add-to-cart bar at the bottom of your product pages once the shopper scrolls past the main button. It keeps the price and buy button one tap away on long pages, and stays in sync with WooCommerce variations. The bar is fixed to the viewport, so it never shifts your layout."
-msgstr "Anchor zeigt unten auf der Produktseite eine schmale, fixierte Add-to-Cart-Leiste, sobald der Käufer am Hauptbutton vorbeiscrollt. Auf langen Seiten bleiben Preis und Kaufbutton jederzeit erreichbar, und die Leiste bleibt mit WooCommerce-Varianten synchron. Sie ist am Browserfenster fixiert und verschiebt daher nie das Layout."
+#: src/Admin/Settings.php:93
+msgid ""
+"Anchor shows a slim, sticky add-to-cart bar at the bottom of your product "
+"pages once the shopper scrolls past the main button. It keeps the price and "
+"buy button one tap away on long pages, and stays in sync with WooCommerce "
+"variations. The bar is fixed to the viewport, so it never shifts your "
+"layout."
+msgstr ""
+"Anchor zeigt unten auf der Produktseite eine schmale, fixierte Add-to-Cart-"
+"Leiste, sobald der Käufer am Hauptbutton vorbeiscrollt. Auf langen Seiten "
+"bleiben Preis und Kaufbutton jederzeit erreichbar, und die Leiste bleibt mit"
+" WooCommerce-Varianten synchron. Sie ist am Browserfenster fixiert und "
+"verschiebt daher nie das Layout."
 
+#: src/Admin/Settings.php:101
 msgid "Display"
 msgstr "Anzeige"
 
+#: src/Admin/Settings.php:105
 msgid "Enable the bar"
 msgstr "Leiste aktivieren"
 
+#: src/Admin/Settings.php:115
 msgid "Show the sticky add-to-cart bar on single product pages."
 msgstr "Sticky Add-to-Cart-Leiste auf einzelnen Produktseiten anzeigen."
 
-msgid "When off, the bar never renders and its CSS/JS are not loaded, zero front-end impact."
-msgstr "Wenn deaktiviert, wird die Leiste nicht ausgegeben und ihre CSS/JS-Dateien werden nicht geladen, also ohne Frontend-Auswirkung."
+#: src/Admin/Settings.php:118
+msgid ""
+"When off, the bar never renders and its CSS/JS are not loaded, zero front-"
+"end impact."
+msgstr ""
+"Wenn deaktiviert, wird die Leiste nicht ausgegeben und ihre CSS/JS-Dateien "
+"werden nicht geladen, also ohne Frontend-Auswirkung."
 
+#: src/Admin/Settings.php:124
 msgid "Scroll threshold (px)"
 msgstr "Scrollschwelle (px)"
 
-msgid "How far past the main add-to-cart form the shopper must scroll before the bar appears (%1$d–%2$d). 300 is a good default."
-msgstr "Wie weit der Käufer über das Hauptformular zum Hinzufügen in den Warenkorb hinaus scrollen muss, bevor die Leiste erscheint (%1$d–%2$d). 300 ist ein guter Standardwert."
+#. translators: 1: minimum px, 2: maximum px.
+#: src/Admin/Settings.php:141
+#, php-format
+msgid ""
+"How far past the main add-to-cart form the shopper must scroll before the "
+"bar appears (%1$d–%2$d). 300 is a good default."
+msgstr ""
+"Wie weit der Käufer über das Hauptformular zum Hinzufügen in den Warenkorb "
+"hinaus scrollen muss, bevor die Leiste erscheint (%1$d–%2$d). 300 ist ein "
+"guter Standardwert."
 
-msgid "Lower means the bar shows up sooner; higher keeps it hidden longer. Right now it appears after %s of scrolling."
-msgstr "Ein niedrigerer Wert zeigt die Leiste früher an, ein höherer hält sie länger verborgen. Aktuell erscheint sie nach %s Scrollen."
+#. translators: %s: the configured threshold in pixels, e.g. "300 px".
+#: src/Admin/Settings.php:151
+#, php-format
+msgid ""
+"Lower means the bar shows up sooner; higher keeps it hidden longer. Right "
+"now it appears after %s of scrolling."
+msgstr ""
+"Ein niedrigerer Wert zeigt die Leiste früher an, ein höherer hält sie länger"
+" verborgen. Aktuell erscheint sie nach %s Scrollen."
 
+#: templates/sticky-bar.php:35 templates/sticky-bar.php:80
 msgid "Add to cart"
 msgstr "In den Warenkorb legen"
 
+#: templates/sticky-bar.php:61
 msgid "Choose options"
 msgstr "Optionen auswählen"

@@ -12,59 +12,119 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Domain: plogins-anchor\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Domain: plogins-anchor\n"
 
+#. Plugin Name of the plugin
+#: anchor.php
 msgid "Anchor - Sticky Add to Cart Bar for WooCommerce"
 msgstr "Anchor - barra fija de añadir al carrito para WooCommerce"
 
+#. Plugin URI of the plugin
+#: anchor.php
 msgid "https://plogins.com/anchor/"
 msgstr "https://plogins.com/anchor/"
 
-msgid "A sticky add-to-cart bar that appears on scroll, boosting conversions on long product pages."
-msgstr "Una barra fija de añadir al carrito que aparece al desplazarse y ayuda a mejorar la conversión en páginas de producto largas."
+#. Description of the plugin
+#: anchor.php
+msgid ""
+"A sticky add-to-cart bar that appears on scroll, boosting conversions on "
+"long product pages."
+msgstr ""
+"Una barra fija de añadir al carrito que aparece al desplazarse y ayuda a "
+"mejorar la conversión en páginas de producto largas."
 
+#. Author of the plugin
+#: anchor.php
 msgid "WPPoland"
 msgstr "WPPoland"
 
+#. Author URI of the plugin
+#: anchor.php
 msgid "https://plogins.com/"
 msgstr "https://plogins.com/"
 
-msgid "Anchor - Sticky Add to Cart Bar for WooCommerce requires WooCommerce to be active."
-msgstr "Anchor - barra fija de añadir al carrito para WooCommerce requiere que WooCommerce esté activo."
+#: anchor.php:47
+msgid ""
+"Anchor - Sticky Add to Cart Bar for WooCommerce requires WooCommerce to be "
+"active."
+msgstr ""
+"Anchor - barra fija de añadir al carrito para WooCommerce requiere que "
+"WooCommerce esté activo."
 
+#: src/Admin/Settings.php:53
 msgid "Anchor: Sticky Add to Cart Bar"
 msgstr "Anchor: barra fija de añadir al carrito"
 
+#: src/Admin/Settings.php:54
 msgid "Anchor"
 msgstr "Anchor"
 
-msgid "Anchor shows a slim, sticky add-to-cart bar at the bottom of your product pages once the shopper scrolls past the main button. It keeps the price and buy button one tap away on long pages, and stays in sync with WooCommerce variations. The bar is fixed to the viewport, so it never shifts your layout."
-msgstr "Anchor muestra una barra fina y fija de añadir al carrito en la parte inferior de la página de producto cuando el comprador supera el botón principal. En páginas largas mantiene el precio y el botón de compra siempre a mano, y se sincroniza con las variaciones de WooCommerce. La barra queda fija en la ventana del navegador, así que no desplaza el diseño."
+#: src/Admin/Settings.php:93
+msgid ""
+"Anchor shows a slim, sticky add-to-cart bar at the bottom of your product "
+"pages once the shopper scrolls past the main button. It keeps the price and "
+"buy button one tap away on long pages, and stays in sync with WooCommerce "
+"variations. The bar is fixed to the viewport, so it never shifts your "
+"layout."
+msgstr ""
+"Anchor muestra una barra fina y fija de añadir al carrito en la parte "
+"inferior de la página de producto cuando el comprador supera el botón "
+"principal. En páginas largas mantiene el precio y el botón de compra siempre"
+" a mano, y se sincroniza con las variaciones de WooCommerce. La barra queda "
+"fija en la ventana del navegador, así que no desplaza el diseño."
 
+#: src/Admin/Settings.php:101
 msgid "Display"
 msgstr "Mostrar"
 
+#: src/Admin/Settings.php:105
 msgid "Enable the bar"
 msgstr "Habilitar la barra"
 
+#: src/Admin/Settings.php:115
 msgid "Show the sticky add-to-cart bar on single product pages."
-msgstr "Muestra la barra fija de añadir al carrito en páginas de producto individuales."
+msgstr ""
+"Muestra la barra fija de añadir al carrito en páginas de producto "
+"individuales."
 
-msgid "When off, the bar never renders and its CSS/JS are not loaded, zero front-end impact."
-msgstr "Cuando está desactivada, la barra no se renderiza y sus CSS/JS no se cargan, sin impacto en el front-end."
+#: src/Admin/Settings.php:118
+msgid ""
+"When off, the bar never renders and its CSS/JS are not loaded, zero front-"
+"end impact."
+msgstr ""
+"Cuando está desactivada, la barra no se renderiza y sus CSS/JS no se cargan,"
+" sin impacto en el front-end."
 
+#: src/Admin/Settings.php:124
 msgid "Scroll threshold (px)"
 msgstr "Umbral de desplazamiento (px)"
 
-msgid "How far past the main add-to-cart form the shopper must scroll before the bar appears (%1$d–%2$d). 300 is a good default."
-msgstr "Cuánto debe desplazarse el comprador más allá del formulario principal de añadir al carrito antes de que aparezca la barra (%1$d–%2$d). 300 es un buen valor predeterminado."
+#. translators: 1: minimum px, 2: maximum px.
+#: src/Admin/Settings.php:141
+#, php-format
+msgid ""
+"How far past the main add-to-cart form the shopper must scroll before the "
+"bar appears (%1$d–%2$d). 300 is a good default."
+msgstr ""
+"Cuánto debe desplazarse el comprador más allá del formulario principal de "
+"añadir al carrito antes de que aparezca la barra (%1$d–%2$d). 300 es un buen"
+" valor predeterminado."
 
-msgid "Lower means the bar shows up sooner; higher keeps it hidden longer. Right now it appears after %s of scrolling."
-msgstr "Un valor más bajo muestra la barra antes, uno más alto la mantiene oculta durante más tiempo. Ahora aparece después de %s de desplazamiento."
+#. translators: %s: the configured threshold in pixels, e.g. "300 px".
+#: src/Admin/Settings.php:151
+#, php-format
+msgid ""
+"Lower means the bar shows up sooner; higher keeps it hidden longer. Right "
+"now it appears after %s of scrolling."
+msgstr ""
+"Un valor más bajo muestra la barra antes, uno más alto la mantiene oculta "
+"durante más tiempo. Ahora aparece después de %s de desplazamiento."
 
+#: templates/sticky-bar.php:35 templates/sticky-bar.php:80
 msgid "Add to cart"
 msgstr "Añadir al carrito"
 
+#: templates/sticky-bar.php:61
 msgid "Choose options"
 msgstr "Elegir opciones"
