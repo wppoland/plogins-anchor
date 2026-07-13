@@ -66,18 +66,3 @@
 	color: var( --anchor-accent );
 	font-weight: 600;
 }
-
-@media ( prefers-color-scheme: dark ) {
-	.anchor-admin {
-		--anchor-card-bg: #1e1e1e;
-		--anchor-card-fg: #f0f0f1;
-		--anchor-card-border: #3c434a;
-		/* Mid brass reads brightly on the dark card (6.56:1). */
-		--anchor-accent: #c89b53;
-		--anchor-accent-soft: rgba( 200, 155, 83, 0.12 );
-	}
-
-	.anchor-intro {
-		color: #bcc2c7;
-	}
-}
