@@ -4,119 +4,107 @@ Tags: woocommerce, add to cart, sticky, conversion, product page
 Requires at least: 6.5
 Tested up to: 7.0
 Requires PHP: 8.1
-Requiere complementos: woocommerce
-Stable tag: 1.0.1
+Requiere plugins: woocommerce
+Stable tag: 1.0.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Mantiene el botón Añadir al carrito al alcance en páginas largas de productos WooCommerce con una barra adhesiva que aparece al desplazarse.
+Mantiene el botón «Añadir al carrito» al alcance en las páginas largas de producto de WooCommerce con una barra fija que aparece al desplazarte.
 
 == Description ==
 
-Anchor añade una barra delgada y adhesiva para añadir al carrito en la parte inferior de tu WooCommerce
-páginas de un solo producto. Permanece oculto hasta que el comprador pasa por la página principal.
-botón Añadir al carrito, luego se desliza a la vista mostrando el título del producto, el precio y un
-botón de compra, por lo que aún se puede acceder al control de añadir al carrito en páginas largas.
+Anchor añade una barra fina y fija para añadir al carrito en la parte inferior de tus páginas de producto individuales de WooCommerce. Permanece oculta hasta que el cliente se desplaza más allá del botón principal de añadir al carrito y, entonces, aparece deslizándose y muestra el título del producto, el precio y un botón de compra, de modo que el control de añadir al carrito sigue estando al alcance en las páginas largas.
 
-En productos variables, la barra sigue la forma de variaciones nativas. como el comprador
-elige opciones, el precio, el estado de las existencias y el botón de compra se actualizan para que coincidan con el
-variación seleccionada. Anchor no carga su propia copia de jQuery; escucha
-los eventos de variación WooCommerce ya se activan.
+En los productos variables, la barra sigue el formulario de variaciones nativo. A medida que el cliente elige opciones, el precio, el estado del stock y el botón de compra se actualizan para coincidir con la variación seleccionada. Anchor no carga su propia copia de jQuery: escucha los eventos de variación que WooCommerce ya dispara.
 
-La barra se posiciona con CSS `posición: fija` y comienza oculta, por lo que se ubica
-fuera del flujo de documentos y no empuja otros contenidos ni causa
-el diseño cambia cuando aparece.
+La barra se posiciona con CSS `position: fixed` y empieza oculta, así que queda fuera del flujo del documento y no desplaza el resto del contenido ni provoca saltos de diseño cuando aparece.
 
-Anchor aún no está en el directorio de WordPress.org, por lo que si desea leer el
-código, informar un error o sugerir un cambio, el repositorio está en
-https://github.com/wppoland/plogins-anchor.
+Anchor todavía no está en el directorio de WordPress.org, así que si quieres leer el código, informar de un error o proponer un cambio, el repositorio está en https://github.com/wppoland/plogins-anchor.
 
 = Documentation and links =
 
 * <strong>Documentación</strong> - https://plogins.com/es/plogins-anchor/docs/
-* <strong>Página de complementos</strong> - https://plogins.com/es/plogins-anchor/
+* <strong>Página del plugin</strong> - https://plogins.com/es/plogins-anchor/
 * <strong>Código fuente</strong> - https://github.com/wppoland/plogins-anchor
-* <strong>Informes de errores y solicitudes de funciones</strong> - https://github.com/wppoland/plogins-anchor/issues
+* <strong>Informes de errores y peticiones de funciones</strong> - https://github.com/wppoland/plogins-anchor/issues
 
 
 = Features =
 
-* Barra adhesiva para añadir al carrito en páginas de productos individuales, que se revela una vez que el comprador pasa por el botón principal.
-* Umbral de desplazamiento que estableces en píxeles (0 a 5000), para que decidas hasta dónde llega la barra.
+* Barra fija para añadir al carrito en las páginas de producto individuales, que se muestra en cuanto el cliente se desplaza más allá del botón principal.
+* Umbral de desplazamiento que defines en píxeles (de 0 a 5000), para que decidas a qué altura aparece la barra.
 * Muestra el título del producto, el precio y un botón de compra.
-* En productos variables, el precio y el estado del stock rastrean la variación que el comprador ha seleccionado.
-* Marcado como región ARIA con un estado de enfoque visible y una etiqueta de lector de pantalla.
-* Honors prefiere el movimiento reducido y tiene un estilo de modo oscuro.
-* La barra está fijada a la ventana gráfica y comienza oculta, por lo que no provoca cambios en el diseño.
-* Se envía con un archivo POT para traducir y al eliminar el complemento se eliminan las dos opciones que almacena.
-* Declara compatibilidad con HPOS y bloques de carrito/pago.
+* En los productos variables, el precio y el estado del stock siguen la variación que ha seleccionado el cliente.
+* Marcada como región ARIA, con un estado de foco visible y una etiqueta para lectores de pantalla.
+* Respeta prefers-reduced-motion y tiene un estilo para modo oscuro.
+* La barra está fijada a la ventana del navegador y empieza oculta, así que no provoca saltos de diseño.
+* Se entrega con un archivo POT para traducir, y al borrar el plugin se eliminan las dos opciones que guarda.
+* Declara compatibilidad con HPOS y con los bloques de carrito/pago.
 
 == Installation ==
 
-1. Cargue el complemento en `/wp-content/plugins/anchor`, o instálelo a través de Complementos → Añadir nuevo.
+1. Sube el plugin a `/wp-content/plugins/anchor` o instálalo desde Plugins → Añadir nuevo.
 2. Actívalo. WooCommerce debe estar activo.
-3. Vaya a <strong>WooCommerce → Anchor</strong> para habilitar la barra y establecer el umbral de desplazamiento.
+3. Ve a <strong>WooCommerce → Anchor</strong> para activar la barra y definir el umbral de desplazamiento.
 
 == Frequently Asked Questions ==
 
 = Does it require WooCommerce? =
 
-Sí. Anchor solo se ejecuta cuando WooCommerce está activo.
+Sí. Anchor solo funciona cuando WooCommerce está activo.
 
 = Does it work with variable products? =
 
-Sí. La barra refleja la forma de variaciones nativas de WooCommerce: elija opciones en la
-La página y el precio de la barra, la disponibilidad y el botón de compra se actualizan para coincidir.
+Sí. La barra refleja el formulario de variaciones nativo de WooCommerce: elige las opciones en la página y el precio, la disponibilidad y el botón de compra de la barra se actualizan para coincidir.
 
 = Will it slow my product pages down or shift the layout? =
 
-No. La hoja de estilo y el script se cargan solo en páginas de un solo producto, el script es
-se difiere, y la barra se fija a la ventana gráfica y se oculta hasta que sea necesaria.
-Debido a que comienza fuera del flujo del documento, mostrarlo no cambia la página.
+No. La hoja de estilos y el script se cargan solo en las páginas de producto individuales, el script se difiere y la barra está fijada a la ventana del navegador y oculta hasta que hace falta. Como empieza fuera del flujo del documento, mostrarla no desplaza la página.
 
 = Can I change when the bar appears? =
 
-Sí. Establezca el umbral de desplazamiento en píxeles en <strong>WooCommerce → Anchor</strong> (0–5000).
+Sí. Define el umbral de desplazamiento en píxeles en <strong>WooCommerce → Anchor</strong> (0–5000).
 
 = Does it work on simple products? =
 
-Sí. En productos simples, la barra muestra el título, el precio y el botón de añadir al carrito. En productos variables, rastrea la variación seleccionada.
+Sí. En los productos simples, la barra muestra el título, el precio y el botón de añadir al carrito. En los productos variables, sigue la variación seleccionada.
 
 
 = Does this plugin work on WordPress Multisite? =
 
-Sí. Este complemento es compatible con WordPress Multisite. Activarlo en red o activarlo en sitios individuales; Cada sitio mantiene su propia configuración y datos.
+Sí. Este plugin es compatible con WordPress Multisite. Actívalo en red o en sitios concretos; cada sitio conserva sus propios ajustes y datos.
 
 == Screenshots ==
 
-1. La barra adhesiva para añadir al carrito en la página de un producto.
-2. La pantalla de configuración de Anchor en WooCommerce.
+1. La barra fija para añadir al carrito en la página de un producto.
+2. La pantalla de ajustes de Anchor en WooCommerce.
 
 == External Services ==
 
-Anchor no se conecta a ningún servicio externo. No envía datos fuera de tu sitio.
-y no carga nada desde una CDN de terceros; su hoja de estilo y script (`assets/css/anchor.css`
-y `assets/js/anchor.js`) se entregan desde su propia instalación y el script de front-end dice
-solo un pequeño objeto `anchorConfig` (el umbral de desplazamiento) que WordPress imprime en línea.
+Anchor no se conecta a ningún servicio externo. No envía datos fuera de tu sitio y no carga nada desde una CDN de terceros; su hoja de estilos y su script (`assets/css/anchor.css` y `assets/js/anchor.js`) se sirven desde tu propia instalación, y el script del frontend solo lee un pequeño objeto `anchorConfig` (el umbral de desplazamiento) que WordPress imprime en línea.
 
-Todos los datos de Anchor permanecen en tu base de datos: almacena dos opciones de carga automática,
-`anchor_settings` (el umbral de activación y desplazamiento) y `anchor_db_version`,
-y no guarda datos por producto. Ambas opciones se eliminan cuando eliminas el complemento.
-Anchor no envía ningún correo electrónico ni realiza ninguna solicitud HTTP propia.
+Todos los datos de Anchor permanecen en tu base de datos: guarda dos opciones sin autocarga, `anchor_settings` (el interruptor de activación y el umbral de desplazamiento) y `anchor_db_version`, y no guarda datos por producto. Ambas opciones se eliminan cuando borras el plugin. Anchor no envía ningún correo electrónico ni realiza peticiones HTTP propias.
+
+== Translations ==
+
+Plogins Anchor incluye traducciones al polaco, al alemán y al español para la interfaz del plugin. El dominio de texto es `plogins-anchor`, así que los paquetes de idioma de WordPress.org también pueden sustituir o ampliar estas traducciones incluidas.
 
 == Changelog ==
+
+= 1.0.2 =
+* Añadidas traducciones incluidas al polaco, al alemán y al español para la interfaz del plugin.
 
 = 1.0.1 =
 * Primera versión estable.
 
 = 0.1.3 =
-* Renombrado a Plogins Anchor para WooCommerce para obtener un nombre de complemento más distintivo.
+* Renombrado a Plogins Anchor para WooCommerce, para un nombre de plugin más distintivo.
 
 = 0.1.2 =
-* Añade la acción `anchor/bar_rendered` y el evento frontal `anchor:bar-visible` para análisis PRO.
+* Añadida la acción `anchor/bar_rendered` y el evento de frontend `anchor:bar-visible` para la analítica PRO.
 
 = 0.1.1 =
-* Filtro `anchor/bar_visible` para que PRO y el código personalizado puedan ocultar la barra por producto sin cargar activos.
+* Filtro `anchor/bar_visible` para que PRO y el código personalizado puedan ocultar la barra por producto sin cargar recursos.
 
 = 0.1.0 =
-* Lanzamiento inicial: una barra adhesiva para añadir al carrito en páginas de productos individuales, que se revela al desplazarse, con un umbral de desplazamiento configurable y sincronización de precio/disponibilidad según las variaciones.
+* Lanzamiento inicial: una barra fija para añadir al carrito en las páginas de producto individuales, que se muestra al desplazarse, con un umbral de desplazamiento configurable y sincronización de precio/disponibilidad según la variación.

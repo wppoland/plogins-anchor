@@ -5,118 +5,106 @@ Requires at least: 6.5
 Tested up to: 7.0
 Requires PHP: 8.1
 Wymaga wtyczek: woocommerce
-Stable tag: 1.0.1
+Stable tag: 1.0.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Utrzymuje przycisk „dodaj do koszyka” na długich stronach produktów WooCommerce za pomocą lepkiego paska wyświetlanego podczas przewijania.
+Utrzymuje przycisk „Dodaj do koszyka” w zasięgu na długich stronach produktów WooCommerce dzięki przyklejonemu paskowi, który pojawia się podczas przewijania.
 
 == Description ==
 
-Anchor dodaje smukły, lepki pasek dodawania do koszyka na dole Twojego WooCommerce
-strony pojedynczych produktów. Pozostaje ukryty, dopóki kupujący nie przejdzie obok strony głównej
-przycisk „dodaj do koszyka”, a następnie wyświetli się tytuł produktu, cena i a
-przycisk kup, dzięki czemu opcja dodawania do koszyka będzie nadal dostępna na długich stronach.
+Anchor dodaje smukły, przyklejony pasek „Dodaj do koszyka” na dole stron pojedynczych produktów WooCommerce. Pozostaje ukryty, dopóki kupujący nie przewinie poza główny przycisk „Dodaj do koszyka”, a następnie wsuwa się do widoku, pokazując tytuł produktu, cenę i przycisk zakupu, dzięki czemu element dodawania do koszyka jest wciąż w zasięgu na długich stronach.
 
-W przypadku produktów zmiennych pasek ma formę natywnych odmian. Jako kupujący
-wybiera opcje, cenę, stan zapasów i aktualizację przycisku Kup, aby odpowiadały
-wybrana odmiana. Anchor nie ładuje własnej kopii jQuery; tego słucha
-zdarzenia związane z odmianą WooCommerce już się uruchamia.
+W przypadku produktów zmiennych pasek podąża za natywnym formularzem wariantów WooCommerce. Gdy kupujący wybiera opcje, cena, stan magazynowy i przycisk zakupu aktualizują się, aby odpowiadały wybranemu wariantowi. Anchor nie ładuje własnej kopii jQuery — nasłuchuje zdarzeń wariantów, które WooCommerce już wywołuje.
 
-Pasek jest pozycjonowany za pomocą CSS „position: fix” i zaczyna być ukryty, więc pozostaje
-poza obiegiem dokumentów i nie przesuwa innych treści ani nie powoduje
-zmiana układu, gdy się pojawi.
+Pasek jest pozycjonowany za pomocą CSS `position: fixed` i początkowo jest ukryty, więc znajduje się poza normalnym układem dokumentu i nie przesuwa innych treści ani nie powoduje przeskoku układu, gdy się pojawia.
 
-Kotwicy nie ma jeszcze w katalogu WordPress.org, więc jeśli chcesz przeczytać
-kodu, zgłoś błąd lub zasugeruj zmianę, repozytorium znajduje się pod adresem
-https://github.com/wppoland/plogins-anchor.
+Anchor nie jest jeszcze w katalogu WordPress.org, więc jeśli chcesz przejrzeć kod, zgłosić błąd lub zaproponować zmianę, repozytorium znajdziesz pod adresem https://github.com/wppoland/plogins-anchor.
 
 = Documentation and links =
 
 * <strong>Dokumentacja</strong> - https://plogins.com/pl/plogins-anchor/docs/
 * <strong>Strona wtyczki</strong> - https://plogins.com/pl/plogins-anchor/
 * <strong>Kod źródłowy</strong> - https://github.com/wppoland/plogins-anchor
-* <strong>Raporty o błędach i prośby o nowe funkcje</strong> - https://github.com/wppoland/plogins-anchor/issues
+* <strong>Zgłoszenia błędów i propozycje funkcji</strong> - https://github.com/wppoland/plogins-anchor/issues
 
 
 = Features =
 
-* Przyklejony pasek dodawania do koszyka na stronach poszczególnych produktów, widoczny po przewinięciu przez kupującego obok głównego przycisku.
-* Próg przewijania ustawiony w pikselach (od 0 do 5000), więc decydujesz, jak daleko w dół pasek się zacznie.
-* Pokazuje tytuł produktu, cenę i przycisk Kup.
-* W przypadku produktów zmiennych cena i stan zapasów śledzą odmianę wybraną przez kupującego.
-* Oznaczony jako region ARIA z widocznym stanem skupienia i etykietą czytnika ekranu.
-* Honors preferuje tryb ograniczonego ruchu i ma styl ciemny.
-* Pasek jest przymocowany do rzutni i zaczyna być ukryty, więc nie powoduje zmiany układu.
-* Dostarczany z plikiem POT do tłumaczenia, a usunięcie wtyczki powoduje usunięcie dwóch przechowywanych w niej opcji.
-* Deklaruje kompatybilność HPOS i bloków koszyka/kasy.
+* Przyklejony pasek „Dodaj do koszyka” na stronach pojedynczych produktów, odsłaniany, gdy kupujący przewinie poza główny przycisk.
+* Próg przewijania ustawiany w pikselach (od 0 do 5000), więc to Ty decydujesz, jak nisko pasek się pojawia.
+* Pokazuje tytuł produktu, cenę i przycisk zakupu.
+* W przypadku produktów zmiennych cena i stan magazynowy śledzą wariant wybrany przez kupującego.
+* Oznaczony jako region ARIA z widocznym stanem fokusu i etykietą dla czytników ekranu.
+* Uwzględnia preferencję ograniczonego ruchu (prefers-reduced-motion) i ma styl trybu ciemnego.
+* Pasek jest przypięty do okna przeglądarki i początkowo ukryty, więc nie powoduje przeskoku układu.
+* Dostarczany z plikiem POT do tłumaczenia, a usunięcie wtyczki usuwa dwie przechowywane przez nią opcje.
+* Deklaruje zgodność z HPOS oraz blokami koszyka/kasy.
 
 == Installation ==
 
-1. Prześlij wtyczkę do `/wp-content/plugins/anchor` lub zainstaluj poprzez Wtyczki → Dodaj nową.
-2. Aktywuj. WooCommerce musi być aktywny.
+1. Wgraj wtyczkę do `/wp-content/plugins/anchor` lub zainstaluj przez Wtyczki → Dodaj nową.
+2. Włącz ją. WooCommerce musi być aktywne.
 3. Przejdź do <strong>WooCommerce → Anchor</strong>, aby włączyć pasek i ustawić próg przewijania.
 
 == Frequently Asked Questions ==
 
 = Does it require WooCommerce? =
 
-Tak. Anchor działa tylko wtedy, gdy WooCommerce jest aktywny.
+Tak. Anchor działa tylko wtedy, gdy WooCommerce jest aktywne.
 
 = Does it work with variable products? =
 
-Tak. Pasek odzwierciedla natywną formę odmian WooCommerce: wybierz opcje na stronie
-stronę oraz cenę paska, dostępność i aktualizację przycisku Kup.
+Tak. Pasek odzwierciedla natywny formularz wariantów WooCommerce: wybierz opcje na stronie, a cena, dostępność i przycisk zakupu na pasku zaktualizują się, aby pasowały.
 
 = Will it slow my product pages down or shift the layout? =
 
-Nie. Arkusz stylów i skrypt ładują się tylko na stronach pojedynczych produktów
-zostaje odroczone, a pasek jest przymocowany do rzutni i ukryty do czasu, aż będzie potrzebny.
-Ponieważ zaczyna się poza obiegiem dokumentu, pokazanie go nie powoduje przesunięcia strony.
+Nie. Arkusz stylów i skrypt ładują się tylko na stronach pojedynczych produktów, skrypt jest odroczony, a pasek jest przypięty do okna przeglądarki i ukryty, dopóki nie jest potrzebny. Ponieważ zaczyna poza układem dokumentu, jego wyświetlenie nie przesuwa strony.
 
 = Can I change when the bar appears? =
 
-Tak. Ustaw próg przewijania w pikselach w obszarze <strong>WooCommerce → Anchor</strong> (0–5000).
+Tak. Ustaw próg przewijania w pikselach w <strong>WooCommerce → Anchor</strong> (0–5000).
 
 = Does it work on simple products? =
 
-Tak. W przypadku prostych produktów pasek pokazuje tytuł, cenę i przycisk „dodaj do koszyka”. W przypadku produktów zmiennych śledzi wybraną odmianę.
+Tak. W przypadku produktów prostych pasek pokazuje tytuł, cenę i przycisk „Dodaj do koszyka”. W przypadku produktów zmiennych śledzi wybrany wariant.
 
 
 = Does this plugin work on WordPress Multisite? =
 
-Tak. Ta wtyczka jest kompatybilna z WordPress Multisite. Aktywuj go w sieci lub aktywuj na poszczególnych stronach; każda witryna przechowuje własne ustawienia i dane.
+Tak. Ta wtyczka jest zgodna z WordPress Multisite. Włącz ją dla całej sieci lub w pojedynczych witrynach; każda witryna zachowuje własne ustawienia i dane.
 
 == Screenshots ==
 
-1. Przyklejony pasek „dodaj do koszyka” na stronie produktu.
+1. Przyklejony pasek „Dodaj do koszyka” na stronie produktu.
 2. Ekran ustawień Anchor w WooCommerce.
 
 == External Services ==
 
-Anchor nie łączy się z żadnymi usługami zewnętrznymi. Nie wysyła żadnych danych z Twojej witryny
-i nie ładuje niczego z zewnętrznego CDN; jego arkusz stylów i skrypt (`assets/css/anchor.css`
-i `assets/js/anchor.js`) są obsługiwane z Twojej własnej instalacji, a skrypt front-end czyta
-tylko mały obiekt `anchorConfig` (próg przewijania), który WordPress drukuje w tekście.
+Anchor nie łączy się z żadną usługą zewnętrzną. Nie wysyła żadnych danych poza Twoją witrynę i nie ładuje niczego z zewnętrznego CDN; jego arkusz stylów i skrypt (`assets/css/anchor.css` i `assets/js/anchor.js`) są serwowane z Twojej własnej instalacji, a skrypt front-endu odczytuje jedynie mały obiekt `anchorConfig` (próg przewijania), który WordPress wypisuje w kodzie strony.
 
-Wszystkie dane Anchora pozostają w Twojej bazie danych: przechowuje dwie automatycznie ładowane opcje,
-`anchor_settings` (próg włączania i przewijania) oraz `anchor_db_version`,
-i nie przechowuje żadnych danych dotyczących poszczególnych produktów. Obie opcje zostaną usunięte po usunięciu wtyczki.
-Anchor nie wysyła żadnych wiadomości e-mail ani nie wysyła własnych żądań HTTP.
+Wszystkie dane Anchor pozostają w Twojej bazie danych: przechowuje dwie opcje z wyłączonym autoloadem, `anchor_settings` (przełącznik włączenia i próg przewijania) oraz `anchor_db_version`, i nie przechowuje żadnych danych dla poszczególnych produktów. Obie opcje są usuwane po usunięciu wtyczki. Anchor nie wysyła e-maili ani nie wykonuje własnych żądań HTTP.
+
+== Translations ==
+
+Plogins Anchor zawiera polskie, niemieckie i hiszpańskie tłumaczenia interfejsu wtyczki. Domena tekstowa to `plogins-anchor`, więc pakiety językowe z WordPress.org mogą również nadpisać lub rozszerzyć te dołączone tłumaczenia.
 
 == Changelog ==
+
+= 1.0.2 =
+* Dodano dołączone polskie, niemieckie i hiszpańskie tłumaczenia interfejsu wtyczki.
 
 = 1.0.1 =
 * Pierwsza stabilna wersja.
 
 = 0.1.3 =
-* Zmieniono nazwę na Plogins Anchor dla WooCommerce, aby uzyskać bardziej charakterystyczną nazwę wtyczki.
+* Zmieniono nazwę na Plogins Anchor dla WooCommerce, aby nazwa wtyczki była bardziej charakterystyczna.
 
 = 0.1.2 =
-* Dodaj akcję `anchor/bar_rendered` i zdarzenie front-end `anchor:bar-visible` dla analityki PRO.
+* Dodano akcję `anchor/bar_rendered` oraz zdarzenie front-endu `anchor:bar-visible` na potrzeby analityki PRO.
 
 = 0.1.1 =
-* Filtr „anchor/bar_visible”, dzięki któremu PRO i kod niestandardowy mogą ukryć pasek dla każdego produktu bez ładowania zasobów.
+* Filtr `anchor/bar_visible`, dzięki któremu wersja PRO i własny kod mogą ukryć pasek dla danego produktu bez ładowania zasobów.
 
 = 0.1.0 =
-* Pierwsza wersja: przyklejony pasek dodawania do koszyka na stronach poszczególnych produktów, widoczny podczas przewijania, z konfigurowalnym progiem przewijania i synchronizacją ceny/dostępności uwzględniającą różnice.
+* Pierwsze wydanie: przyklejony pasek „Dodaj do koszyka” na stronach pojedynczych produktów, odsłaniany podczas przewijania, z konfigurowalnym progiem przewijania i synchronizacją ceny/dostępności uwzględniającą wariant.

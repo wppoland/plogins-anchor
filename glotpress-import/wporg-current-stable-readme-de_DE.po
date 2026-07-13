@@ -12,68 +12,74 @@ msgid "Requires Plugins: woocommerce"
 msgstr "Erfordert Plugins: woocommerce"
 
 msgid "Keeps the add-to-cart button in reach on long WooCommerce product pages with a sticky bar that appears on scroll."
-msgstr "Hält die Schaltfläche „Zum Warenkorb hinzufügen“ auf langen WooCommerce-Produktseiten mit einer Sticky-Leiste, die beim Scrollen erscheint, in Reichweite."
+msgstr "Hält den Button „In den Warenkorb“ auf langen WooCommerce-Produktseiten in Reichweite – mit einer Sticky-Leiste, die beim Scrollen erscheint."
 
 msgid "Anchor adds a slim sticky add-to-cart bar to the bottom of your WooCommerce\nsingle product pages. It stays hidden until the shopper scrolls past the main\nadd-to-cart button, then slides into view showing the product title, price and a\nbuy button, so the add-to-cart control is still reachable on long pages."
-msgstr "Anchor fügt am unteren Rand Ihres WooCommerce eine schlanke, klebrige Leiste zum Hinzufügen zum Warenkorb hinzu\neinzelne Produktseiten. Es bleibt verborgen, bis der Käufer am Hauptbildschirm vorbeiscrollt\nKlicke auf die Schaltfläche „Zum Warenkorb hinzufügen“ und gleite dann in die Ansicht mit dem Produkttitel, dem Preis und a\nKlicke auf die Schaltfläche „Kaufen“, sodass die Steuerung zum Hinzufügen zum Warenkorb auch auf langen Seiten weiterhin erreichbar ist."
+msgstr "Anchor fügt am unteren Rand deiner einzelnen WooCommerce-Produktseiten eine schmale Sticky-Leiste zum Hinzufügen zum Warenkorb hinzu. Sie bleibt verborgen, bis die Kundschaft am Haupt-Button „In den Warenkorb“ vorbeiscrollt, und schiebt sich dann ins Bild – mit Produkttitel, Preis und einem Kaufen-Button, sodass der Button zum Hinzufügen zum Warenkorb auch auf langen Seiten erreichbar bleibt."
 
 msgid "On variable products the bar follows the native variations form. As the shopper\npicks options, the price, stock status and the buy button update to match the\nselected variation. Anchor does not load its own copy of jQuery; it listens to\nthe variation events WooCommerce already fires."
-msgstr "Bei variablen Produkten folgt die Leiste der nativen Variationsform. Als Käufer\nwählt Optionen aus, der Preis, der Lagerstatus und die Schaltfläche „Kaufen“ werden entsprechend aktualisiert\nausgewählte Variante. Anchor lädt keine eigene Kopie von jQuery; es hört zu\nDie Variationsereignisse, die WooCommerce bereits auslöst."
+msgstr "Bei variablen Produkten folgt die Leiste dem nativen Variationen-Formular. Während die Kundschaft Optionen auswählt, aktualisieren sich Preis, Lagerstatus und Kaufen-Button passend zur gewählten Variante. Anchor lädt keine eigene Kopie von jQuery, sondern lauscht auf die Variations-Events, die WooCommerce ohnehin auslöst."
 
 msgid "The bar is positioned with CSS `position: fixed` and starts hidden, so it sits\noutside the document flow and does not push other content around or cause\nlayout shift when it appears."
-msgstr "Die Leiste wird mit CSS „position: Fixed“ positioniert und beginnt versteckt, sodass sie sitzt\naußerhalb des Dokumentenflusses und schiebt keine anderen Inhalte herum oder verursacht\nLayoutverschiebung, wenn es erscheint."
+msgstr "Die Leiste wird per CSS `position: fixed` positioniert und startet ausgeblendet, liegt also außerhalb des Dokumentflusses und schiebt keine anderen Inhalte weg und verursacht beim Erscheinen keine Layout-Verschiebung."
 
 msgid "Anchor is not on the WordPress.org directory yet, so if you want to read the\ncode, report a bug or suggest a change, the repository is at"
-msgstr "Anchor befindet sich noch nicht im WordPress.org-Verzeichnis, wenn du also lesen möchten\nCode eingeben, einen Fehler melden oder eine Änderung vorschlagen, das Repository findest du unter"
+msgstr "Anchor ist noch nicht im WordPress.org-Verzeichnis. Wenn du also den Code lesen, einen Fehler melden oder eine Änderung vorschlagen möchtest, findest du das Repository unter https://github.com/wppoland/plogins-anchor."
 
 msgid "* <strong>Documentation</strong> - https://plogins.com/plogins-anchor/docs/\n* <strong>Plugin page</strong> - https://plogins.com/plogins-anchor/\n* <strong>Source code</strong> - https://github.com/wppoland/plogins-anchor\n* <strong>Bug reports and feature requests</strong> - https://github.com/wppoland/plogins-anchor/issues"
-msgstr "* <strong>Dokumentation</strong> - https://plogins.com/de/plogins-anchor/docs/\n* <strong>Plugin-Seite</strong> - https://plogins.com/de/plogins-anchor/\n* <strong>Quellcode</strong> – https://github.com/wppoland/plogins-anchor\n* <strong>Fehlerberichte und Funktionsanfragen</strong> – https://github.com/wppoland/plogins-anchor/issues"
+msgstr "* <strong>Dokumentation</strong> - https://plogins.com/de/plogins-anchor/docs/\n* <strong>Plugin-Seite</strong> - https://plogins.com/de/plogins-anchor/\n* <strong>Quellcode</strong> - https://github.com/wppoland/plogins-anchor\n* <strong>Fehlerberichte und Funktionswünsche</strong> - https://github.com/wppoland/plogins-anchor/issues"
 
 msgid "* Sticky add-to-cart bar on single product pages, revealed once the shopper scrolls past the main button.\n* Scroll threshold you set in pixels (0 to 5000), so you decide how far down the bar kicks in.\n* Shows the product title, price and a buy button.\n* On variable products the price and stock status track the variation the shopper has selected.\n* Marked up as an ARIA region with a visible focus state and screen-reader label.\n* Honours prefers-reduced-motion and has a dark-mode style.\n* The bar is fixed to the viewport and starts hidden, so it does not cause layout shift.\n* Ships with a POT file for translation, and deleting the plugin removes the two options it stores.\n* Declares HPOS and cart/checkout blocks compatibility."
-msgstr "* Klebrige Add-to-Cart-Leiste auf einzelnen Produktseiten, die angezeigt wird, sobald der Käufer über die Hauptschaltfläche scrollt.\n* Du legst den Scroll-Schwellenwert in Pixeln (0 bis 5000) fest, sodass du entscheiden, wie weit nach unten die Leiste einsetzt.\n* Zeigt den Produkttitel, den Preis und eine Kaufen-Schaltfläche an.\n* Bei variablen Produkten verfolgen Preis und Lagerstatus die vom Käufer ausgewählte Variante.\n* Markiert als ARIA-Region mit sichtbarem Fokusstatus und Screenreader-Beschriftung.\n* Honors bevorzugt reduzierte Bewegung und verfügt über einen Dunkelmodus-Stil.\n* Die Leiste ist am Ansichtsfenster fixiert und beginnt ausgeblendet, sodass es nicht zu einer Layoutverschiebung kommt.\n* Wird mit einer POT-Datei zur Übersetzung geliefert und durch das Löschen des Plugins werden die beiden darin gespeicherten Optionen entfernt.\n* Erklärt die Kompatibilität von HPOS und Warenkorb-/Checkout-Blöcken."
+msgstr "* Sticky-Add-to-Cart-Leiste auf einzelnen Produktseiten, eingeblendet, sobald die Kundschaft am Haupt-Button vorbeiscrollt.\n* Scroll-Schwelle, die du in Pixeln festlegst (0 bis 5000), sodass du entscheidest, wie weit unten die Leiste einsetzt.\n* Zeigt Produkttitel, Preis und einen Kaufen-Button.\n* Bei variablen Produkten folgen Preis und Lagerstatus der von der Kundschaft gewählten Variante.\n* Als ARIA-Region ausgezeichnet, mit sichtbarem Fokus-Status und Screenreader-Beschriftung.\n* Berücksichtigt prefers-reduced-motion und hat einen Dark-Mode-Stil.\n* Die Leiste ist am Viewport fixiert und startet ausgeblendet, sodass sie keine Layout-Verschiebung verursacht.\n* Wird mit einer POT-Datei zur Übersetzung geliefert; beim Löschen des Plugins werden die beiden gespeicherten Optionen entfernt.\n* Deklariert Kompatibilität mit HPOS und den Warenkorb-/Kassen-Blöcken."
 
 msgid "1. Upload the plugin to `/wp-content/plugins/anchor`, or install via Plugins → Add New.\n2. Activate it. WooCommerce must be active.\n3. Go to <strong>WooCommerce → Anchor</strong> to enable the bar and set the scroll threshold."
-msgstr "1. Lade das Plugin nach „/wp-content/plugins/anchor“ hoch oder installiere es über Plugins → Neu hinzufügen.\n2. Aktiviere es. WooCommerce muss aktiv sein.\n3. Gehe zu <strong>WooCommerce → Anchor</strong>, um die Leiste zu aktivieren und den Scroll-Schwellenwert festzulegen."
+msgstr "1. Lade das Plugin nach `/wp-content/plugins/anchor` hoch oder installiere es über Plugins → Installieren.\n2. Aktiviere es. WooCommerce muss aktiv sein.\n3. Gehe zu <strong>WooCommerce → Anchor</strong>, um die Leiste zu aktivieren und die Scroll-Schwelle festzulegen."
 
 msgid "Yes. Anchor only runs when WooCommerce is active."
 msgstr "Ja. Anchor läuft nur, wenn WooCommerce aktiv ist."
 
 msgid "Yes. The bar mirrors WooCommerce's native variations form: pick options on the\npage and the bar's price, availability and buy button update to match."
-msgstr "Ja. Die Leiste spiegelt die native Variationsform von WooCommerce wider: Wähle Optionen auf der aus\nSeite und der Preis, die Verfügbarkeit und die Schaltfläche „Kaufen“ der Bar werden entsprechend aktualisiert."
+msgstr "Ja. Die Leiste spiegelt das native Variationen-Formular von WooCommerce wider: Wähle auf der Seite Optionen aus, und Preis, Verfügbarkeit und Kaufen-Button der Leiste aktualisieren sich passend."
 
 msgid "No. The stylesheet and script load only on single product pages, the script is\ndeferred, and the bar is fixed to the viewport and hidden until it is needed.\nBecause it starts outside the document flow, showing it does not shift the page."
-msgstr "Nein. Das Stylesheet und das Skript werden nur auf einzelnen Produktseiten geladen, das Skript jedoch nicht\nverschoben, und die Leiste wird am Ansichtsfenster fixiert und ausgeblendet, bis sie benötigt wird.\nDa es außerhalb des Dokumentflusses beginnt, wird die Seite durch die Anzeige nicht verschoben."
+msgstr "Nein. Stylesheet und Skript werden nur auf einzelnen Produktseiten geladen, das Skript wird verzögert (deferred), und die Leiste ist am Viewport fixiert und ausgeblendet, bis sie gebraucht wird. Da sie außerhalb des Dokumentflusses startet, verschiebt ihr Erscheinen die Seite nicht."
 
 msgid "Yes. Set the scroll threshold in pixels under <strong>WooCommerce → Anchor</strong> (0–5000)."
-msgstr "Ja. Lege den Scroll-Schwellenwert in Pixeln unter <strong>WooCommerce → Anchor</strong> fest (0–5000)."
+msgstr "Ja. Lege die Scroll-Schwelle in Pixeln unter <strong>WooCommerce → Anchor</strong> fest (0–5000)."
 
 msgid "Yes. On simple products the bar shows the title, price and add-to-cart button. On variable products it tracks the selected variation."
-msgstr "Ja. Bei einfachen Produkten zeigt die Leiste den Titel, den Preis und die Schaltfläche „In den Warenkorb“ an. Bei variablen Produkten wird die ausgewählte Variante verfolgt."
+msgstr "Ja. Bei einfachen Produkten zeigt die Leiste Titel, Preis und den Button „In den Warenkorb“. Bei variablen Produkten folgt sie der gewählten Variante."
 
 msgid "Yes. This plugin is compatible with WordPress Multisite. Network activate it or activate it on individual sites; each site keeps its own settings and data."
-msgstr "Ja. Dieses Plugin ist mit WordPress Multisite kompatibel. Aktiviere es im Netzwerk oder auf einzelnen Websites. Jede Site behält ihre eigenen Einstellungen und Daten."
+msgstr "Ja. Dieses Plugin ist mit WordPress Multisite kompatibel. Aktiviere es netzwerkweit oder auf einzelnen Websites; jede Website behält ihre eigenen Einstellungen und Daten."
 
 msgid "1. The sticky add-to-cart bar on a product page.\n2. The Anchor settings screen under WooCommerce."
-msgstr "1. Die klebrige Add-to-Cart-Leiste auf einer Produktseite.\n2. Der Bildschirm mit den Ankereinstellungen unter WooCommerce."
+msgstr "1. Die Sticky-Add-to-Cart-Leiste auf einer Produktseite.\n2. Der Anchor-Einstellungsbildschirm unter WooCommerce."
 
 msgid "Anchor does not connect to any external services. It sends no data off your site\nand loads nothing from a third-party CDN; its stylesheet and script (`assets/css/anchor.css`\nand `assets/js/anchor.js`) are served from your own install, and the front-end script reads\nonly a small `anchorConfig` object (the scroll threshold) that WordPress prints inline."
-msgstr "Anchor stellt keine Verbindung zu externen Diensten her. Es werden keine Daten von deiner Website gesendet\nund lädt nichts von einem Drittanbieter-CDN; sein Stylesheet und Skript (`assets/css/anchor.css`\nund „assets/js/anchor.js“) werden von deiner eigenen Installation bereitgestellt und das Front-End-Skript liest\nnur ein kleines „anchorConfig“-Objekt (der Scroll-Schwellenwert), das WordPress inline druckt."
+msgstr "Anchor stellt keine Verbindung zu externen Diensten her. Es sendet keine Daten von deiner Website und lädt nichts von einem Drittanbieter-CDN; sein Stylesheet und Skript (`assets/css/anchor.css` und `assets/js/anchor.js`) werden von deiner eigenen Installation ausgeliefert, und das Frontend-Skript liest nur ein kleines `anchorConfig`-Objekt (die Scroll-Schwelle), das WordPress inline ausgibt."
 
 msgid "All of Anchor's data stays in your database: it stores two autoloaded-off options,\n`anchor_settings` (the enable toggle and scroll threshold) and `anchor_db_version`,\nand keeps no per-product data. Both options are removed when you delete the plugin.\nAnchor sends no email and makes no HTTP requests of its own."
-msgstr "Alle Daten von Anchor bleiben in deiner Datenbank: Es werden zwei Optionen zum automatischen Laden gespeichert:\n„anchor_settings“ (der Schwellenwert zum Aktivieren des Umschaltens und Scrollens) und „anchor_db_version“,\nund speichert keine produktbezogenen Daten. Beide Optionen werden entfernt, wenn du das Plugin löschen.\nAnchor sendet keine E-Mails und stellt keine eigenen HTTP-Anfragen."
+msgstr "Alle Daten von Anchor bleiben in deiner Datenbank: Es speichert zwei Optionen mit deaktiviertem Autoload, `anchor_settings` (den Aktivieren-Schalter und die Scroll-Schwelle) und `anchor_db_version`, und behält keine produktbezogenen Daten. Beide Optionen werden entfernt, wenn du das Plugin löschst. Anchor sendet keine E-Mails und stellt keine eigenen HTTP-Anfragen."
+
+msgid "Plogins Anchor includes Polish, German and Spanish translations for the plugin interface. The text domain is `plogins-anchor`, so WordPress.org language packs can also override or extend these bundled translations."
+msgstr "Plogins Anchor enthält polnische, deutsche und spanische Übersetzungen für die Plugin-Oberfläche. Die Textdomain ist `plogins-anchor`, sodass Sprachpakete von WordPress.org diese mitgelieferten Übersetzungen ebenfalls überschreiben oder erweitern können."
+
+msgid "* Added bundled Polish, German and Spanish translations for the plugin interface."
+msgstr "* Mitgelieferte polnische, deutsche und spanische Übersetzungen für die Plugin-Oberfläche hinzugefügt."
 
 msgid "* First stable release."
 msgstr "* Erste stabile Version."
 
 msgid "* Renamed to Plogins Anchor for WooCommerce for a more distinctive plugin name."
-msgstr "* Für einen eindeutigeren Plugin-Namen in Plogins Anchor for WooCommerce umbenannt."
+msgstr "* In Plogins Anchor für WooCommerce umbenannt, für einen eindeutigeren Plugin-Namen."
 
 msgid "* Add `anchor/bar_rendered` action and `anchor:bar-visible` front-end event for PRO analytics."
-msgstr "* Füge die Aktion „anchor/bar_rendered“ und das Front-End-Ereignis „anchor:bar-visible“ für PRO-Analysen hinzu."
+msgstr "* Aktion `anchor/bar_rendered` und Frontend-Event `anchor:bar-visible` für PRO-Analysen hinzugefügt."
 
 msgid "* `anchor/bar_visible` filter so PRO and custom code can hide the bar per product without loading assets."
-msgstr "* „anchor/bar_visible“-Filter, damit PRO- und benutzerdefinierter Code die Leiste pro Produkt ausblenden kann, ohne Assets zu laden."
+msgstr "* Filter `anchor/bar_visible`, damit PRO und eigener Code die Leiste pro Produkt ausblenden können, ohne Assets zu laden."
 
 msgid "* Initial release: a sticky add-to-cart bar on single product pages, revealed on scroll, with a configurable scroll threshold and variation-aware price/availability sync."
-msgstr "* Erstveröffentlichung: eine klebrige Add-to-Cart-Leiste auf einzelnen Produktseiten, die beim Scrollen angezeigt wird, mit einem konfigurierbaren Scroll-Schwellenwert und einer Variations-bezogenen Preis-/Verfügbarkeitssynchronisierung."
+msgstr "* Erstveröffentlichung: eine Sticky-Add-to-Cart-Leiste auf einzelnen Produktseiten, beim Scrollen eingeblendet, mit konfigurierbarer Scroll-Schwelle und variationsbewusster Preis-/Verfügbarkeitssynchronisierung."
 

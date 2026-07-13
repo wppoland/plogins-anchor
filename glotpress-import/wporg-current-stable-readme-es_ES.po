@@ -9,71 +9,77 @@ msgstr ""
 "X-Generator: plogins-i18n\n"
 
 msgid "Requires Plugins: woocommerce"
-msgstr "Requiere complementos: woocommerce"
+msgstr "Requiere plugins: woocommerce"
 
 msgid "Keeps the add-to-cart button in reach on long WooCommerce product pages with a sticky bar that appears on scroll."
-msgstr "Mantiene el botón Añadir al carrito al alcance en páginas largas de productos WooCommerce con una barra adhesiva que aparece al desplazarse."
+msgstr "Mantiene el botón «Añadir al carrito» al alcance en las páginas largas de producto de WooCommerce con una barra fija que aparece al desplazarte."
 
 msgid "Anchor adds a slim sticky add-to-cart bar to the bottom of your WooCommerce\nsingle product pages. It stays hidden until the shopper scrolls past the main\nadd-to-cart button, then slides into view showing the product title, price and a\nbuy button, so the add-to-cart control is still reachable on long pages."
-msgstr "Anchor añade una barra delgada y adhesiva para añadir al carrito en la parte inferior de tu WooCommerce\npáginas de un solo producto. Permanece oculto hasta que el comprador pasa por la página principal.\nbotón Añadir al carrito, luego se desliza a la vista mostrando el título del producto, el precio y un\nbotón de compra, por lo que aún se puede acceder al control de añadir al carrito en páginas largas."
+msgstr "Anchor añade una barra fina y fija para añadir al carrito en la parte inferior de tus páginas de producto individuales de WooCommerce. Permanece oculta hasta que el cliente se desplaza más allá del botón principal de añadir al carrito y, entonces, aparece deslizándose y muestra el título del producto, el precio y un botón de compra, de modo que el control de añadir al carrito sigue estando al alcance en las páginas largas."
 
 msgid "On variable products the bar follows the native variations form. As the shopper\npicks options, the price, stock status and the buy button update to match the\nselected variation. Anchor does not load its own copy of jQuery; it listens to\nthe variation events WooCommerce already fires."
-msgstr "En productos variables, la barra sigue la forma de variaciones nativas. como el comprador\nelige opciones, el precio, el estado de las existencias y el botón de compra se actualizan para que coincidan con el\nvariación seleccionada. Anchor no carga su propia copia de jQuery; escucha\nlos eventos de variación WooCommerce ya se activan."
+msgstr "En los productos variables, la barra sigue el formulario de variaciones nativo. A medida que el cliente elige opciones, el precio, el estado del stock y el botón de compra se actualizan para coincidir con la variación seleccionada. Anchor no carga su propia copia de jQuery: escucha los eventos de variación que WooCommerce ya dispara."
 
 msgid "The bar is positioned with CSS `position: fixed` and starts hidden, so it sits\noutside the document flow and does not push other content around or cause\nlayout shift when it appears."
-msgstr "La barra se posiciona con CSS `posición: fija` y comienza oculta, por lo que se ubica\nfuera del flujo de documentos y no empuja otros contenidos ni causa\nel diseño cambia cuando aparece."
+msgstr "La barra se posiciona con CSS `position: fixed` y empieza oculta, así que queda fuera del flujo del documento y no desplaza el resto del contenido ni provoca saltos de diseño cuando aparece."
 
 msgid "Anchor is not on the WordPress.org directory yet, so if you want to read the\ncode, report a bug or suggest a change, the repository is at"
-msgstr "Anchor aún no está en el directorio de WordPress.org, por lo que si desea leer el\ncódigo, informar un error o sugerir un cambio, el repositorio está en"
+msgstr "Anchor todavía no está en el directorio de WordPress.org, así que si quieres leer el código, informar de un error o proponer un cambio, el repositorio está en https://github.com/wppoland/plogins-anchor."
 
 msgid "* <strong>Documentation</strong> - https://plogins.com/plogins-anchor/docs/\n* <strong>Plugin page</strong> - https://plogins.com/plogins-anchor/\n* <strong>Source code</strong> - https://github.com/wppoland/plogins-anchor\n* <strong>Bug reports and feature requests</strong> - https://github.com/wppoland/plogins-anchor/issues"
-msgstr "* <strong>Documentación</strong> - https://plogins.com/es/plogins-anchor/docs/\n* <strong>Página de complementos</strong> - https://plogins.com/es/plogins-anchor/\n* <strong>Código fuente</strong> - https://github.com/wppoland/plogins-anchor\n* <strong>Informes de errores y solicitudes de funciones</strong> - https://github.com/wppoland/plogins-anchor/issues"
+msgstr "* <strong>Documentación</strong> - https://plogins.com/es/plogins-anchor/docs/\n* <strong>Página del plugin</strong> - https://plogins.com/es/plogins-anchor/\n* <strong>Código fuente</strong> - https://github.com/wppoland/plogins-anchor\n* <strong>Informes de errores y peticiones de funciones</strong> - https://github.com/wppoland/plogins-anchor/issues"
 
 msgid "* Sticky add-to-cart bar on single product pages, revealed once the shopper scrolls past the main button.\n* Scroll threshold you set in pixels (0 to 5000), so you decide how far down the bar kicks in.\n* Shows the product title, price and a buy button.\n* On variable products the price and stock status track the variation the shopper has selected.\n* Marked up as an ARIA region with a visible focus state and screen-reader label.\n* Honours prefers-reduced-motion and has a dark-mode style.\n* The bar is fixed to the viewport and starts hidden, so it does not cause layout shift.\n* Ships with a POT file for translation, and deleting the plugin removes the two options it stores.\n* Declares HPOS and cart/checkout blocks compatibility."
-msgstr "* Barra adhesiva para añadir al carrito en páginas de productos individuales, que se revela una vez que el comprador pasa por el botón principal.\n* Umbral de desplazamiento que estableces en píxeles (0 a 5000), para que decidas hasta dónde llega la barra.\n* Muestra el título del producto, el precio y un botón de compra.\n* En productos variables, el precio y el estado del stock rastrean la variación que el comprador ha seleccionado.\n* Marcado como región ARIA con un estado de enfoque visible y una etiqueta de lector de pantalla.\n* Honors prefiere el movimiento reducido y tiene un estilo de modo oscuro.\n* La barra está fijada a la ventana gráfica y comienza oculta, por lo que no provoca cambios en el diseño.\n* Se envía con un archivo POT para traducir y al eliminar el complemento se eliminan las dos opciones que almacena.\n* Declara compatibilidad con HPOS y bloques de carrito/pago."
+msgstr "* Barra fija para añadir al carrito en las páginas de producto individuales, que se muestra en cuanto el cliente se desplaza más allá del botón principal.\n* Umbral de desplazamiento que defines en píxeles (de 0 a 5000), para que decidas a qué altura aparece la barra.\n* Muestra el título del producto, el precio y un botón de compra.\n* En los productos variables, el precio y el estado del stock siguen la variación que ha seleccionado el cliente.\n* Marcada como región ARIA, con un estado de foco visible y una etiqueta para lectores de pantalla.\n* Respeta prefers-reduced-motion y tiene un estilo para modo oscuro.\n* La barra está fijada a la ventana del navegador y empieza oculta, así que no provoca saltos de diseño.\n* Se entrega con un archivo POT para traducir, y al borrar el plugin se eliminan las dos opciones que guarda.\n* Declara compatibilidad con HPOS y con los bloques de carrito/pago."
 
 msgid "1. Upload the plugin to `/wp-content/plugins/anchor`, or install via Plugins → Add New.\n2. Activate it. WooCommerce must be active.\n3. Go to <strong>WooCommerce → Anchor</strong> to enable the bar and set the scroll threshold."
-msgstr "1. Cargue el complemento en `/wp-content/plugins/anchor`, o instálelo a través de Complementos → Añadir nuevo.\n2. Actívalo. WooCommerce debe estar activo.\n3. Vaya a <strong>WooCommerce → Anchor</strong> para habilitar la barra y establecer el umbral de desplazamiento."
+msgstr "1. Sube el plugin a `/wp-content/plugins/anchor` o instálalo desde Plugins → Añadir nuevo.\n2. Actívalo. WooCommerce debe estar activo.\n3. Ve a <strong>WooCommerce → Anchor</strong> para activar la barra y definir el umbral de desplazamiento."
 
 msgid "Yes. Anchor only runs when WooCommerce is active."
-msgstr "Sí. Anchor solo se ejecuta cuando WooCommerce está activo."
+msgstr "Sí. Anchor solo funciona cuando WooCommerce está activo."
 
 msgid "Yes. The bar mirrors WooCommerce's native variations form: pick options on the\npage and the bar's price, availability and buy button update to match."
-msgstr "Sí. La barra refleja la forma de variaciones nativas de WooCommerce: elija opciones en la\nLa página y el precio de la barra, la disponibilidad y el botón de compra se actualizan para coincidir."
+msgstr "Sí. La barra refleja el formulario de variaciones nativo de WooCommerce: elige las opciones en la página y el precio, la disponibilidad y el botón de compra de la barra se actualizan para coincidir."
 
 msgid "No. The stylesheet and script load only on single product pages, the script is\ndeferred, and the bar is fixed to the viewport and hidden until it is needed.\nBecause it starts outside the document flow, showing it does not shift the page."
-msgstr "No. La hoja de estilo y el script se cargan solo en páginas de un solo producto, el script es\nse difiere, y la barra se fija a la ventana gráfica y se oculta hasta que sea necesaria.\nDebido a que comienza fuera del flujo del documento, mostrarlo no cambia la página."
+msgstr "No. La hoja de estilos y el script se cargan solo en las páginas de producto individuales, el script se difiere y la barra está fijada a la ventana del navegador y oculta hasta que hace falta. Como empieza fuera del flujo del documento, mostrarla no desplaza la página."
 
 msgid "Yes. Set the scroll threshold in pixels under <strong>WooCommerce → Anchor</strong> (0–5000)."
-msgstr "Sí. Establezca el umbral de desplazamiento en píxeles en <strong>WooCommerce → Anchor</strong> (0–5000)."
+msgstr "Sí. Define el umbral de desplazamiento en píxeles en <strong>WooCommerce → Anchor</strong> (0–5000)."
 
 msgid "Yes. On simple products the bar shows the title, price and add-to-cart button. On variable products it tracks the selected variation."
-msgstr "Sí. En productos simples, la barra muestra el título, el precio y el botón de añadir al carrito. En productos variables, rastrea la variación seleccionada."
+msgstr "Sí. En los productos simples, la barra muestra el título, el precio y el botón de añadir al carrito. En los productos variables, sigue la variación seleccionada."
 
 msgid "Yes. This plugin is compatible with WordPress Multisite. Network activate it or activate it on individual sites; each site keeps its own settings and data."
-msgstr "Sí. Este complemento es compatible con WordPress Multisite. Activarlo en red o activarlo en sitios individuales; Cada sitio mantiene su propia configuración y datos."
+msgstr "Sí. Este plugin es compatible con WordPress Multisite. Actívalo en red o en sitios concretos; cada sitio conserva sus propios ajustes y datos."
 
 msgid "1. The sticky add-to-cart bar on a product page.\n2. The Anchor settings screen under WooCommerce."
-msgstr "1. La barra adhesiva para añadir al carrito en la página de un producto.\n2. La pantalla de configuración de Anchor en WooCommerce."
+msgstr "1. La barra fija para añadir al carrito en la página de un producto.\n2. La pantalla de ajustes de Anchor en WooCommerce."
 
 msgid "Anchor does not connect to any external services. It sends no data off your site\nand loads nothing from a third-party CDN; its stylesheet and script (`assets/css/anchor.css`\nand `assets/js/anchor.js`) are served from your own install, and the front-end script reads\nonly a small `anchorConfig` object (the scroll threshold) that WordPress prints inline."
-msgstr "Anchor no se conecta a ningún servicio externo. No envía datos fuera de tu sitio.\ny no carga nada desde una CDN de terceros; su hoja de estilo y script (`assets/css/anchor.css`\ny `assets/js/anchor.js`) se entregan desde su propia instalación y el script de front-end dice\nsolo un pequeño objeto `anchorConfig` (el umbral de desplazamiento) que WordPress imprime en línea."
+msgstr "Anchor no se conecta a ningún servicio externo. No envía datos fuera de tu sitio y no carga nada desde una CDN de terceros; su hoja de estilos y su script (`assets/css/anchor.css` y `assets/js/anchor.js`) se sirven desde tu propia instalación, y el script del frontend solo lee un pequeño objeto `anchorConfig` (el umbral de desplazamiento) que WordPress imprime en línea."
 
 msgid "All of Anchor's data stays in your database: it stores two autoloaded-off options,\n`anchor_settings` (the enable toggle and scroll threshold) and `anchor_db_version`,\nand keeps no per-product data. Both options are removed when you delete the plugin.\nAnchor sends no email and makes no HTTP requests of its own."
-msgstr "Todos los datos de Anchor permanecen en tu base de datos: almacena dos opciones de carga automática,\n`anchor_settings` (el umbral de activación y desplazamiento) y `anchor_db_version`,\ny no guarda datos por producto. Ambas opciones se eliminan cuando eliminas el complemento.\nAnchor no envía ningún correo electrónico ni realiza ninguna solicitud HTTP propia."
+msgstr "Todos los datos de Anchor permanecen en tu base de datos: guarda dos opciones sin autocarga, `anchor_settings` (el interruptor de activación y el umbral de desplazamiento) y `anchor_db_version`, y no guarda datos por producto. Ambas opciones se eliminan cuando borras el plugin. Anchor no envía ningún correo electrónico ni realiza peticiones HTTP propias."
+
+msgid "Plogins Anchor includes Polish, German and Spanish translations for the plugin interface. The text domain is `plogins-anchor`, so WordPress.org language packs can also override or extend these bundled translations."
+msgstr "Plogins Anchor incluye traducciones al polaco, al alemán y al español para la interfaz del plugin. El dominio de texto es `plogins-anchor`, así que los paquetes de idioma de WordPress.org también pueden sustituir o ampliar estas traducciones incluidas."
+
+msgid "* Added bundled Polish, German and Spanish translations for the plugin interface."
+msgstr "* Añadidas traducciones incluidas al polaco, al alemán y al español para la interfaz del plugin."
 
 msgid "* First stable release."
 msgstr "* Primera versión estable."
 
 msgid "* Renamed to Plogins Anchor for WooCommerce for a more distinctive plugin name."
-msgstr "* Renombrado a Plogins Anchor para WooCommerce para obtener un nombre de complemento más distintivo."
+msgstr "* Renombrado a Plogins Anchor para WooCommerce, para un nombre de plugin más distintivo."
 
 msgid "* Add `anchor/bar_rendered` action and `anchor:bar-visible` front-end event for PRO analytics."
-msgstr "* Añade la acción `anchor/bar_rendered` y el evento frontal `anchor:bar-visible` para análisis PRO."
+msgstr "* Añadida la acción `anchor/bar_rendered` y el evento de frontend `anchor:bar-visible` para la analítica PRO."
 
 msgid "* `anchor/bar_visible` filter so PRO and custom code can hide the bar per product without loading assets."
-msgstr "* Filtro `anchor/bar_visible` para que PRO y el código personalizado puedan ocultar la barra por producto sin cargar activos."
+msgstr "* Filtro `anchor/bar_visible` para que PRO y el código personalizado puedan ocultar la barra por producto sin cargar recursos."
 
 msgid "* Initial release: a sticky add-to-cart bar on single product pages, revealed on scroll, with a configurable scroll threshold and variation-aware price/availability sync."
-msgstr "* Lanzamiento inicial: una barra adhesiva para añadir al carrito en páginas de productos individuales, que se revela al desplazarse, con un umbral de desplazamiento configurable y sincronización de precio/disponibilidad según las variaciones."
+msgstr "* Lanzamiento inicial: una barra fija para añadir al carrito en las páginas de producto individuales, que se muestra al desplazarse, con un umbral de desplazamiento configurable y sincronización de precio/disponibilidad según la variación."
 

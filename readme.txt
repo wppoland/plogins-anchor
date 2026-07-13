@@ -1,4 +1,4 @@
-=== Plogins Anchor - Sticky Add to Cart for WooCommerce ===
+=== Anchor - Sticky Add to Cart for WooCommerce ===
 Contributors: motylanogha
 Tags: woocommerce, add to cart, sticky, conversion, product page
 Requires at least: 6.5
