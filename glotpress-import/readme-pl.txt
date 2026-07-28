@@ -15,7 +15,7 @@ Utrzymuje przycisk „Dodaj do koszyka” w zasięgu na długich stronach produk
 
 Anchor dodaje smukły, przyklejony pasek „Dodaj do koszyka” na dole stron pojedynczych produktów WooCommerce. Pozostaje ukryty, dopóki kupujący nie przewinie poza główny przycisk „Dodaj do koszyka”, a następnie wsuwa się do widoku, pokazując tytuł produktu, cenę i przycisk zakupu, dzięki czemu element dodawania do koszyka jest wciąż w zasięgu na długich stronach.
 
-W przypadku produktów zmiennych pasek podąża za natywnym formularzem wariantów WooCommerce. Gdy kupujący wybiera opcje, cena, stan magazynowy i przycisk zakupu aktualizują się, aby odpowiadały wybranemu wariantowi. Anchor nie ładuje własnej kopii jQuery — nasłuchuje zdarzeń wariantów, które WooCommerce już wywołuje.
+W przypadku produktów zmiennych pasek podąża za natywnym formularzem wariantów WooCommerce. Gdy kupujący wybiera opcje, cena, stan magazynowy i przycisk zakupu aktualizują się, aby odpowiadały wybranemu wariantowi. Anchor nie ładuje własnej kopii jQuery, nasłuchuje zdarzeń wariantów, które WooCommerce już wywołuje.
 
 Pasek jest pozycjonowany za pomocą CSS `position: fixed` i początkowo jest ukryty, więc znajduje się poza normalnym układem dokumentu i nie przesuwa innych treści ani nie powoduje przeskoku układu, gdy się pojawia.
 
@@ -63,7 +63,7 @@ Nie. Arkusz stylów i skrypt ładują się tylko na stronach pojedynczych produk
 
 = Can I change when the bar appears? =
 
-Tak. Ustaw próg przewijania w pikselach w <strong>WooCommerce → Anchor</strong> (0–5000).
+Tak. Ustaw próg przewijania w pikselach w <strong>WooCommerce → Anchor</strong> (0-5000).
 
 = Does it work on simple products? =
 

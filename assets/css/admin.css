@@ -1,5 +1,5 @@
 /**
- * Anchor — admin settings screen styles. Native WordPress card layout with a
+ * Anchor, admin settings screen styles. Native WordPress card layout with a
  * restrained brass section accent that echoes the storefront bar (family
  * consistency), and a dark-mode-aware palette that follows the OS preference.
  *
@@ -8,7 +8,7 @@
  *   Light wrap (#f0f0f1):accent #8a6a31 = 4.40:1  (UI 3:1 pass)
  *   Dark card (#1e1e1e): accent #c89b53 = 6.56:1  (text AA 4.5:1 + UI 3:1 pass)
  * The storefront's mid brass (#c89b53) is only ~2.5:1 on white, so light mode
- * uses the deeper brass to stay above AA — never eyeballed.
+ * uses the deeper brass to stay above AA, never eyeballed.
  */
 
 .anchor-admin {
@@ -68,7 +68,7 @@
 }
 
 /* ------------------------------------------------------------------ *
- * PRO upsell — dismissible banner, sidebar promo, "what PRO adds"
+ * PRO upsell, dismissible banner, sidebar promo, "what PRO adds"
  * locked cards. Pure advertising (no disabled inputs), scoped to
  * .anchor-admin. Reuses the brass accent for family consistency.
  * ------------------------------------------------------------------ */

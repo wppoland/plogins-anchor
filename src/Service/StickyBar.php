@@ -15,7 +15,7 @@ defined('ABSPATH') || exit;
  * shopper scrolls past the main add-to-cart form (the front-end script reveals
  * it via an IntersectionObserver). On variable products the script listens to
  * WooCommerce's native variation events to keep the price, availability and the
- * resolved variation id in sync — Anchor ships no jQuery of its own.
+ * resolved variation id in sync, Anchor ships no jQuery of its own.
  *
  * All output is escaped; the service is inert unless enabled and on a product
  * page, and it degrades gracefully (it simply renders nothing) when product data

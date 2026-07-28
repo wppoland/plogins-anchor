@@ -63,7 +63,7 @@ No. La hoja de estilos y el script se cargan solo en las páginas de producto in
 
 = Can I change when the bar appears? =
 
-Sí. Define el umbral de desplazamiento en píxeles en <strong>WooCommerce → Anchor</strong> (0–5000).
+Sí. Define el umbral de desplazamiento en píxeles en <strong>WooCommerce → Anchor</strong> (0-5000).
 
 = Does it work on simple products? =
 

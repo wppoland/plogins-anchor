@@ -49,7 +49,7 @@ msgid ""
 "Anchor - Sticky Add to Cart Bar for WooCommerce requires WooCommerce to be "
 "active."
 msgstr ""
-"Anchor – Sticky Add to Cart Bar für WooCommerce erfordert, dass WooCommerce "
+"Anchor, Sticky Add to Cart Bar für WooCommerce erfordert, dass WooCommerce "
 "aktiv ist."
 
 #: src/Admin/Settings.php:53
@@ -102,10 +102,10 @@ msgstr "Scrollschwelle (px)"
 #, php-format
 msgid ""
 "How far past the main add-to-cart form the shopper must scroll before the "
-"bar appears (%1$d–%2$d). 300 is a good default."
+"bar appears (%1$d, %2$d). 300 is a good default."
 msgstr ""
 "Wie weit der Käufer über das Hauptformular zum Hinzufügen in den Warenkorb "
-"hinaus scrollen muss, bevor die Leiste erscheint (%1$d–%2$d). 300 ist ein "
+"hinaus scrollen muss, bevor die Leiste erscheint (%1$d, %2$d). 300 ist ein "
 "guter Standardwert."
 
 #. translators: %s: the configured threshold in pixels, e.g. "300 px".

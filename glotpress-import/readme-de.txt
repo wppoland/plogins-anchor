@@ -9,11 +9,11 @@ Stable tag: 1.0.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Hält den Button „In den Warenkorb“ auf langen WooCommerce-Produktseiten in Reichweite – mit einer Sticky-Leiste, die beim Scrollen erscheint.
+Hält den Button „In den Warenkorb“ auf langen WooCommerce-Produktseiten in Reichweite, mit einer Sticky-Leiste, die beim Scrollen erscheint.
 
 == Description ==
 
-Anchor fügt am unteren Rand deiner einzelnen WooCommerce-Produktseiten eine schmale Sticky-Leiste zum Hinzufügen zum Warenkorb hinzu. Sie bleibt verborgen, bis die Kundschaft am Haupt-Button „In den Warenkorb“ vorbeiscrollt, und schiebt sich dann ins Bild – mit Produkttitel, Preis und einem Kaufen-Button, sodass der Button zum Hinzufügen zum Warenkorb auch auf langen Seiten erreichbar bleibt.
+Anchor fügt am unteren Rand deiner einzelnen WooCommerce-Produktseiten eine schmale Sticky-Leiste zum Hinzufügen zum Warenkorb hinzu. Sie bleibt verborgen, bis die Kundschaft am Haupt-Button „In den Warenkorb“ vorbeiscrollt, und schiebt sich dann ins Bild, mit Produkttitel, Preis und einem Kaufen-Button, sodass der Button zum Hinzufügen zum Warenkorb auch auf langen Seiten erreichbar bleibt.
 
 Bei variablen Produkten folgt die Leiste dem nativen Variationen-Formular. Während die Kundschaft Optionen auswählt, aktualisieren sich Preis, Lagerstatus und Kaufen-Button passend zur gewählten Variante. Anchor lädt keine eigene Kopie von jQuery, sondern lauscht auf die Variations-Events, die WooCommerce ohnehin auslöst.
 
@@ -63,7 +63,7 @@ Nein. Stylesheet und Skript werden nur auf einzelnen Produktseiten geladen, das 
 
 = Can I change when the bar appears? =
 
-Ja. Lege die Scroll-Schwelle in Pixeln unter <strong>WooCommerce → Anchor</strong> fest (0–5000).
+Ja. Lege die Scroll-Schwelle in Pixeln unter <strong>WooCommerce → Anchor</strong> fest (0-5000).
 
 = Does it work on simple products? =
 

@@ -5,7 +5,7 @@ Requires at least: 6.5
 Tested up to: 7.0
 Requires PHP: 8.1
 Requires Plugins: woocommerce
-Stable tag: 1.0.4
+Stable tag: 1.0.5
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -76,7 +76,7 @@ Because it starts outside the document flow, showing it does not shift the page.
 
 = Can I change when the bar appears? =
 
-Yes. Set the scroll threshold in pixels under **WooCommerce → Anchor** (0–5000).
+Yes. Set the scroll threshold in pixels under **WooCommerce → Anchor** (0-5000).
 
 = Does it work on simple products? =
 

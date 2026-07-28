@@ -126,10 +126,10 @@ msgstr ""
 
 msgid ""
 "Yes. Set the scroll threshold in pixels under <strong>WooCommerce → "
-"Anchor</strong> (0–5000)."
+"Anchor</strong> (0-5000)."
 msgstr ""
 "Sí. Define el umbral de desplazamiento en píxeles en <strong>WooCommerce → "
-"Anchor</strong> (0–5000)."
+"Anchor</strong> (0-5000)."
 
 msgid ""
 "Yes. On simple products the bar shows the title, price and add-to-cart "
