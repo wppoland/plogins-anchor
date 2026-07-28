@@ -1,5 +1,5 @@
 /**
- * Anchor — sticky add-to-cart bar (front-end).
+ * Anchor, sticky add-to-cart bar (front-end).
  *
  * Responsibilities:
  *  1. Reveal the bar once the shopper scrolls past the native add-to-cart form,

@@ -1,5 +1,5 @@
 /**
- * Anchor — sticky add-to-cart bar (front-end styles).
+ * Anchor, sticky add-to-cart bar (front-end styles).
  *
  * The bar is position:fixed and starts hidden, so it never occupies document
  * flow and causes zero Cumulative Layout Shift. Colours and spacing are exposed
@@ -8,8 +8,8 @@
  *
  * The bar's world is nautical: it is the anchor that keeps the buy button within
  * reach. So the surface is a deep harbour navy, the accent is weathered ship's
- * brass, and the one earned moment — the bar arriving as you scroll past the main
- * button — reads as an anchor catching hold: the bar settles into the foot of the
+ * brass, and the one earned moment, the bar arriving as you scroll past the main
+ * button, reads as an anchor catching hold: the bar settles into the foot of the
  * screen and a taut brass mooring line draws across its top edge, left to right.
  */
 
@@ -19,7 +19,7 @@
 	--anchor-fg: var( --wp--preset--color--base, #f3f6f8 );
 	--anchor-muted: #9fb3c0;
 
-	/* Weathered ship's brass — the plugin's signature accent (not default blue). */
+	/* Weathered ship's brass, the plugin's signature accent (not default blue). */
 	--anchor-brass: #c89b53;
 	--anchor-brass-bright: #e8c987;
 	--anchor-brass-deep: #8a6a31;
@@ -57,7 +57,7 @@
 
 /*
  * The mooring line. A thin brass rule pinned to the top edge of the bar. It sits
- * scaled to nothing until the bar catches, then draws taut from left to right —
+ * scaled to nothing until the bar catches, then draws taut from left to right, 
  * the rope pulling tight as the anchor sets. Presentation only; ::before never
  * affects layout (the bar's own border-top reserves the visual space).
  */
@@ -167,7 +167,7 @@
 }
 
 /*
- * The buy button reads as a brass shackle — the fitting the anchor line clips
+ * The buy button reads as a brass shackle, the fitting the anchor line clips
  * into. Solid weathered brass with a faceted top highlight; dark ink for contrast.
  */
 .anchor-bar__button {

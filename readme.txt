@@ -1,11 +1,11 @@
-=== Plogins Anchor - Sticky Add to Cart for WooCommerce ===
+=== Anchor - Sticky Add to Cart for WooCommerce ===
 Contributors: motylanogha
 Tags: woocommerce, add to cart, sticky, conversion, product page
 Requires at least: 6.5
 Tested up to: 7.0
 Requires PHP: 8.1
 Requires Plugins: woocommerce
-Stable tag: 0.1.3
+Stable tag: 1.0.5
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -76,7 +76,7 @@ Because it starts outside the document flow, showing it does not shift the page.
 
 = Can I change when the bar appears? =
 
-Yes. Set the scroll threshold in pixels under **WooCommerce → Anchor** (0–5000).
+Yes. Set the scroll threshold in pixels under **WooCommerce → Anchor** (0-5000).
 
 = Does it work on simple products? =
 
@@ -104,7 +104,23 @@ All of Anchor's data stays in your database: it stores two autoloaded-off option
 and keeps no per-product data. Both options are removed when you delete the plugin.
 Anchor sends no email and makes no HTTP requests of its own.
 
+== Translations ==
+
+Plogins Anchor includes Polish, German and Spanish translations for the plugin interface. The text domain is `plogins-anchor`, so WordPress.org language packs can also override or extend these bundled translations.
+
 == Changelog ==
+
+= 1.0.4 =
+* Translations: completed Polish, German and Spanish for the PRO upgrade panel.
+
+= 1.0.3 =
+* Fixed low-contrast admin headings under an OS dark-mode preference.
+
+= 1.0.2 =
+* Added bundled Polish, German and Spanish translations for the plugin interface.
+
+= 1.0.1 =
+* First stable release.
 
 = 0.1.3 =
 * Renamed to Plogins Anchor for WooCommerce for a more distinctive plugin name.

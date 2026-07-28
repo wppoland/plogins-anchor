@@ -149,7 +149,7 @@ final class Settings implements HasHooks
                                         <?php
                                         printf(
                                             /* translators: 1: minimum px, 2: maximum px. */
-                                            esc_html__('How far past the main add-to-cart form the shopper must scroll before the bar appears (%1$d–%2$d). 300 is a good default.', 'plogins-anchor'),
+                                            esc_html__('How far past the main add-to-cart form the shopper must scroll before the bar appears (%1$d, %2$d). 300 is a good default.', 'plogins-anchor'),
                                             (int) self::MIN_THRESHOLD,
                                             (int) self::MAX_THRESHOLD,
                                         );
