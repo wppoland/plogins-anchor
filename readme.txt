@@ -29,14 +29,14 @@ layout shift when it appears.
 
 Anchor is not on the WordPress.org directory yet, so if you want to read the
 code, report a bug or suggest a change, the repository is at
-https://github.com/wppoland/plogins-anchor.
+[github.com/wppoland/plogins-anchor](https://github.com/wppoland/plogins-anchor).
 
 = Documentation and links =
 
-* **Documentation** - https://plogins.com/plogins-anchor/docs/
-* **Plugin page** - https://plogins.com/plogins-anchor/
-* **Source code** - https://github.com/wppoland/plogins-anchor
-* **Bug reports and feature requests** - https://github.com/wppoland/plogins-anchor/issues
+* **Documentation**: [plogins.com/plogins-anchor/docs/](https://plogins.com/plogins-anchor/docs/)
+* **Plugin page**: [plogins.com/plogins-anchor/](https://plogins.com/plogins-anchor/)
+* **Source code**: [github.com/wppoland/plogins-anchor](https://github.com/wppoland/plogins-anchor)
+* **Bug reports and feature requests**: [github.com/wppoland/plogins-anchor/issues](https://github.com/wppoland/plogins-anchor/issues)
 
 
 = Features =
