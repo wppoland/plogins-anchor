@@ -15,7 +15,6 @@ return [
     'sellable'   => true,
     'price_from' => 19,
     'currency'   => 'EUR',
-    'price_pln'  => 85,
     'lead'       => [
         'en' => 'Custom bar button colour, label, placement rules, campaign scheduling and conversion analytics ship today.',
         'pl' => 'Własny kolor i etykieta przycisku, reguły widoczności, harmonogram kampanii i analityka konwersji są już dostępne.',
