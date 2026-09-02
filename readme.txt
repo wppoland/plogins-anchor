@@ -19,8 +19,8 @@ add-to-cart button, then slides into view showing the product title, price and a
 buy button, so the add-to-cart control is still reachable on long pages.
 
 On variable products the bar follows the native variations form. As the shopper
-picks options, the price, stock status and the buy button update to match the
-selected variation. Anchor does not load its own copy of jQuery; it listens to
+picks options, the price and the buy button update to match the selected variation, and the button
+disables itself when the chosen variation is out of stock. Anchor does not load its own copy of jQuery; it listens to
 the variation events WooCommerce already fires.
 
 The bar is positioned with CSS `position: fixed` and starts hidden, so it sits
@@ -44,7 +44,7 @@ code, report a bug or suggest a change, the repository is at
 * Sticky add-to-cart bar on single product pages, revealed once the shopper scrolls past the main button.
 * Scroll threshold you set in pixels (0 to 5000), so you decide how far down the bar kicks in.
 * Shows the product title, price and a buy button.
-* On variable products the price and stock status track the variation the shopper has selected.
+* On variable products the price tracks the variation the shopper has selected, and the button disables itself if that variation is out of stock.
 * Marked up as an ARIA region with a visible focus state and screen-reader label.
 * Honours prefers-reduced-motion and has a dark-mode style.
 * The bar is fixed to the viewport and starts hidden, so it does not cause layout shift.
@@ -66,7 +66,8 @@ Yes. Anchor only runs when WooCommerce is active.
 = Does it work with variable products? =
 
 Yes. The bar mirrors WooCommerce's native variations form: pick options on the
-page and the bar's price, availability and buy button update to match.
+page and the bar's price and buy button update to match; the button disables itself
+if the selected variation is out of stock.
 
 = Will it slow my product pages down or shift the layout? =
 
