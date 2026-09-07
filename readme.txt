@@ -1,11 +1,11 @@
-=== Anchor - Sticky Add to Cart for WooCommerce ===
+=== Plogins Anchor - Sticky Add to Cart for WooCommerce ===
 Contributors: motylanogha
 Tags: woocommerce, add to cart, sticky, conversion, product page
 Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 8.1
 Requires Plugins: woocommerce
-Stable tag: 1.0.8
+Stable tag: 1.0.9
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -110,6 +110,9 @@ Anchor sends no email and makes no HTTP requests of its own.
 Plogins Anchor is fully translatable and ships the `plogins-anchor.pot` template. Translations are delivered by WordPress.org language packs from translate.wordpress.org, which is where Polish, German and Spanish are being contributed; the package itself carries no compiled translation files.
 
 == Changelog ==
+
+= 1.0.9 =
+* Renamed to Plogins Anchor - Sticky Add to Cart for WooCommerce so the name leads with the brand rather than a generic word, which is what the WordPress.org plugin review team asks for. The plugin slug is unchanged.
 
 = 1.0.8 =
 * Tested against WordPress 7.1. Verified by activating this build on a clean 7.1 install with WooCommerce 11.1, not by editing the header.
