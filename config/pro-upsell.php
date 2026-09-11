@@ -21,20 +21,20 @@ return [
     ],
     'features'   => [
         [
-            'en' => ['title' => 'Custom bar button colour and label', 'desc' => 'Override the sticky bar buy-button text and colour on WooCommerce → Anchor.'],
-            'pl' => ['title' => 'Własny kolor i etykieta przycisku', 'desc' => 'Nadpisz tekst i kolor przycisku zakupu na przyklejonym pasku w WooCommerce → Anchor.'],
+            'en' => ['title' => 'Custom bar button colour and label', 'desc' => 'Override the sticky bar buy-button text and colour on WooCommerce > Anchor.'],
+            'pl' => ['title' => 'Własny kolor i etykieta przycisku', 'desc' => 'Nadpisz tekst i kolor przycisku zakupu na przyklejonym pasku w WooCommerce > Anchor.'],
         ],
         [
             'en' => ['title' => 'Placement rules', 'desc' => 'Show or hide the sticky bar on selected products and categories, include-only or exclude modes.'],
             'pl' => ['title' => 'Reguły widoczności', 'desc' => 'Pokaż lub ukryj pasek na wybranych produktach i kategoriach, tryb tylko wybrane lub wyklucz wybrane.'],
         ],
         [
-            'en' => ['title' => 'Campaign scheduling', 'desc' => 'Reveal the sticky bar only during a start/end promotional window on WooCommerce → Anchor.'],
-            'pl' => ['title' => 'Harmonogram kampanii', 'desc' => 'Pokaż pasek tylko w oknie start/koniec promocji na WooCommerce → Anchor.'],
+            'en' => ['title' => 'Campaign scheduling', 'desc' => 'Reveal the sticky bar only during a start/end promotional window on WooCommerce > Anchor.'],
+            'pl' => ['title' => 'Harmonogram kampanii', 'desc' => 'Pokaż pasek tylko w oknie start/koniec promocji na WooCommerce > Anchor.'],
         ],
         [
-            'en' => ['title' => 'Conversion analytics', 'desc' => 'Track bar views, button taps and add-to-cart counts per product on WooCommerce → Anchor Analytics.'],
-            'pl' => ['title' => 'Analityka konwersji', 'desc' => 'Zliczaj wyświetlenia paska, kliknięcia przycisku i dodania do koszyka per produkt na WooCommerce → Anchor Analytics.'],
+            'en' => ['title' => 'Conversion analytics', 'desc' => 'Track bar views, button taps and add-to-cart counts per product on WooCommerce > Anchor Analytics.'],
+            'pl' => ['title' => 'Analityka konwersji', 'desc' => 'Zliczaj wyświetlenia paska, kliknięcia przycisku i dodania do koszyka per produkt na WooCommerce > Anchor Analytics.'],
         ],
         [
             'en' => ['title' => 'Extends free Anchor', 'desc' => 'Requires the active free Anchor plugin; delivered through Freemius with licensing and automatic updates.'],
