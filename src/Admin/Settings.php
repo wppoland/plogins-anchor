@@ -9,7 +9,7 @@ defined('ABSPATH') || exit;
 use Anchor\Contract\HasHooks;
 
 /**
- * Admin settings page registered as a WooCommerce submenu ("WooCommerce →
+ * Admin settings page registered as a WooCommerce submenu ("WooCommerce >
  * Anchor"). Stores settings in the `anchor_settings` option (array): the master
  * toggle and the scroll threshold.
  *

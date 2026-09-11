@@ -4,7 +4,7 @@
  *
  * Anchor renders a sticky add-to-cart bar on single product pages once the
  * shopper scrolls past the main add-to-cart form. The merchant enables it and
- * tunes the scroll trigger from the WooCommerce → Anchor settings screen.
+ * tunes the scroll trigger from the WooCommerce > Anchor settings screen.
  *
  * @package Anchor
  *

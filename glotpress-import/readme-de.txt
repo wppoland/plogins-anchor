@@ -43,9 +43,9 @@ Anchor ist noch nicht im WordPress.org-Verzeichnis. Wenn du also den Code lesen,
 
 == Installation ==
 
-1. Lade das Plugin nach `/wp-content/plugins/anchor` hoch oder installiere es über Plugins → Installieren.
+1. Lade das Plugin nach `/wp-content/plugins/anchor` hoch oder installiere es über Plugins > Installieren.
 2. Aktiviere es. WooCommerce muss aktiv sein.
-3. Gehe zu <strong>WooCommerce → Anchor</strong>, um die Leiste zu aktivieren und die Scroll-Schwelle festzulegen.
+3. Gehe zu <strong>WooCommerce > Anchor</strong>, um die Leiste zu aktivieren und die Scroll-Schwelle festzulegen.
 
 == Frequently Asked Questions ==
 
@@ -63,7 +63,7 @@ Nein. Stylesheet und Skript werden nur auf einzelnen Produktseiten geladen, das 
 
 = Can I change when the bar appears? =
 
-Ja. Lege die Scroll-Schwelle in Pixeln unter <strong>WooCommerce → Anchor</strong> fest (0-5000).
+Ja. Lege die Scroll-Schwelle in Pixeln unter <strong>WooCommerce > Anchor</strong> fest (0-5000).
 
 = Does it work on simple products? =
 
