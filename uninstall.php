@@ -1,8 +1,8 @@
 <?php
 /**
- * Uninstall cleanup for Anchor.
+ * Uninstall cleanup for Ankro.
  *
- * Runs when the plugin is deleted from wp-admin. Removes the options Anchor
+ * Runs when the plugin is deleted from wp-admin. Removes the options Ankro
  * creates and the per-user dismissal of the PRO banner. No per-product data is
  * stored, so there is nothing else to clean up.
  *

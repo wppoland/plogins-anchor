@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plogins Anchor - Sticky Add to Cart for WooCommerce 1.0.10\n"
-"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/plogins-anchor\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/ankro\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -12,34 +12,34 @@ msgstr ""
 "POT-Creation-Date: 2026-09-09T14:37:48+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
-"X-Domain: plogins-anchor\n"
+"X-Domain: ankro\n"
 
 #. Plugin Name of the plugin
-#: plogins-anchor.php
+#: ankro.php
 msgid "Plogins Anchor - Sticky Add to Cart for WooCommerce"
 msgstr ""
 
 #. Plugin URI of the plugin
-#: plogins-anchor.php
-msgid "https://plogins.com/plogins-anchor/"
+#: ankro.php
+msgid "https://plogins.com/ankro/"
 msgstr ""
 
 #. Description of the plugin
-#: plogins-anchor.php
+#: ankro.php
 msgid "A sticky add-to-cart bar that appears on scroll, boosting conversions on long product pages."
 msgstr ""
 
 #. Author of the plugin
-#: plogins-anchor.php
+#: ankro.php
 msgid "WPPoland.com"
 msgstr ""
 
 #. Author URI of the plugin
-#: plogins-anchor.php
+#: ankro.php
 msgid "https://wppoland.com"
 msgstr ""
 
-#: plogins-anchor.php:48
+#: ankro.php:48
 msgid "Anchor - Sticky Add to Cart Bar for WooCommerce requires WooCommerce to be active."
 msgstr ""
 

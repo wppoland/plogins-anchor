@@ -1,7 +1,7 @@
 <?php
 /**
  * Service wiring. Returns a closure that registers every service in the
- * container. Anchor is self-contained: the sticky-bar logic lives in
+ * container. Ankro is self-contained: the sticky-bar logic lives in
  * {@see \Anchor\Service\StickyBar} and the admin screen in
  * {@see \Anchor\Admin\Settings}.
  *
