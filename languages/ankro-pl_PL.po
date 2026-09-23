@@ -19,12 +19,12 @@ msgstr ""
 #. Plugin Name of the plugin
 #: ankro.php
 msgid "Plogins Anchor - Sticky Add to Cart for WooCommerce"
-msgstr ""
+msgstr "Plogins Anchor - Przyklejony przycisk dodawania do koszyka dla WooCommerce"
 
 #. Plugin URI of the plugin
 #: ankro.php
 msgid "https://plogins.com/ankro/"
-msgstr ""
+msgstr "https://plogins.com/ankro/"
 
 #. Description of the plugin
 #: ankro.php
@@ -38,12 +38,12 @@ msgstr ""
 #. Author of the plugin
 #: ankro.php
 msgid "WPPoland.com"
-msgstr ""
+msgstr "WPPoland.com"
 
 #. Author URI of the plugin
 #: ankro.php
 msgid "https://wppoland.com"
-msgstr ""
+msgstr "https://wppoland.com"
 
 #: ankro.php:48
 msgid ""
