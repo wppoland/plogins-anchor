@@ -3,8 +3,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Anchor - Sticky Add to Cart Bar for WooCommerce 0.1.0\n"
-"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/anchor\n"
-"POT-Creation-Date: 2026-06-16T20:23:09+00:00\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/ankro\n"
+"POT-Creation-Date: 2026-09-09T14:37:48+00:00\n"
 "PO-Revision-Date: 2026-07-07 00:00+0000\n"
 "Last-Translator: motylanogha <szatkowski.mariusz@gmail.com>\n"
 "Language-Team: Spanish <es@li.org>\n"
@@ -16,17 +16,17 @@ msgstr ""
 "X-Domain: ankro\n"
 
 #. Plugin Name of the plugin
-#: anchor.php
-msgid "Anchor - Sticky Add to Cart Bar for WooCommerce"
-msgstr "Anchor - barra fija de añadir al carrito para WooCommerce"
+#: ankro.php
+msgid "Plogins Anchor - Sticky Add to Cart for WooCommerce"
+msgstr ""
 
 #. Plugin URI of the plugin
-#: anchor.php
-msgid "https://plogins.com/anchor/"
-msgstr "https://plogins.com/anchor/"
+#: ankro.php
+msgid "https://plogins.com/ankro/"
+msgstr ""
 
 #. Description of the plugin
-#: anchor.php
+#: ankro.php
 msgid ""
 "A sticky add-to-cart bar that appears on scroll, boosting conversions on "
 "long product pages."
@@ -35,16 +35,16 @@ msgstr ""
 "mejorar la conversión en páginas de producto largas."
 
 #. Author of the plugin
-#: anchor.php
-msgid "WPPoland"
-msgstr "WPPoland"
+#: ankro.php
+msgid "WPPoland.com"
+msgstr ""
 
 #. Author URI of the plugin
-#: anchor.php
-msgid "https://plogins.com/"
-msgstr "https://plogins.com/"
+#: ankro.php
+msgid "https://wppoland.com"
+msgstr ""
 
-#: anchor.php:47
+#: ankro.php:48
 msgid ""
 "Anchor - Sticky Add to Cart Bar for WooCommerce requires WooCommerce to be "
 "active."
@@ -52,15 +52,69 @@ msgstr ""
 "Anchor - barra fija de añadir al carrito para WooCommerce requiere que "
 "WooCommerce esté activo."
 
-#: src/Admin/Settings.php:53
+#: src/Admin/ProUpsell.php:78
+msgid "Wkrótce"
+msgstr "Próximamente"
+
+#: src/Admin/ProUpsell.php:78
+msgid "Coming soon"
+msgstr "Próximamente"
+
+#. translators: 1: currency symbol, 2: yearly price
+#: src/Admin/ProUpsell.php:84
+#, php-format
+msgid "from %1$s%2$d/yr"
+msgstr "desde %1$s%2$d/año"
+
+#: src/Admin/ProUpsell.php:93
+msgid "Upgrade to PRO"
+msgstr "Mejora a PRO"
+
+#: src/Admin/ProUpsell.php:94
+msgid "Powiadom mnie"
+msgstr "Avísame"
+
+#: src/Admin/ProUpsell.php:94
+msgid "Get notified"
+msgstr "Avísame"
+
+#: src/Admin/ProUpsell.php:124
+msgid "Permission denied."
+msgstr "Permiso denegado."
+
+#. translators: %s: PRO edition name
+#: src/Admin/ProUpsell.php:154
+#, php-format
+msgid "Do more with %s"
+msgstr "Haz más con %s"
+
+#: src/Admin/ProUpsell.php:161
+msgid "Dismiss this notice"
+msgstr "Descartar este aviso"
+
+#: src/Admin/ProUpsell.php:178
+msgid "Unlock every PRO feature"
+msgstr "Desbloquea todas las funciones PRO"
+
+#: src/Admin/ProUpsell.php:191
+msgid "one licence, every PRO feature"
+msgstr "una licencia, todas las funciones PRO"
+
+#. translators: %s: PRO edition name
+#: src/Admin/ProUpsell.php:210
+#, php-format
+msgid "What %s adds"
+msgstr "Lo que añade %s"
+
+#: src/Admin/Settings.php:61
 msgid "Anchor: Sticky Add to Cart Bar"
 msgstr "Anchor: barra fija de añadir al carrito"
 
-#: src/Admin/Settings.php:54
+#: src/Admin/Settings.php:62
 msgid "Anchor"
 msgstr "Anchor"
 
-#: src/Admin/Settings.php:93
+#: src/Admin/Settings.php:103
 msgid ""
 "Anchor shows a slim, sticky add-to-cart bar at the bottom of your product "
 "pages once the shopper scrolls past the main button. It keeps the price and "
@@ -73,21 +127,21 @@ msgstr ""
 "a mano, y se sincroniza con las variaciones de WooCommerce. La barra queda "
 "fija en la ventana del navegador, así que no desplaza el diseño."
 
-#: src/Admin/Settings.php:101
+#: src/Admin/Settings.php:112
 msgid "Display"
 msgstr "Mostrar"
 
-#: src/Admin/Settings.php:105
+#: src/Admin/Settings.php:116
 msgid "Enable the bar"
 msgstr "Habilitar la barra"
 
-#: src/Admin/Settings.php:115
+#: src/Admin/Settings.php:126
 msgid "Show the sticky add-to-cart bar on single product pages."
 msgstr ""
 "Muestra la barra fija de añadir al carrito en páginas de producto "
 "individuales."
 
-#: src/Admin/Settings.php:118
+#: src/Admin/Settings.php:129
 msgid ""
 "When off, the bar never renders and its CSS/JS are not loaded, zero front-"
 "end impact."
@@ -95,23 +149,23 @@ msgstr ""
 "Cuando está desactivada, la barra no se renderiza y sus CSS/JS no se cargan, "
 "sin impacto en el front-end."
 
-#: src/Admin/Settings.php:124
+#: src/Admin/Settings.php:135
 msgid "Scroll threshold (px)"
 msgstr "Umbral de desplazamiento (px)"
 
 #. translators: 1: minimum px, 2: maximum px.
-#: src/Admin/Settings.php:141
+#: src/Admin/Settings.php:152
 #, php-format
 msgid ""
 "How far past the main add-to-cart form the shopper must scroll before the "
 "bar appears (%1$d, %2$d). 300 is a good default."
 msgstr ""
 "Cuánto debe desplazarse el comprador más allá del formulario principal de "
-"añadir al carrito antes de que aparezca la barra (%1$d, %2$d). 300 es un buen "
-"valor predeterminado."
+"añadir al carrito antes de que aparezca la barra (%1$d, %2$d). 300 es un "
+"buen valor predeterminado."
 
 #. translators: %s: the configured threshold in pixels, e.g. "300 px".
-#: src/Admin/Settings.php:151
+#: src/Admin/Settings.php:162
 #, php-format
 msgid ""
 "Lower means the bar shows up sooner; higher keeps it hidden longer. Right "
@@ -120,70 +174,26 @@ msgstr ""
 "Un valor más bajo muestra la barra antes, uno más alto la mantiene oculta "
 "durante más tiempo. Ahora aparece después de %s de desplazamiento."
 
-#: templates/sticky-bar.php:35 templates/sticky-bar.php:80
+#: templates/sticky-bar.php:35 templates/sticky-bar.php:87
 msgid "Add to cart"
 msgstr "Añadir al carrito"
 
-#: templates/sticky-bar.php:61
+#: templates/sticky-bar.php:68
 msgid "Choose options"
 msgstr "Elegir opciones"
 
-#: src/Admin/ProUpsell.php:78
-msgid "Wkrótce"
-msgstr "Próximamente"
+#~ msgid "Anchor - Sticky Add to Cart Bar for WooCommerce"
+#~ msgstr "Anchor - barra fija de añadir al carrito para WooCommerce"
 
-#: src/Admin/ProUpsell.php:78
-msgid "Coming soon"
-msgstr "Próximamente"
+#~ msgid "https://plogins.com/anchor/"
+#~ msgstr "https://plogins.com/anchor/"
 
-#. translators: %d: yearly price in PLN
-#: src/Admin/ProUpsell.php:83
+#~ msgid "WPPoland"
+#~ msgstr "WPPoland"
+
+#~ msgid "https://plogins.com/"
+#~ msgstr "https://plogins.com/"
+
 #, php-format
-msgid "od %d zł/rok"
-msgstr "desde %d zł/año"
-
-#. translators: 1: currency symbol, 2: yearly price
-#: src/Admin/ProUpsell.php:88
-#, php-format
-msgid "from %1$s%2$d/yr"
-msgstr "desde %1$s%2$d/año"
-
-#: src/Admin/ProUpsell.php:97
-msgid "Upgrade to PRO"
-msgstr "Mejora a PRO"
-
-#: src/Admin/ProUpsell.php:98
-msgid "Powiadom mnie"
-msgstr "Avísame"
-
-#: src/Admin/ProUpsell.php:98
-msgid "Get notified"
-msgstr "Avísame"
-
-#: src/Admin/ProUpsell.php:128
-msgid "Permission denied."
-msgstr "Permiso denegado."
-
-#. translators: %s: PRO edition name
-#: src/Admin/ProUpsell.php:158
-#, php-format
-msgid "Do more with %s"
-msgstr "Haz más con %s"
-
-#: src/Admin/ProUpsell.php:165
-msgid "Dismiss this notice"
-msgstr "Descartar este aviso"
-
-#: src/Admin/ProUpsell.php:182
-msgid "Unlock every PRO feature"
-msgstr "Desbloquea todas las funciones PRO"
-
-#: src/Admin/ProUpsell.php:195
-msgid "one licence, every PRO feature"
-msgstr "una licencia, todas las funciones PRO"
-
-#. translators: %s: PRO edition name
-#: src/Admin/ProUpsell.php:214
-#, php-format
-msgid "What %s adds"
-msgstr "Lo que añade %s"
+#~ msgid "od %d zł/rok"
+#~ msgstr "desde %d zł/año"
