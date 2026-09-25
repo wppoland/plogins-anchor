@@ -15,7 +15,7 @@ defined('ABSPATH') || exit;
  * shopper scrolls past the main add-to-cart form (the front-end script reveals
  * it via an IntersectionObserver). On variable products the script listens to
  * WooCommerce's native variation events to keep the price, availability and the
- * resolved variation id in sync, Ankro ships no jQuery of its own.
+ * resolved variation id in sync, Cartdock ships no jQuery of its own.
  *
  * All output is escaped; the service is inert unless enabled and on a product
  * page, and it degrades gracefully (it simply renders nothing) when product data
@@ -130,7 +130,7 @@ final class StickyBar implements HasHooks
         /**
          * Filter whether the sticky bar should load and render on this request.
          *
-         * @param bool               $visible  Whether Ankro would show the bar.
+         * @param bool               $visible  Whether Cartdock would show the bar.
          * @param array<string,mixed> $settings Resolved anchor_settings.
          * @param \WC_Product|null   $product  Current product on single product pages.
          */

@@ -1,8 +1,8 @@
 <?php
 /**
- * Uninstall cleanup for Ankro.
+ * Uninstall cleanup for Cartdock.
  *
- * Runs when the plugin is deleted from wp-admin. Removes the options Ankro
+ * Runs when the plugin is deleted from wp-admin. Removes the options Cartdock
  * creates and the per-user dismissal of the PRO banner. No per-product data is
  * stored, so there is nothing else to clean up.
  *

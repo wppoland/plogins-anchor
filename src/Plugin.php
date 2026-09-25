@@ -51,9 +51,9 @@ final class Plugin
         }
 
         /**
-         * Fires after Ankro has fully booted and registered its services.
+         * Fires after Cartdock has fully booted and registered its services.
          *
-         * Add-ons (e.g. Ankro Pro) hook this to extend the shared DI container
+         * Add-ons (e.g. Cartdock Pro) hook this to extend the shared DI container
          * and register their own services.
          *
          * @param Plugin $plugin The booted plugin instance.

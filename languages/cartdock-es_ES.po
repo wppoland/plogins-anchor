@@ -3,113 +3,112 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Anchor - Sticky Add to Cart Bar for WooCommerce 0.1.0\n"
-"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/ankro\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/cartdock\n"
 "POT-Creation-Date: 2026-09-09T14:37:48+00:00\n"
 "PO-Revision-Date: 2026-07-07 00:00+0000\n"
 "Last-Translator: motylanogha <szatkowski.mariusz@gmail.com>\n"
-"Language-Team: Polish <pl@li.org>\n"
-"Language: pl_PL\n"
+"Language-Team: Spanish <es@li.org>\n"
+"Language: es_ES\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n == 1 ? 0 : n % 10 >= 2 && n % 10 <= 4 && "
-"(n % 100 < 12 || n % 100 > 14) ? 1 : 2);\n"
-"X-Domain: ankro\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Domain: cartdock\n"
 
 #. Plugin Name of the plugin
-#: ankro.php
+#: cartdock.php
 msgid "Plogins Anchor - Sticky Add to Cart for WooCommerce"
-msgstr "Plogins Anchor - Przyklejony przycisk dodawania do koszyka dla WooCommerce"
+msgstr ""
 
 #. Plugin URI of the plugin
-#: ankro.php
-msgid "https://plogins.com/ankro/"
-msgstr "https://plogins.com/ankro/"
+#: cartdock.php
+msgid "https://plogins.com/cartdock/"
+msgstr ""
 
 #. Description of the plugin
-#: ankro.php
+#: cartdock.php
 msgid ""
 "A sticky add-to-cart bar that appears on scroll, boosting conversions on "
 "long product pages."
 msgstr ""
-"Przyklejony pasek dodawania do koszyka, który pojawia się podczas "
-"przewijania i pomaga zwiększać konwersję na długich stronach produktów."
+"Una barra fija de añadir al carrito que aparece al desplazarse y ayuda a "
+"mejorar la conversión en páginas de producto largas."
 
 #. Author of the plugin
-#: ankro.php
+#: cartdock.php
 msgid "WPPoland.com"
-msgstr "WPPoland.com"
+msgstr ""
 
 #. Author URI of the plugin
-#: ankro.php
+#: cartdock.php
 msgid "https://wppoland.com"
-msgstr "https://wppoland.com"
+msgstr ""
 
-#: ankro.php:48
+#: cartdock.php:48
 msgid ""
 "Anchor - Sticky Add to Cart Bar for WooCommerce requires WooCommerce to be "
 "active."
 msgstr ""
-"Anchor - przyklejony pasek dodawania do koszyka dla WooCommerce wymaga "
-"aktywnego WooCommerce."
+"Anchor - barra fija de añadir al carrito para WooCommerce requiere que "
+"WooCommerce esté activo."
 
 #: src/Admin/ProUpsell.php:78
 msgid "Wkrótce"
-msgstr "Wkrótce"
+msgstr "Próximamente"
 
 #: src/Admin/ProUpsell.php:78
 msgid "Coming soon"
-msgstr "Wkrótce"
+msgstr "Próximamente"
 
 #. translators: 1: currency symbol, 2: yearly price
 #: src/Admin/ProUpsell.php:84
 #, php-format
 msgid "from %1$s%2$d/yr"
-msgstr "od %1$s%2$d/rok"
+msgstr "desde %1$s%2$d/año"
 
 #: src/Admin/ProUpsell.php:93
 msgid "Upgrade to PRO"
-msgstr "Przejdź na PRO"
+msgstr "Mejora a PRO"
 
 #: src/Admin/ProUpsell.php:94
 msgid "Powiadom mnie"
-msgstr "Powiadom mnie"
+msgstr "Avísame"
 
 #: src/Admin/ProUpsell.php:94
 msgid "Get notified"
-msgstr "Powiadom mnie"
+msgstr "Avísame"
 
 #: src/Admin/ProUpsell.php:124
 msgid "Permission denied."
-msgstr "Brak uprawnień."
+msgstr "Permiso denegado."
 
 #. translators: %s: PRO edition name
 #: src/Admin/ProUpsell.php:154
 #, php-format
 msgid "Do more with %s"
-msgstr "Zrób więcej dzięki %s"
+msgstr "Haz más con %s"
 
 #: src/Admin/ProUpsell.php:161
 msgid "Dismiss this notice"
-msgstr "Odrzuć to powiadomienie"
+msgstr "Descartar este aviso"
 
 #: src/Admin/ProUpsell.php:178
 msgid "Unlock every PRO feature"
-msgstr "Odblokuj wszystkie funkcje PRO"
+msgstr "Desbloquea todas las funciones PRO"
 
 #: src/Admin/ProUpsell.php:191
 msgid "one licence, every PRO feature"
-msgstr "jedna licencja, wszystkie funkcje PRO"
+msgstr "una licencia, todas las funciones PRO"
 
 #. translators: %s: PRO edition name
 #: src/Admin/ProUpsell.php:210
 #, php-format
 msgid "What %s adds"
-msgstr "Co dodaje %s"
+msgstr "Lo que añade %s"
 
 #: src/Admin/Settings.php:61
 msgid "Anchor: Sticky Add to Cart Bar"
-msgstr "Anchor: przyklejony pasek dodawania do koszyka"
+msgstr "Anchor: barra fija de añadir al carrito"
 
 #: src/Admin/Settings.php:62
 msgid "Anchor"
@@ -122,37 +121,37 @@ msgid ""
 "buy button one tap away on long pages, and stays in sync with WooCommerce "
 "variations. The bar is fixed to the viewport, so it never shifts your layout."
 msgstr ""
-"Anchor pokazuje wąski, przyklejony pasek dodawania do koszyka u dołu strony "
-"produktu, gdy kupujący przewinie stronę poniżej głównego przycisku. Na "
-"długich stronach cena i przycisk zakupu pozostają pod ręką, a pasek "
-"synchronizuje się z wariantami WooCommerce. Jest przypięty do okna "
-"przeglądarki, więc nie przesuwa układu strony."
+"Anchor muestra una barra fina y fija de añadir al carrito en la parte "
+"inferior de la página de producto cuando el comprador supera el botón "
+"principal. En páginas largas mantiene el precio y el botón de compra siempre "
+"a mano, y se sincroniza con las variaciones de WooCommerce. La barra queda "
+"fija en la ventana del navegador, así que no desplaza el diseño."
 
 #: src/Admin/Settings.php:112
 msgid "Display"
-msgstr "Wyświetlanie"
+msgstr "Mostrar"
 
 #: src/Admin/Settings.php:116
 msgid "Enable the bar"
-msgstr "Włącz pasek"
+msgstr "Habilitar la barra"
 
 #: src/Admin/Settings.php:126
 msgid "Show the sticky add-to-cart bar on single product pages."
 msgstr ""
-"Wyświetlaj przyklejony pasek dodawania do koszyka na stronach pojedynczych "
-"produktów."
+"Muestra la barra fija de añadir al carrito en páginas de producto "
+"individuales."
 
 #: src/Admin/Settings.php:129
 msgid ""
 "When off, the bar never renders and its CSS/JS are not loaded, zero front-"
 "end impact."
 msgstr ""
-"Gdy opcja jest wyłączona, pasek nie jest renderowany, a jego CSS/JS nie są "
-"ładowane, więc nie wpływa na front-end."
+"Cuando está desactivada, la barra no se renderiza y sus CSS/JS no se cargan, "
+"sin impacto en el front-end."
 
 #: src/Admin/Settings.php:135
 msgid "Scroll threshold (px)"
-msgstr "Próg przewinięcia (px)"
+msgstr "Umbral de desplazamiento (px)"
 
 #. translators: 1: minimum px, 2: maximum px.
 #: src/Admin/Settings.php:152
@@ -161,8 +160,9 @@ msgid ""
 "How far past the main add-to-cart form the shopper must scroll before the "
 "bar appears (%1$d, %2$d). 300 is a good default."
 msgstr ""
-"Jak daleko poza główny formularz dodawania do koszyka klient musi przewinąć, "
-"zanim pojawi się pasek (%1$d, %2$d). 300 to dobra wartość domyślna."
+"Cuánto debe desplazarse el comprador más allá del formulario principal de "
+"añadir al carrito antes de que aparezca la barra (%1$d, %2$d). 300 es un "
+"buen valor predeterminado."
 
 #. translators: %s: the configured threshold in pixels, e.g. "300 px".
 #: src/Admin/Settings.php:162
@@ -171,19 +171,19 @@ msgid ""
 "Lower means the bar shows up sooner; higher keeps it hidden longer. Right "
 "now it appears after %s of scrolling."
 msgstr ""
-"Niższa wartość oznacza, że pasek pojawi się wcześniej, wyższa ukryje go na "
-"dłużej. Teraz pojawia się po przewinięciu o %s."
+"Un valor más bajo muestra la barra antes, uno más alto la mantiene oculta "
+"durante más tiempo. Ahora aparece después de %s de desplazamiento."
 
 #: templates/sticky-bar.php:35 templates/sticky-bar.php:87
 msgid "Add to cart"
-msgstr "Dodaj do koszyka"
+msgstr "Añadir al carrito"
 
 #: templates/sticky-bar.php:68
 msgid "Choose options"
-msgstr "Wybierz opcje"
+msgstr "Elegir opciones"
 
 #~ msgid "Anchor - Sticky Add to Cart Bar for WooCommerce"
-#~ msgstr "Anchor - przyklejony pasek dodawania do koszyka dla WooCommerce"
+#~ msgstr "Anchor - barra fija de añadir al carrito para WooCommerce"
 
 #~ msgid "https://plogins.com/anchor/"
 #~ msgstr "https://plogins.com/anchor/"
@@ -196,4 +196,4 @@ msgstr "Wybierz opcje"
 
 #, php-format
 #~ msgid "od %d zł/rok"
-#~ msgstr "od %d zł/rok"
+#~ msgstr "desde %d zł/año"

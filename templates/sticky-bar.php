@@ -1,7 +1,7 @@
 <?php
 /**
  * Sticky add-to-cart bar, printed on single product pages and revealed on scroll
- * by the Ankro front-end script. No layout shift: the bar is position:fixed and
+ * by the Cartdock front-end script. No layout shift: the bar is position:fixed and
  * starts hidden, so it never occupies document flow until shown.
  *
  * On variable products the form posts the resolved variation id; the script keeps
@@ -32,7 +32,7 @@ $productUrl   = $product->get_permalink();
     class="anchor-bar"
     id="anchor-bar"
     role="region"
-    aria-label="<?php esc_attr_e('Add to cart', 'ankro'); ?>"
+    aria-label="<?php esc_attr_e('Add to cart', 'cartdock'); ?>"
     aria-hidden="true"
     data-anchor-bar
     data-product-id="<?php echo esc_attr((string) $product->get_id()); ?>"
@@ -65,7 +65,7 @@ $productUrl   = $product->get_permalink();
                     class="button anchor-bar__button anchor-bar__button--choose"
                     data-anchor-choose
                 >
-                    <?php esc_html_e('Choose options', 'ankro'); ?>
+                    <?php esc_html_e('Choose options', 'cartdock'); ?>
                 </button>
                 <form
                     class="anchor-bar__form anchor-bar__form--variable"
@@ -84,7 +84,7 @@ $productUrl   = $product->get_permalink();
                         data-anchor-add
                         disabled
                     >
-                        <?php esc_html_e('Add to cart', 'ankro'); ?>
+                        <?php esc_html_e('Add to cart', 'cartdock'); ?>
                     </button>
                 </form>
             </div>

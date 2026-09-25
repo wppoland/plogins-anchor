@@ -1,11 +1,11 @@
-=== Ankro - Sticky Add to Cart for WooCommerce ===
+=== Cartdock - Sticky Add to Cart for WooCommerce ===
 Contributors: motylanogha
 Tags: woocommerce, add to cart, sticky, conversion, product page
 Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 8.1
 Requires Plugins: woocommerce
-Stable tag: 1.1.1
+Stable tag: 1.1.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -13,21 +13,21 @@ Keeps the add-to-cart button in reach on long WooCommerce product pages with a s
 
 == Description ==
 
-Ankro adds a slim sticky add-to-cart bar to the bottom of your WooCommerce
+Cartdock adds a slim sticky add-to-cart bar to the bottom of your WooCommerce
 single product pages. It stays hidden until the shopper scrolls past the main
 add-to-cart button, then slides into view showing the product title, price and a
 buy button, so the add-to-cart control is still reachable on long pages.
 
 On variable products the bar follows the native variations form. As the shopper
 picks options, the price and the buy button update to match the selected variation, and the button
-disables itself when the chosen variation is out of stock. Ankro does not load its own copy of jQuery; it listens to
+disables itself when the chosen variation is out of stock. Cartdock does not load its own copy of jQuery; it listens to
 the variation events WooCommerce already fires.
 
 The bar is positioned with CSS `position: fixed` and starts hidden, so it sits
 outside the document flow and does not push other content around or cause
 layout shift when it appears.
 
-Ankro is not on the WordPress.org directory yet, so if you want to read the
+Cartdock is not on the WordPress.org directory yet, so if you want to read the
 code, report a bug or suggest a change, the repository is at
 [github.com/wppoland/plogins-anchor](https://github.com/wppoland/plogins-anchor).
 
@@ -53,15 +53,15 @@ code, report a bug or suggest a change, the repository is at
 
 == Installation ==
 
-1. Upload the plugin to `/wp-content/plugins/ankro`, or install via Plugins > Add New.
+1. Upload the plugin to `/wp-content/plugins/cartdock`, or install via Plugins > Add New.
 2. Activate it. WooCommerce must be active.
-3. Go to **WooCommerce > Ankro** to enable the bar and set the scroll threshold.
+3. Go to **WooCommerce > Cartdock** to enable the bar and set the scroll threshold.
 
 == Frequently Asked Questions ==
 
 = Does it require WooCommerce? =
 
-Yes. Ankro only runs when WooCommerce is active.
+Yes. Cartdock only runs when WooCommerce is active.
 
 = Does it work with variable products? =
 
@@ -77,7 +77,7 @@ Because it starts outside the document flow, showing it does not shift the page.
 
 = Can I change when the bar appears? =
 
-Yes. Set the scroll threshold in pixels under **WooCommerce > Ankro** (0-5000).
+Yes. Set the scroll threshold in pixels under **WooCommerce > Cartdock** (0-5000).
 
 = Does it work on simple products? =
 
@@ -91,25 +91,28 @@ Yes. This plugin is compatible with WordPress Multisite. Network activate it or 
 == Screenshots ==
 
 1. The sticky add-to-cart bar on a product page.
-2. The Ankro settings screen under WooCommerce.
+2. The Cartdock settings screen under WooCommerce.
 
 == External Services ==
 
-Ankro does not connect to any external services. It sends no data off your site
+Cartdock does not connect to any external services. It sends no data off your site
 and loads nothing from a third-party CDN; its stylesheet and script (`assets/css/anchor.css`
 and `assets/js/anchor.js`) are served from your own install, and the front-end script reads
 only a small `anchorConfig` object (the scroll threshold) that WordPress prints inline.
 
-All of Ankro's data stays in your database: it stores two autoloaded-off options,
+All of Cartdock's data stays in your database: it stores two autoloaded-off options,
 `anchor_settings` (the enable toggle and scroll threshold) and `anchor_db_version`,
 and keeps no per-product data. Both options are removed when you delete the plugin.
-Ankro sends no email and makes no HTTP requests of its own.
+Cartdock sends no email and makes no HTTP requests of its own.
 
 == Translations ==
 
-Ankro is fully translatable and ships the `ankro.pot` template. Translations are delivered by WordPress.org language packs from translate.wordpress.org, which is where Polish, German and Spanish are being contributed; the package itself carries no compiled translation files.
+Cartdock is fully translatable and ships the `cartdock.pot` template. Translations are delivered by WordPress.org language packs from translate.wordpress.org, which is where Polish, German and Spanish are being contributed; the package itself carries no compiled translation files.
 
 == Changelog ==
+
+= 1.1.2 =
+* Renamed to Cartdock, a plain English name in place of the Esperanto one. The text domain and the plugin folder follow the name; the stored settings, the anchor_settings option and every hook are unchanged.
 
 = 1.1.1 =
 * The sidebar upgrade promo now follows the same dismissal as the banner. Dismissing the banner used to leave a full-height advert on the settings screen for good, which is not what the WordPress.org guideline on upgrade prompts means by used with moderation.

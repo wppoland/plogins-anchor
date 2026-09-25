@@ -3,112 +3,112 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Anchor - Sticky Add to Cart Bar for WooCommerce 0.1.0\n"
-"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/ankro\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/cartdock\n"
 "POT-Creation-Date: 2026-09-09T14:37:48+00:00\n"
 "PO-Revision-Date: 2026-07-07 00:00+0000\n"
 "Last-Translator: motylanogha <szatkowski.mariusz@gmail.com>\n"
-"Language-Team: Spanish <es@li.org>\n"
-"Language: es_ES\n"
+"Language-Team: German <de@li.org>\n"
+"Language: de_DE\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Domain: ankro\n"
+"X-Domain: cartdock\n"
 
 #. Plugin Name of the plugin
-#: ankro.php
+#: cartdock.php
 msgid "Plogins Anchor - Sticky Add to Cart for WooCommerce"
 msgstr ""
 
 #. Plugin URI of the plugin
-#: ankro.php
-msgid "https://plogins.com/ankro/"
+#: cartdock.php
+msgid "https://plogins.com/cartdock/"
 msgstr ""
 
 #. Description of the plugin
-#: ankro.php
+#: cartdock.php
 msgid ""
 "A sticky add-to-cart bar that appears on scroll, boosting conversions on "
 "long product pages."
 msgstr ""
-"Una barra fija de añadir al carrito que aparece al desplazarse y ayuda a "
-"mejorar la conversión en páginas de producto largas."
+"Eine fixierte Add-to-Cart-Leiste, die beim Scrollen erscheint und "
+"Conversions auf langen Produktseiten verbessert."
 
 #. Author of the plugin
-#: ankro.php
+#: cartdock.php
 msgid "WPPoland.com"
 msgstr ""
 
 #. Author URI of the plugin
-#: ankro.php
+#: cartdock.php
 msgid "https://wppoland.com"
 msgstr ""
 
-#: ankro.php:48
+#: cartdock.php:48
 msgid ""
 "Anchor - Sticky Add to Cart Bar for WooCommerce requires WooCommerce to be "
 "active."
 msgstr ""
-"Anchor - barra fija de añadir al carrito para WooCommerce requiere que "
-"WooCommerce esté activo."
+"Anchor, Sticky Add to Cart Bar für WooCommerce erfordert, dass WooCommerce "
+"aktiv ist."
 
 #: src/Admin/ProUpsell.php:78
 msgid "Wkrótce"
-msgstr "Próximamente"
+msgstr "Demnächst"
 
 #: src/Admin/ProUpsell.php:78
 msgid "Coming soon"
-msgstr "Próximamente"
+msgstr "Demnächst"
 
 #. translators: 1: currency symbol, 2: yearly price
 #: src/Admin/ProUpsell.php:84
 #, php-format
 msgid "from %1$s%2$d/yr"
-msgstr "desde %1$s%2$d/año"
+msgstr "ab %1$s%2$d/Jahr"
 
 #: src/Admin/ProUpsell.php:93
 msgid "Upgrade to PRO"
-msgstr "Mejora a PRO"
+msgstr "Auf PRO upgraden"
 
 #: src/Admin/ProUpsell.php:94
 msgid "Powiadom mnie"
-msgstr "Avísame"
+msgstr "Benachrichtige mich"
 
 #: src/Admin/ProUpsell.php:94
 msgid "Get notified"
-msgstr "Avísame"
+msgstr "Benachrichtige mich"
 
 #: src/Admin/ProUpsell.php:124
 msgid "Permission denied."
-msgstr "Permiso denegado."
+msgstr "Zugriff verweigert."
 
 #. translators: %s: PRO edition name
 #: src/Admin/ProUpsell.php:154
 #, php-format
 msgid "Do more with %s"
-msgstr "Haz más con %s"
+msgstr "Mehr erreichen mit %s"
 
 #: src/Admin/ProUpsell.php:161
 msgid "Dismiss this notice"
-msgstr "Descartar este aviso"
+msgstr "Diesen Hinweis ausblenden"
 
 #: src/Admin/ProUpsell.php:178
 msgid "Unlock every PRO feature"
-msgstr "Desbloquea todas las funciones PRO"
+msgstr "Alle PRO-Funktionen freischalten"
 
 #: src/Admin/ProUpsell.php:191
 msgid "one licence, every PRO feature"
-msgstr "una licencia, todas las funciones PRO"
+msgstr "eine Lizenz, alle PRO-Funktionen"
 
 #. translators: %s: PRO edition name
 #: src/Admin/ProUpsell.php:210
 #, php-format
 msgid "What %s adds"
-msgstr "Lo que añade %s"
+msgstr "Was %s ergänzt"
 
 #: src/Admin/Settings.php:61
 msgid "Anchor: Sticky Add to Cart Bar"
-msgstr "Anchor: barra fija de añadir al carrito"
+msgstr "Anchor: Sticky Add-to-Cart-Leiste"
 
 #: src/Admin/Settings.php:62
 msgid "Anchor"
@@ -121,37 +121,35 @@ msgid ""
 "buy button one tap away on long pages, and stays in sync with WooCommerce "
 "variations. The bar is fixed to the viewport, so it never shifts your layout."
 msgstr ""
-"Anchor muestra una barra fina y fija de añadir al carrito en la parte "
-"inferior de la página de producto cuando el comprador supera el botón "
-"principal. En páginas largas mantiene el precio y el botón de compra siempre "
-"a mano, y se sincroniza con las variaciones de WooCommerce. La barra queda "
-"fija en la ventana del navegador, así que no desplaza el diseño."
+"Anchor zeigt unten auf der Produktseite eine schmale, fixierte Add-to-Cart-"
+"Leiste, sobald der Käufer am Hauptbutton vorbeiscrollt. Auf langen Seiten "
+"bleiben Preis und Kaufbutton jederzeit erreichbar, und die Leiste bleibt mit "
+"WooCommerce-Varianten synchron. Sie ist am Browserfenster fixiert und "
+"verschiebt daher nie das Layout."
 
 #: src/Admin/Settings.php:112
 msgid "Display"
-msgstr "Mostrar"
+msgstr "Anzeige"
 
 #: src/Admin/Settings.php:116
 msgid "Enable the bar"
-msgstr "Habilitar la barra"
+msgstr "Leiste aktivieren"
 
 #: src/Admin/Settings.php:126
 msgid "Show the sticky add-to-cart bar on single product pages."
-msgstr ""
-"Muestra la barra fija de añadir al carrito en páginas de producto "
-"individuales."
+msgstr "Sticky Add-to-Cart-Leiste auf einzelnen Produktseiten anzeigen."
 
 #: src/Admin/Settings.php:129
 msgid ""
 "When off, the bar never renders and its CSS/JS are not loaded, zero front-"
 "end impact."
 msgstr ""
-"Cuando está desactivada, la barra no se renderiza y sus CSS/JS no se cargan, "
-"sin impacto en el front-end."
+"Wenn deaktiviert, wird die Leiste nicht ausgegeben und ihre CSS/JS-Dateien "
+"werden nicht geladen, also ohne Frontend-Auswirkung."
 
 #: src/Admin/Settings.php:135
 msgid "Scroll threshold (px)"
-msgstr "Umbral de desplazamiento (px)"
+msgstr "Scrollschwelle (px)"
 
 #. translators: 1: minimum px, 2: maximum px.
 #: src/Admin/Settings.php:152
@@ -160,9 +158,9 @@ msgid ""
 "How far past the main add-to-cart form the shopper must scroll before the "
 "bar appears (%1$d, %2$d). 300 is a good default."
 msgstr ""
-"Cuánto debe desplazarse el comprador más allá del formulario principal de "
-"añadir al carrito antes de que aparezca la barra (%1$d, %2$d). 300 es un "
-"buen valor predeterminado."
+"Wie weit der Käufer über das Hauptformular zum Hinzufügen in den Warenkorb "
+"hinaus scrollen muss, bevor die Leiste erscheint (%1$d, %2$d). 300 ist ein "
+"guter Standardwert."
 
 #. translators: %s: the configured threshold in pixels, e.g. "300 px".
 #: src/Admin/Settings.php:162
@@ -171,19 +169,19 @@ msgid ""
 "Lower means the bar shows up sooner; higher keeps it hidden longer. Right "
 "now it appears after %s of scrolling."
 msgstr ""
-"Un valor más bajo muestra la barra antes, uno más alto la mantiene oculta "
-"durante más tiempo. Ahora aparece después de %s de desplazamiento."
+"Ein niedrigerer Wert zeigt die Leiste früher an, ein höherer hält sie länger "
+"verborgen. Aktuell erscheint sie nach %s Scrollen."
 
 #: templates/sticky-bar.php:35 templates/sticky-bar.php:87
 msgid "Add to cart"
-msgstr "Añadir al carrito"
+msgstr "In den Warenkorb legen"
 
 #: templates/sticky-bar.php:68
 msgid "Choose options"
-msgstr "Elegir opciones"
+msgstr "Optionen auswählen"
 
 #~ msgid "Anchor - Sticky Add to Cart Bar for WooCommerce"
-#~ msgstr "Anchor - barra fija de añadir al carrito para WooCommerce"
+#~ msgstr "Anchor - Sticky Add-to-Cart-Leiste für WooCommerce"
 
 #~ msgid "https://plogins.com/anchor/"
 #~ msgstr "https://plogins.com/anchor/"
@@ -196,4 +194,4 @@ msgstr "Elegir opciones"
 
 #, php-format
 #~ msgid "od %d zł/rok"
-#~ msgstr "desde %d zł/año"
+#~ msgstr "ab %d zł/Jahr"
