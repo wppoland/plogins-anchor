@@ -1,11 +1,11 @@
-=== Anchor - Sticky Add to Cart for WooCommerce ===
+=== Cartdock - Sticky Add to Cart for WooCommerce ===
 Contributors: motylanogha
 Tags: woocommerce, add to cart, sticky, conversion, product page
 Requires at least: 6.5
-Tested up to: 7.0
+Tested up to: 7.1
 Requires PHP: 8.1
 Requires Plugins: woocommerce
-Stable tag: 1.0.5
+Stable tag: 1.1.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -13,30 +13,30 @@ Keeps the add-to-cart button in reach on long WooCommerce product pages with a s
 
 == Description ==
 
-Anchor adds a slim sticky add-to-cart bar to the bottom of your WooCommerce
+Cartdock adds a slim sticky add-to-cart bar to the bottom of your WooCommerce
 single product pages. It stays hidden until the shopper scrolls past the main
 add-to-cart button, then slides into view showing the product title, price and a
 buy button, so the add-to-cart control is still reachable on long pages.
 
 On variable products the bar follows the native variations form. As the shopper
-picks options, the price, stock status and the buy button update to match the
-selected variation. Anchor does not load its own copy of jQuery; it listens to
+picks options, the price and the buy button update to match the selected variation, and the button
+disables itself when the chosen variation is out of stock. Cartdock does not load its own copy of jQuery; it listens to
 the variation events WooCommerce already fires.
 
 The bar is positioned with CSS `position: fixed` and starts hidden, so it sits
 outside the document flow and does not push other content around or cause
 layout shift when it appears.
 
-Anchor is not on the WordPress.org directory yet, so if you want to read the
+Cartdock is not on the WordPress.org directory yet, so if you want to read the
 code, report a bug or suggest a change, the repository is at
-https://github.com/wppoland/plogins-anchor.
+[github.com/wppoland/plogins-anchor](https://github.com/wppoland/plogins-anchor).
 
 = Documentation and links =
 
-* **Documentation** - https://plogins.com/plogins-anchor/docs/
-* **Plugin page** - https://plogins.com/plogins-anchor/
-* **Source code** - https://github.com/wppoland/plogins-anchor
-* **Bug reports and feature requests** - https://github.com/wppoland/plogins-anchor/issues
+* **Documentation**: [plogins.com/plogins-anchor/docs/](https://plogins.com/plogins-anchor/docs/)
+* **Plugin page**: [plogins.com/plogins-anchor/](https://plogins.com/plogins-anchor/)
+* **Source code**: [github.com/wppoland/plogins-anchor](https://github.com/wppoland/plogins-anchor)
+* **Bug reports and feature requests**: [github.com/wppoland/plogins-anchor/issues](https://github.com/wppoland/plogins-anchor/issues)
 
 
 = Features =
@@ -44,7 +44,7 @@ https://github.com/wppoland/plogins-anchor.
 * Sticky add-to-cart bar on single product pages, revealed once the shopper scrolls past the main button.
 * Scroll threshold you set in pixels (0 to 5000), so you decide how far down the bar kicks in.
 * Shows the product title, price and a buy button.
-* On variable products the price and stock status track the variation the shopper has selected.
+* On variable products the price tracks the variation the shopper has selected, and the button disables itself if that variation is out of stock.
 * Marked up as an ARIA region with a visible focus state and screen-reader label.
 * Honours prefers-reduced-motion and has a dark-mode style.
 * The bar is fixed to the viewport and starts hidden, so it does not cause layout shift.
@@ -53,20 +53,21 @@ https://github.com/wppoland/plogins-anchor.
 
 == Installation ==
 
-1. Upload the plugin to `/wp-content/plugins/anchor`, or install via Plugins → Add New.
+1. Upload the plugin to `/wp-content/plugins/cartdock`, or install via Plugins > Add New.
 2. Activate it. WooCommerce must be active.
-3. Go to **WooCommerce → Anchor** to enable the bar and set the scroll threshold.
+3. Go to **WooCommerce > Cartdock** to enable the bar and set the scroll threshold.
 
 == Frequently Asked Questions ==
 
 = Does it require WooCommerce? =
 
-Yes. Anchor only runs when WooCommerce is active.
+Yes. Cartdock only runs when WooCommerce is active.
 
 = Does it work with variable products? =
 
 Yes. The bar mirrors WooCommerce's native variations form: pick options on the
-page and the bar's price, availability and buy button update to match.
+page and the bar's price and buy button update to match; the button disables itself
+if the selected variation is out of stock.
 
 = Will it slow my product pages down or shift the layout? =
 
@@ -76,7 +77,7 @@ Because it starts outside the document flow, showing it does not shift the page.
 
 = Can I change when the bar appears? =
 
-Yes. Set the scroll threshold in pixels under **WooCommerce → Anchor** (0-5000).
+Yes. Set the scroll threshold in pixels under **WooCommerce > Cartdock** (0-5000).
 
 = Does it work on simple products? =
 
@@ -90,25 +91,56 @@ Yes. This plugin is compatible with WordPress Multisite. Network activate it or 
 == Screenshots ==
 
 1. The sticky add-to-cart bar on a product page.
-2. The Anchor settings screen under WooCommerce.
+2. The Cartdock settings screen under WooCommerce.
 
 == External Services ==
 
-Anchor does not connect to any external services. It sends no data off your site
+Cartdock does not connect to any external services. It sends no data off your site
 and loads nothing from a third-party CDN; its stylesheet and script (`assets/css/anchor.css`
 and `assets/js/anchor.js`) are served from your own install, and the front-end script reads
 only a small `anchorConfig` object (the scroll threshold) that WordPress prints inline.
 
-All of Anchor's data stays in your database: it stores two autoloaded-off options,
+All of Cartdock's data stays in your database: it stores two autoloaded-off options,
 `anchor_settings` (the enable toggle and scroll threshold) and `anchor_db_version`,
 and keeps no per-product data. Both options are removed when you delete the plugin.
-Anchor sends no email and makes no HTTP requests of its own.
+Cartdock sends no email and makes no HTTP requests of its own.
 
 == Translations ==
 
-Plogins Anchor includes Polish, German and Spanish translations for the plugin interface. The text domain is `plogins-anchor`, so WordPress.org language packs can also override or extend these bundled translations.
+Cartdock is fully translatable and ships the `cartdock.pot` template. Translations are delivered by WordPress.org language packs from translate.wordpress.org, which is where Polish, German and Spanish are being contributed; the package itself carries no compiled translation files.
 
 == Changelog ==
+
+= 1.1.2 =
+* Renamed to Cartdock, a plain English name in place of the Esperanto one. The text domain and the plugin folder follow the name; the stored settings, the anchor_settings option and every hook are unchanged.
+
+= 1.1.1 =
+* The sidebar upgrade promo now follows the same dismissal as the banner. Dismissing the banner used to leave a full-height advert on the settings screen for good, which is not what the WordPress.org guideline on upgrade prompts means by used with moderation.
+
+= 1.1.0 =
+* Renamed to Ankro. The WordPress.org review team asks a plugin name to lead with a distinctive, coined identifier rather than a generic descriptive word. Ankro is Esperanto for anchor. The text domain follows the name; the stored settings, the anchor_settings option and every hook are unchanged.
+
+= 1.0.12 =
+* Fixed: the PRO upgrade promo kept selling to people who had already bought the paid edition. Only the banner could be dismissed, so the sidebar promo and the locked feature cards followed a paying customer around for good. The promo now checks whether the paid edition is active and steps aside when it is.
+* Fixed: arrow glyphs in the admin menu paths, and in the strings handed to translators. An arrow inside a translatable string makes the glyph every translator's problem and changes the layout in any locale that drops it.
+
+= 1.0.11 =
+* Fixed: deleting the plugin left the per-user "dismiss" flag from the PRO notice in the database. Uninstall now removes it for every user, not just the one who dismissed it.
+
+= 1.0.10 =
+* The translation template was regenerated. It still named an older version of the plugin and pointed at source lines that had since moved, which is what translation tools read to show a string in context.
+
+= 1.0.9 =
+* Renamed to Plogins Anchor - Sticky Add to Cart for WooCommerce so the name leads with the brand rather than a generic word, which is what the WordPress.org plugin review team asks for. The plugin slug is unchanged.
+
+= 1.0.8 =
+* Tested against WordPress 7.1. Verified by activating this build on a clean 7.1 install with WooCommerce 11.1, not by editing the header.
+
+= 1.0.7 =
+* Fixed the PRO promo on the settings screen quoting a price in PLN. PRO is priced and charged in EUR, so an admin on a Polish site was shown a zloty amount and then billed in euro, and the zloty figure was a fixed conversion that drifted from the real charge as the rate moved. The promo now shows the euro price that is actually taken.
+
+= 1.0.6 =
+* The scroll threshold now works the way the settings screen describes it: a higher number keeps the bar hidden longer, a lower number brings it in sooner. Until now raising it made the bar appear earlier, not later.
 
 = 1.0.4 =
 * Translations: completed Polish, German and Spanish for the PRO upgrade panel.

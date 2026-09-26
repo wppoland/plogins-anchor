@@ -2,9 +2,9 @@
 /**
  * Default settings, merged under the option key `anchor_settings`.
  *
- * Anchor renders a sticky add-to-cart bar on single product pages once the
+ * Cartdock renders a sticky add-to-cart bar on single product pages once the
  * shopper scrolls past the main add-to-cart form. The merchant enables it and
- * tunes the scroll trigger from the WooCommerce → Anchor settings screen.
+ * tunes the scroll trigger from the WooCommerce > Cartdock settings screen.
  *
  * @package Anchor
  *

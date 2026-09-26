@@ -43,9 +43,9 @@ Anchor todavía no está en el directorio de WordPress.org, así que si quieres 
 
 == Installation ==
 
-1. Sube el plugin a `/wp-content/plugins/anchor` o instálalo desde Plugins → Añadir nuevo.
+1. Sube el plugin a `/wp-content/plugins/anchor` o instálalo desde Plugins > Añadir nuevo.
 2. Actívalo. WooCommerce debe estar activo.
-3. Ve a <strong>WooCommerce → Anchor</strong> para activar la barra y definir el umbral de desplazamiento.
+3. Ve a <strong>WooCommerce > Anchor</strong> para activar la barra y definir el umbral de desplazamiento.
 
 == Frequently Asked Questions ==
 
@@ -63,7 +63,7 @@ No. La hoja de estilos y el script se cargan solo en las páginas de producto in
 
 = Can I change when the bar appears? =
 
-Sí. Define el umbral de desplazamiento en píxeles en <strong>WooCommerce → Anchor</strong> (0-5000).
+Sí. Define el umbral de desplazamiento en píxeles en <strong>WooCommerce > Anchor</strong> (0-5000).
 
 = Does it work on simple products? =
 

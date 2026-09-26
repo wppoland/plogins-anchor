@@ -1,0 +1,194 @@
+# Copyright (C) 2026 WPPoland.com
+# This file is distributed under the GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Anchor - Sticky Add to Cart Bar for WooCommerce 0.1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/anchor\n"
+"POT-Creation-Date: 2026-09-26T04:48:57+00:00\n"
+"PO-Revision-Date: 2026-07-07 00:00+0000\n"
+"Last-Translator: motylanogha <szatkowski.mariusz@gmail.com>\n"
+"Language-Team: Spanish <es@li.org>\n"
+"Language: es_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Domain: cartdock\n"
+
+#. Plugin Name of the plugin
+#: cartdock.php
+msgid "Cartdock - Sticky Add to Cart for WooCommerce"
+msgstr "Cartdock - barra fija de añadir al carrito para WooCommerce"
+
+#. Plugin URI of the plugin
+#: cartdock.php
+msgid "https://plogins.com/plogins-anchor/"
+msgstr ""
+
+#. Description of the plugin
+#: cartdock.php
+msgid ""
+"A sticky add-to-cart bar that appears on scroll, boosting conversions on "
+"long product pages."
+msgstr ""
+"Una barra fija de añadir al carrito que aparece al desplazarse y ayuda a "
+"mejorar la conversión en páginas de producto largas."
+
+#. Author of the plugin
+#: cartdock.php
+msgid "WPPoland.com"
+msgstr ""
+
+#. Author URI of the plugin
+#: cartdock.php
+msgid "https://wppoland.com"
+msgstr ""
+
+#: cartdock.php:48
+msgid "Cartdock requires WooCommerce to be installed and activated."
+msgstr ""
+
+#: src/Admin/ProUpsell.php:85
+msgid "Wkrótce"
+msgstr "Próximamente"
+
+#: src/Admin/ProUpsell.php:85
+msgid "Coming soon"
+msgstr "Próximamente"
+
+#. translators: 1: currency symbol, 2: yearly price
+#: src/Admin/ProUpsell.php:91
+#, php-format
+msgid "from %1$s%2$d/yr"
+msgstr "desde %1$s%2$d/año"
+
+#: src/Admin/ProUpsell.php:100
+msgid "Upgrade to PRO"
+msgstr "Mejora a PRO"
+
+#: src/Admin/ProUpsell.php:101
+msgid "Powiadom mnie"
+msgstr "Avísame"
+
+#: src/Admin/ProUpsell.php:101
+msgid "Get notified"
+msgstr "Avísame"
+
+#: src/Admin/ProUpsell.php:131
+msgid "Permission denied."
+msgstr "Permiso denegado."
+
+#. translators: %s: PRO edition name
+#: src/Admin/ProUpsell.php:161
+#, php-format
+msgid "Do more with %s"
+msgstr "Haz más con %s"
+
+#: src/Admin/ProUpsell.php:168
+msgid "Dismiss this notice"
+msgstr "Descartar este aviso"
+
+#: src/Admin/ProUpsell.php:190
+msgid "Unlock every PRO feature"
+msgstr "Desbloquea todas las funciones PRO"
+
+#: src/Admin/ProUpsell.php:203
+msgid "one licence, every PRO feature"
+msgstr "una licencia, todas las funciones PRO"
+
+#. translators: %s: PRO edition name
+#: src/Admin/ProUpsell.php:222
+#, php-format
+msgid "What %s adds"
+msgstr "Lo que añade %s"
+
+#: src/Admin/Settings.php:61
+msgid "Cartdock: Sticky Add to Cart Bar"
+msgstr "Cartdock: barra fija de añadir al carrito"
+
+#: src/Admin/Settings.php:62
+msgid "Cartdock"
+msgstr ""
+
+#: src/Admin/Settings.php:103
+msgid ""
+"Cartdock shows a slim, sticky add-to-cart bar at the bottom of your product "
+"pages once the shopper scrolls past the main button. It keeps the price and "
+"buy button one tap away on long pages, and stays in sync with WooCommerce "
+"variations. The bar is fixed to the viewport, so it never shifts your layout."
+msgstr ""
+
+#: src/Admin/Settings.php:112
+msgid "Display"
+msgstr "Mostrar"
+
+#: src/Admin/Settings.php:116
+msgid "Enable the bar"
+msgstr "Habilitar la barra"
+
+#: src/Admin/Settings.php:126
+msgid "Show the sticky add-to-cart bar on single product pages."
+msgstr ""
+"Muestra la barra fija de añadir al carrito en páginas de producto "
+"individuales."
+
+#: src/Admin/Settings.php:129
+msgid ""
+"When off, the bar never renders and its CSS/JS are not loaded, zero front-"
+"end impact."
+msgstr ""
+"Cuando está desactivada, la barra no se renderiza y sus CSS/JS no se cargan, "
+"sin impacto en el front-end."
+
+#: src/Admin/Settings.php:135
+msgid "Scroll threshold (px)"
+msgstr "Umbral de desplazamiento (px)"
+
+#. translators: 1: minimum px, 2: maximum px.
+#: src/Admin/Settings.php:152
+#, php-format
+msgid ""
+"How far past the main add-to-cart form the shopper must scroll before the "
+"bar appears (%1$d, %2$d). 300 is a good default."
+msgstr ""
+"Cuánto debe desplazarse el comprador más allá del formulario principal de "
+"añadir al carrito antes de que aparezca la barra (%1$d, %2$d). 300 es un "
+"buen valor predeterminado."
+
+#. translators: %s: the configured threshold in pixels, e.g. "300 px".
+#: src/Admin/Settings.php:162
+#, php-format
+msgid ""
+"Lower means the bar shows up sooner; higher keeps it hidden longer. Right "
+"now it appears after %s of scrolling."
+msgstr ""
+"Un valor más bajo muestra la barra antes, uno más alto la mantiene oculta "
+"durante más tiempo. Ahora aparece después de %s de desplazamiento."
+
+#: templates/sticky-bar.php:35 templates/sticky-bar.php:87
+msgid "Add to cart"
+msgstr "Añadir al carrito"
+
+#: templates/sticky-bar.php:68
+msgid "Choose options"
+msgstr "Elegir opciones"
+
+#~ msgid ""
+#~ "Anchor - Sticky Add to Cart Bar for WooCommerce requires WooCommerce to "
+#~ "be active."
+#~ msgstr ""
+#~ "Anchor - barra fija de añadir al carrito para WooCommerce requiere que "
+#~ "WooCommerce esté activo."
+
+#~ msgid "Anchor"
+#~ msgstr "Anchor"
+
+#~ msgid "WPPoland"
+#~ msgstr "WPPoland"
+
+#~ msgid "https://plogins.com/"
+#~ msgstr "https://plogins.com/"
+
+#, php-format
+#~ msgid "od %d zł/rok"
+#~ msgstr "desde %d zł/año"

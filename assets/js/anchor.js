@@ -59,7 +59,14 @@
 
 	if ( 'IntersectionObserver' in window && anchorTarget ) {
 		// Reveal when the native form leaves the viewport (scrolled past), using a
-		// negative root margin so the threshold maps to "px past the form".
+		// POSITIVE top root margin so the threshold maps to "px past the form".
+		//
+		// This used to be a negative margin, which shrinks the root from the top and
+		// so runs the setting backwards: the merchant read "higher keeps it hidden
+		// longer", raised it to 800, and the shopper got the bar 800px before the
+		// form had even left the screen. Growing the root upwards instead means the
+		// form only stops intersecting once its bottom edge is `threshold` px above
+		// the top of the viewport, which is what the settings screen promises.
 		var observer = new IntersectionObserver(
 			function ( entries ) {
 				entries.forEach( function ( entry ) {
@@ -71,7 +78,7 @@
 					}
 				} );
 			},
-			{ rootMargin: '-' + threshold + 'px 0px 0px 0px', threshold: 0 }
+			{ rootMargin: threshold + 'px 0px 0px 0px', threshold: 0 }
 		);
 		observer.observe( anchorTarget );
 	} else {
@@ -85,7 +92,13 @@
 				}
 				ticking = true;
 				window.requestAnimationFrame( function () {
-					if ( window.pageYOffset > threshold ) {
+					// Same meaning as the observer path: px scrolled past the form,
+					// falling back to raw page scroll only when there is no form.
+					var past = anchorTarget
+						? -anchorTarget.getBoundingClientRect().bottom
+						: window.pageYOffset;
+
+					if ( past > threshold ) {
 						show();
 					} else {
 						hide();

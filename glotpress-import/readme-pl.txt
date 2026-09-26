@@ -43,9 +43,9 @@ Anchor nie jest jeszcze w katalogu WordPress.org, więc jeśli chcesz przejrzeć
 
 == Installation ==
 
-1. Wgraj wtyczkę do `/wp-content/plugins/anchor` lub zainstaluj przez Wtyczki → Dodaj nową.
+1. Wgraj wtyczkę do `/wp-content/plugins/anchor` lub zainstaluj przez Wtyczki > Dodaj nową.
 2. Włącz ją. WooCommerce musi być aktywne.
-3. Przejdź do <strong>WooCommerce → Anchor</strong>, aby włączyć pasek i ustawić próg przewijania.
+3. Przejdź do <strong>WooCommerce > Anchor</strong>, aby włączyć pasek i ustawić próg przewijania.
 
 == Frequently Asked Questions ==
 
@@ -63,7 +63,7 @@ Nie. Arkusz stylów i skrypt ładują się tylko na stronach pojedynczych produk
 
 = Can I change when the bar appears? =
 
-Tak. Ustaw próg przewijania w pikselach w <strong>WooCommerce → Anchor</strong> (0-5000).
+Tak. Ustaw próg przewijania w pikselach w <strong>WooCommerce > Anchor</strong> (0-5000).
 
 = Does it work on simple products? =
 

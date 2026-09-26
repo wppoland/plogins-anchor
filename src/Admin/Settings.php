@@ -9,8 +9,8 @@ defined('ABSPATH') || exit;
 use Anchor\Contract\HasHooks;
 
 /**
- * Admin settings page registered as a WooCommerce submenu ("WooCommerce →
- * Anchor"). Stores settings in the `anchor_settings` option (array): the master
+ * Admin settings page registered as a WooCommerce submenu ("WooCommerce >
+ * Cartdock"). Stores settings in the `anchor_settings` option (array): the master
  * toggle and the scroll threshold.
  *
  * All output is escaped; all input is sanitised and clamped on save. The screen
@@ -58,8 +58,8 @@ final class Settings implements HasHooks
     {
         add_submenu_page(
             'woocommerce',
-            __('Anchor: Sticky Add to Cart Bar', 'plogins-anchor'),
-            __('Anchor', 'plogins-anchor'),
+            __('Cartdock: Sticky Add to Cart Bar', 'cartdock'),
+            __('Cartdock', 'cartdock'),
             'manage_woocommerce',
             self::PAGE,
             [$this, 'renderPage'],
@@ -100,7 +100,7 @@ final class Settings implements HasHooks
 
             <div class="anchor-intro">
                 <p>
-                    <?php esc_html_e('Anchor shows a slim, sticky add-to-cart bar at the bottom of your product pages once the shopper scrolls past the main button. It keeps the price and buy button one tap away on long pages, and stays in sync with WooCommerce variations. The bar is fixed to the viewport, so it never shifts your layout.', 'plogins-anchor'); ?>
+                    <?php esc_html_e('Cartdock shows a slim, sticky add-to-cart bar at the bottom of your product pages once the shopper scrolls past the main button. It keeps the price and buy button one tap away on long pages, and stays in sync with WooCommerce variations. The bar is fixed to the viewport, so it never shifts your layout.', 'cartdock'); ?>
                 </p>
             </div>
 
@@ -109,11 +109,11 @@ final class Settings implements HasHooks
                 <?php settings_fields(self::PAGE); ?>
 
                 <div class="anchor-card">
-                    <h2><?php esc_html_e('Display', 'plogins-anchor'); ?></h2>
+                    <h2><?php esc_html_e('Display', 'cartdock'); ?></h2>
                     <table class="form-table" role="presentation">
                         <tbody>
                             <tr>
-                                <th scope="row"><?php esc_html_e('Enable the bar', 'plogins-anchor'); ?></th>
+                                <th scope="row"><?php esc_html_e('Enable the bar', 'cartdock'); ?></th>
                                 <td>
                                     <label for="anchor_enabled">
                                         <input
@@ -123,16 +123,16 @@ final class Settings implements HasHooks
                                             value="1"
                                             <?php checked((bool) ($settings['enabled'] ?? false), true); ?>
                                         />
-                                        <?php esc_html_e('Show the sticky add-to-cart bar on single product pages.', 'plogins-anchor'); ?>
+                                        <?php esc_html_e('Show the sticky add-to-cart bar on single product pages.', 'cartdock'); ?>
                                     </label>
                                     <p class="description">
-                                        <?php esc_html_e('When off, the bar never renders and its CSS/JS are not loaded, zero front-end impact.', 'plogins-anchor'); ?>
+                                        <?php esc_html_e('When off, the bar never renders and its CSS/JS are not loaded, zero front-end impact.', 'cartdock'); ?>
                                     </p>
                                 </td>
                             </tr>
                             <tr>
                                 <th scope="row">
-                                    <label for="anchor_scroll_threshold"><?php esc_html_e('Scroll threshold (px)', 'plogins-anchor'); ?></label>
+                                    <label for="anchor_scroll_threshold"><?php esc_html_e('Scroll threshold (px)', 'cartdock'); ?></label>
                                 </th>
                                 <td>
                                     <input
@@ -149,7 +149,7 @@ final class Settings implements HasHooks
                                         <?php
                                         printf(
                                             /* translators: 1: minimum px, 2: maximum px. */
-                                            esc_html__('How far past the main add-to-cart form the shopper must scroll before the bar appears (%1$d, %2$d). 300 is a good default.', 'plogins-anchor'),
+                                            esc_html__('How far past the main add-to-cart form the shopper must scroll before the bar appears (%1$d, %2$d). 300 is a good default.', 'cartdock'),
                                             (int) self::MIN_THRESHOLD,
                                             (int) self::MAX_THRESHOLD,
                                         );
@@ -159,7 +159,7 @@ final class Settings implements HasHooks
                                         <?php
                                         printf(
                                             /* translators: %s: the configured threshold in pixels, e.g. "300 px". */
-                                            esc_html__('Lower means the bar shows up sooner; higher keeps it hidden longer. Right now it appears after %s of scrolling.', 'plogins-anchor'),
+                                            esc_html__('Lower means the bar shows up sooner; higher keeps it hidden longer. Right now it appears after %s of scrolling.', 'cartdock'),
                                             '<code>' . esc_html((string) (int) ($settings['scroll_threshold'] ?? 300)) . ' px</code>',
                                         );
                                         ?>
@@ -172,7 +172,7 @@ final class Settings implements HasHooks
 
                 <?php
                 /**
-                 * Fires inside the Anchor settings form, after the core cards and
+                 * Fires inside the Cartdock settings form, after the core cards and
                  * before the submit button. Add-ons render their own settings
                  * cards here; their fields share the `anchor_settings` option and
                  * are preserved on save via the `anchor_sanitize_settings` filter.
@@ -215,7 +215,7 @@ final class Settings implements HasHooks
         ];
 
         /**
-         * Filters the sanitised Anchor settings before they are saved.
+         * Filters the sanitised Cartdock settings before they are saved.
          *
          * Add-ons that render fields into the shared `anchor_settings` option use
          * this to validate and re-attach their own keys, which the core
