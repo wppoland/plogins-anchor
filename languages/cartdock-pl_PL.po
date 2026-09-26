@@ -3,8 +3,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Anchor - Sticky Add to Cart Bar for WooCommerce 0.1.0\n"
-"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/cartdock\n"
-"POT-Creation-Date: 2026-09-09T14:37:48+00:00\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/anchor\n"
+"POT-Creation-Date: 2026-09-26T04:48:57+00:00\n"
 "PO-Revision-Date: 2026-07-07 00:00+0000\n"
 "Last-Translator: motylanogha <szatkowski.mariusz@gmail.com>\n"
 "Language-Team: Polish <pl@li.org>\n"
@@ -18,13 +18,13 @@ msgstr ""
 
 #. Plugin Name of the plugin
 #: cartdock.php
-msgid "Plogins Anchor - Sticky Add to Cart for WooCommerce"
-msgstr "Plogins Anchor - Przyklejony przycisk dodawania do koszyka dla WooCommerce"
+msgid "Cartdock - Sticky Add to Cart for WooCommerce"
+msgstr "Cartdock - przyklejony pasek dodawania do koszyka dla WooCommerce"
 
 #. Plugin URI of the plugin
 #: cartdock.php
-msgid "https://plogins.com/cartdock/"
-msgstr "https://plogins.com/cartdock/"
+msgid "https://plogins.com/plogins-anchor/"
+msgstr ""
 
 #. Description of the plugin
 #: cartdock.php
@@ -46,87 +46,83 @@ msgid "https://wppoland.com"
 msgstr "https://wppoland.com"
 
 #: cartdock.php:48
-msgid ""
-"Anchor - Sticky Add to Cart Bar for WooCommerce requires WooCommerce to be "
-"active."
+msgid "Cartdock requires WooCommerce to be installed and activated."
 msgstr ""
-"Anchor - przyklejony pasek dodawania do koszyka dla WooCommerce wymaga "
-"aktywnego WooCommerce."
 
-#: src/Admin/ProUpsell.php:78
+#: src/Admin/ProUpsell.php:85
 msgid "Wkrótce"
 msgstr "Wkrótce"
 
-#: src/Admin/ProUpsell.php:78
+#: src/Admin/ProUpsell.php:85
 msgid "Coming soon"
 msgstr "Wkrótce"
 
 #. translators: 1: currency symbol, 2: yearly price
-#: src/Admin/ProUpsell.php:84
+#: src/Admin/ProUpsell.php:91
 #, php-format
 msgid "from %1$s%2$d/yr"
 msgstr "od %1$s%2$d/rok"
 
-#: src/Admin/ProUpsell.php:93
+#: src/Admin/ProUpsell.php:100
 msgid "Upgrade to PRO"
 msgstr "Przejdź na PRO"
 
-#: src/Admin/ProUpsell.php:94
+#: src/Admin/ProUpsell.php:101
 msgid "Powiadom mnie"
 msgstr "Powiadom mnie"
 
-#: src/Admin/ProUpsell.php:94
+#: src/Admin/ProUpsell.php:101
 msgid "Get notified"
 msgstr "Powiadom mnie"
 
-#: src/Admin/ProUpsell.php:124
+#: src/Admin/ProUpsell.php:131
 msgid "Permission denied."
 msgstr "Brak uprawnień."
 
 #. translators: %s: PRO edition name
-#: src/Admin/ProUpsell.php:154
+#: src/Admin/ProUpsell.php:161
 #, php-format
 msgid "Do more with %s"
 msgstr "Zrób więcej dzięki %s"
 
-#: src/Admin/ProUpsell.php:161
+#: src/Admin/ProUpsell.php:168
 msgid "Dismiss this notice"
 msgstr "Odrzuć to powiadomienie"
 
-#: src/Admin/ProUpsell.php:178
+#: src/Admin/ProUpsell.php:190
 msgid "Unlock every PRO feature"
 msgstr "Odblokuj wszystkie funkcje PRO"
 
-#: src/Admin/ProUpsell.php:191
+#: src/Admin/ProUpsell.php:203
 msgid "one licence, every PRO feature"
 msgstr "jedna licencja, wszystkie funkcje PRO"
 
 #. translators: %s: PRO edition name
-#: src/Admin/ProUpsell.php:210
+#: src/Admin/ProUpsell.php:222
 #, php-format
 msgid "What %s adds"
 msgstr "Co dodaje %s"
 
 #: src/Admin/Settings.php:61
-msgid "Anchor: Sticky Add to Cart Bar"
-msgstr "Anchor: przyklejony pasek dodawania do koszyka"
+msgid "Cartdock: Sticky Add to Cart Bar"
+msgstr "Cartdock: przyklejony pasek dodawania do koszyka"
 
 #: src/Admin/Settings.php:62
-msgid "Anchor"
-msgstr "Anchor"
+msgid "Cartdock"
+msgstr ""
 
 #: src/Admin/Settings.php:103
 msgid ""
-"Anchor shows a slim, sticky add-to-cart bar at the bottom of your product "
+"Cartdock shows a slim, sticky add-to-cart bar at the bottom of your product "
 "pages once the shopper scrolls past the main button. It keeps the price and "
 "buy button one tap away on long pages, and stays in sync with WooCommerce "
 "variations. The bar is fixed to the viewport, so it never shifts your layout."
 msgstr ""
-"Anchor pokazuje wąski, przyklejony pasek dodawania do koszyka u dołu strony "
-"produktu, gdy kupujący przewinie stronę poniżej głównego przycisku. Na "
-"długich stronach cena i przycisk zakupu pozostają pod ręką, a pasek "
-"synchronizuje się z wariantami WooCommerce. Jest przypięty do okna "
-"przeglądarki, więc nie przesuwa układu strony."
+"Cartdock wyświetla wąski, przyklejony pasek dodawania do koszyka na dole "
+"strony produktu, gdy klient przewinie stronę poniżej głównego przycisku. Na "
+"długich stronach cena i przycisk zakupu są zawsze pod ręką, a pasek śledzi "
+"warianty WooCommerce. Pasek jest przypięty do okna przeglądarki, więc nie "
+"przesuwa układu strony."
 
 #: src/Admin/Settings.php:112
 msgid "Display"
@@ -182,11 +178,22 @@ msgstr "Dodaj do koszyka"
 msgid "Choose options"
 msgstr "Wybierz opcje"
 
-#~ msgid "Anchor - Sticky Add to Cart Bar for WooCommerce"
-#~ msgstr "Anchor - przyklejony pasek dodawania do koszyka dla WooCommerce"
+#~ msgid "Plogins Anchor - Sticky Add to Cart for WooCommerce"
+#~ msgstr ""
+#~ "Plogins Anchor - Przyklejony przycisk dodawania do koszyka dla WooCommerce"
 
-#~ msgid "https://plogins.com/anchor/"
-#~ msgstr "https://plogins.com/anchor/"
+#~ msgid "https://plogins.com/cartdock/"
+#~ msgstr "https://plogins.com/cartdock/"
+
+#~ msgid ""
+#~ "Anchor - Sticky Add to Cart Bar for WooCommerce requires WooCommerce to "
+#~ "be active."
+#~ msgstr ""
+#~ "Anchor - przyklejony pasek dodawania do koszyka dla WooCommerce wymaga "
+#~ "aktywnego WooCommerce."
+
+#~ msgid "Anchor"
+#~ msgstr "Anchor"
 
 #~ msgid "WPPoland"
 #~ msgstr "WPPoland"

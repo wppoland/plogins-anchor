@@ -3,8 +3,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Anchor - Sticky Add to Cart Bar for WooCommerce 0.1.0\n"
-"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/cartdock\n"
-"POT-Creation-Date: 2026-09-09T14:37:48+00:00\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/anchor\n"
+"POT-Creation-Date: 2026-09-26T04:48:57+00:00\n"
 "PO-Revision-Date: 2026-07-07 00:00+0000\n"
 "Last-Translator: motylanogha <szatkowski.mariusz@gmail.com>\n"
 "Language-Team: German <de@li.org>\n"
@@ -17,12 +17,12 @@ msgstr ""
 
 #. Plugin Name of the plugin
 #: cartdock.php
-msgid "Plogins Anchor - Sticky Add to Cart for WooCommerce"
-msgstr ""
+msgid "Cartdock - Sticky Add to Cart for WooCommerce"
+msgstr "Cartdock - Sticky Add-to-Cart-Leiste für WooCommerce"
 
 #. Plugin URI of the plugin
 #: cartdock.php
-msgid "https://plogins.com/cartdock/"
+msgid "https://plogins.com/plogins-anchor/"
 msgstr ""
 
 #. Description of the plugin
@@ -45,87 +45,78 @@ msgid "https://wppoland.com"
 msgstr ""
 
 #: cartdock.php:48
-msgid ""
-"Anchor - Sticky Add to Cart Bar for WooCommerce requires WooCommerce to be "
-"active."
+msgid "Cartdock requires WooCommerce to be installed and activated."
 msgstr ""
-"Anchor, Sticky Add to Cart Bar für WooCommerce erfordert, dass WooCommerce "
-"aktiv ist."
 
-#: src/Admin/ProUpsell.php:78
+#: src/Admin/ProUpsell.php:85
 msgid "Wkrótce"
 msgstr "Demnächst"
 
-#: src/Admin/ProUpsell.php:78
+#: src/Admin/ProUpsell.php:85
 msgid "Coming soon"
 msgstr "Demnächst"
 
 #. translators: 1: currency symbol, 2: yearly price
-#: src/Admin/ProUpsell.php:84
+#: src/Admin/ProUpsell.php:91
 #, php-format
 msgid "from %1$s%2$d/yr"
 msgstr "ab %1$s%2$d/Jahr"
 
-#: src/Admin/ProUpsell.php:93
+#: src/Admin/ProUpsell.php:100
 msgid "Upgrade to PRO"
 msgstr "Auf PRO upgraden"
 
-#: src/Admin/ProUpsell.php:94
+#: src/Admin/ProUpsell.php:101
 msgid "Powiadom mnie"
 msgstr "Benachrichtige mich"
 
-#: src/Admin/ProUpsell.php:94
+#: src/Admin/ProUpsell.php:101
 msgid "Get notified"
 msgstr "Benachrichtige mich"
 
-#: src/Admin/ProUpsell.php:124
+#: src/Admin/ProUpsell.php:131
 msgid "Permission denied."
 msgstr "Zugriff verweigert."
 
 #. translators: %s: PRO edition name
-#: src/Admin/ProUpsell.php:154
+#: src/Admin/ProUpsell.php:161
 #, php-format
 msgid "Do more with %s"
 msgstr "Mehr erreichen mit %s"
 
-#: src/Admin/ProUpsell.php:161
+#: src/Admin/ProUpsell.php:168
 msgid "Dismiss this notice"
 msgstr "Diesen Hinweis ausblenden"
 
-#: src/Admin/ProUpsell.php:178
+#: src/Admin/ProUpsell.php:190
 msgid "Unlock every PRO feature"
 msgstr "Alle PRO-Funktionen freischalten"
 
-#: src/Admin/ProUpsell.php:191
+#: src/Admin/ProUpsell.php:203
 msgid "one licence, every PRO feature"
 msgstr "eine Lizenz, alle PRO-Funktionen"
 
 #. translators: %s: PRO edition name
-#: src/Admin/ProUpsell.php:210
+#: src/Admin/ProUpsell.php:222
 #, php-format
 msgid "What %s adds"
 msgstr "Was %s ergänzt"
 
 #: src/Admin/Settings.php:61
-msgid "Anchor: Sticky Add to Cart Bar"
-msgstr "Anchor: Sticky Add-to-Cart-Leiste"
+msgid "Cartdock: Sticky Add to Cart Bar"
+msgstr "Cartdock: Sticky Add-to-Cart-Leiste"
 
 #: src/Admin/Settings.php:62
-msgid "Anchor"
-msgstr "Anchor"
+msgid "Cartdock"
+msgstr ""
 
 #: src/Admin/Settings.php:103
 msgid ""
-"Anchor shows a slim, sticky add-to-cart bar at the bottom of your product "
+"Cartdock shows a slim, sticky add-to-cart bar at the bottom of your product "
 "pages once the shopper scrolls past the main button. It keeps the price and "
 "buy button one tap away on long pages, and stays in sync with WooCommerce "
 "variations. The bar is fixed to the viewport, so it never shifts your layout."
 msgstr ""
-"Anchor zeigt unten auf der Produktseite eine schmale, fixierte Add-to-Cart-"
-"Leiste, sobald der Käufer am Hauptbutton vorbeiscrollt. Auf langen Seiten "
-"bleiben Preis und Kaufbutton jederzeit erreichbar, und die Leiste bleibt mit "
-"WooCommerce-Varianten synchron. Sie ist am Browserfenster fixiert und "
-"verschiebt daher nie das Layout."
 
 #: src/Admin/Settings.php:112
 msgid "Display"
@@ -180,11 +171,15 @@ msgstr "In den Warenkorb legen"
 msgid "Choose options"
 msgstr "Optionen auswählen"
 
-#~ msgid "Anchor - Sticky Add to Cart Bar for WooCommerce"
-#~ msgstr "Anchor - Sticky Add-to-Cart-Leiste für WooCommerce"
+#~ msgid ""
+#~ "Anchor - Sticky Add to Cart Bar for WooCommerce requires WooCommerce to "
+#~ "be active."
+#~ msgstr ""
+#~ "Anchor, Sticky Add to Cart Bar für WooCommerce erfordert, dass "
+#~ "WooCommerce aktiv ist."
 
-#~ msgid "https://plogins.com/anchor/"
-#~ msgstr "https://plogins.com/anchor/"
+#~ msgid "Anchor"
+#~ msgstr "Anchor"
 
 #~ msgid "WPPoland"
 #~ msgstr "WPPoland"
