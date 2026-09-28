@@ -88,18 +88,10 @@ final class StickyBar implements HasHooks
 
         $settings = $this->settings();
 
-        ob_start();
-        $this->renderTemplate('sticky-bar', [
-            'product'  => $product,
-            'settings' => $settings,
-        ]);
-        $output = (string) ob_get_clean();
-
-        if ('' === trim($output)) {
+        // The template escapes every value it prints.
+        if (! $this->renderTemplate('sticky-bar', $product, $settings)) {
             return;
         }
-
-        echo $output; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Output is escaped inside the template.
 
         /**
          * Fires after the sticky add-to-cart bar is rendered on a single product page.
@@ -175,17 +167,20 @@ final class StickyBar implements HasHooks
     }
 
     /**
-     * @param array<string, mixed> $context
+     * Include a template with the product and settings in scope.
+     *
+     * @param array<string, mixed> $settings
      */
-    private function renderTemplate(string $template, array $context): void
+    private function renderTemplate(string $template, \WC_Product $product, array $settings): bool
     {
         $file = ANCHOR_DIR . 'templates/' . $template . '.php';
 
         if (! is_readable($file)) {
-            return;
+            return false;
         }
 
-        extract($context, EXTR_SKIP);
         require $file;
+
+        return true;
     }
 }
