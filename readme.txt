@@ -92,6 +92,7 @@ Yes. This plugin is compatible with WordPress Multisite. Network activate it or 
 
 1. The sticky add-to-cart bar on a product page.
 2. The Cartdock settings screen under WooCommerce.
+3. The same bar on a phone, pinned to the bottom of the screen.
 
 == External Services ==
 
