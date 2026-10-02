@@ -5,7 +5,7 @@ Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 8.1
 Requires Plugins: woocommerce
-Stable tag: 1.1.4
+Stable tag: 1.1.5
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -111,6 +111,11 @@ Cartdock sends no email and makes no HTTP requests of its own.
 Cartdock is fully translatable and ships the `cartdock.pot` template. Translations are delivered by WordPress.org language packs from translate.wordpress.org, which is where Polish, German and Spanish are being contributed; the package itself carries no compiled translation files.
 
 == Changelog ==
+
+= 1.1.5 =
+* Fixed: on a variable product the bar's Add to cart now sends the shopper's chosen attributes. A variation set to "Any" value of an attribute was refused with "<attribute> is a required field".
+* Fixed: before a variation is chosen the bar shows only Choose options. The disabled Add to cart showed beside it, and on themes such as Storefront Choose options also stayed visible after a variation was picked.
+* Fixed: a negative scroll threshold is saved as 0 instead of being turned into a positive number.
 
 = 1.1.4 =
 * The upgrade notice's "Coming soon" and "Get notified" labels are English source strings for every language; Polish sites used to get their own Polish source text, which translators in other languages then saw untranslated.

@@ -206,7 +206,7 @@ final class Settings implements HasHooks
             $raw = [];
         }
 
-        $threshold = isset($raw['scroll_threshold']) ? absint($raw['scroll_threshold']) : 300;
+        $threshold = isset($raw['scroll_threshold']) ? (int) $raw['scroll_threshold'] : 300;
         $threshold = max(self::MIN_THRESHOLD, min(self::MAX_THRESHOLD, $threshold));
 
         $sanitized = [

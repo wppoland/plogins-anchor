@@ -166,6 +166,12 @@
 	margin: 0;
 }
 
+/* display:flex above would otherwise beat the hidden attribute, and the
+   disabled Add to cart showed next to Choose options before a variation was picked. */
+.anchor-bar [hidden] {
+	display: none;
+}
+
 /*
  * The buy button reads as a brass shackle, the fitting the anchor line clips
  * into. Solid weathered brass with a faceted top highlight; dark ink for contrast.

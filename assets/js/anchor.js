@@ -177,6 +177,28 @@
 		}
 	}
 
+	// The bar posts its own form, so it has to carry the shopper's attribute
+	// choices too. Without them a variation set to "Any <attribute>" is
+	// refused by WooCommerce with "<attribute> is a required field".
+	if ( form ) {
+		form.addEventListener( 'submit', function () {
+			Array.prototype.forEach.call( form.querySelectorAll( '[data-anchor-attr]' ), function ( el ) {
+				el.parentNode.removeChild( el );
+			} );
+			Array.prototype.forEach.call( variationsForm.querySelectorAll( '[name^="attribute_"]' ), function ( field ) {
+				if ( ( field.type === 'radio' || field.type === 'checkbox' ) && ! field.checked ) {
+					return;
+				}
+				var input = document.createElement( 'input' );
+				input.type = 'hidden';
+				input.name = field.name;
+				input.value = field.value;
+				input.setAttribute( 'data-anchor-attr', '' );
+				form.appendChild( input );
+			} );
+		} );
+	}
+
 	jq( variationsForm ).on( 'found_variation', function ( event, variation ) {
 		if ( variation ) {
 			setChosen( variation );
