@@ -5,11 +5,11 @@ Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 8.1
 Requires Plugins: woocommerce
-Stable tag: 1.1.5
+Stable tag: 1.1.6
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Keeps the add-to-cart button in reach on long WooCommerce product pages with a sticky bar that appears on scroll.
+Keep Add to cart within reach on long product pages, on mobile and desktop, with a slim bar that slides in as shoppers scroll.
 
 == Description ==
 
@@ -27,8 +27,7 @@ The bar is positioned with CSS `position: fixed` and starts hidden, so it sits
 outside the document flow and does not push other content around or cause
 layout shift when it appears.
 
-Cartdock is not on the WordPress.org directory yet, so if you want to read the
-code, report a bug or suggest a change, the repository is at
+To read the code, report a bug or suggest a change, the repository is at
 [github.com/wppoland/plogins-anchor](https://github.com/wppoland/plogins-anchor).
 
 = Documentation and links =
@@ -43,7 +42,8 @@ code, report a bug or suggest a change, the repository is at
 
 * Sticky add-to-cart bar on single product pages, revealed once the shopper scrolls past the main button.
 * Scroll threshold you set in pixels (0 to 5000), so you decide how far down the bar kicks in.
-* Shows the product title, price and a buy button.
+* Shows a small product thumbnail, the title, the price and a buy button. The thumbnail is hidden on screens 360px wide and narrower.
+* The bar's Add to cart sends the quantity chosen in the product form, kept within that field's minimum, maximum and step.
 * On variable products the price tracks the variation the shopper has selected, and the button disables itself if that variation is out of stock.
 * Marked up as an ARIA region with a visible focus state and screen-reader label.
 * Honours prefers-reduced-motion and has a dark-mode style.
@@ -93,6 +93,8 @@ Yes. This plugin is compatible with WordPress Multisite. Network activate it or 
 1. The sticky add-to-cart bar on a product page.
 2. The Cartdock settings screen under WooCommerce.
 3. The same bar on a phone, pinned to the bottom of the screen.
+4. The bar on a 390px phone, with the product thumbnail, title, price and Add to cart.
+5. With 3 in the product's quantity field, the bar's Add to cart adds three.
 
 == External Services ==
 
@@ -111,6 +113,10 @@ Cartdock sends no email and makes no HTTP requests of its own.
 Cartdock is fully translatable and ships the `cartdock.pot` template. Translations are delivered by WordPress.org language packs from translate.wordpress.org, which is where Polish, German and Spanish are being contributed; the package itself carries no compiled translation files.
 
 == Changelog ==
+
+= 1.1.6 =
+* New: the bar's Add to cart sends the quantity chosen in the product form, kept within that field's minimum, maximum and step. It always added one before.
+* New: a small product thumbnail sits before the title in the bar. It is hidden on very narrow screens.
 
 = 1.1.5 =
 * Fixed: on a variable product the bar's Add to cart now sends the shopper's chosen attributes. A variation set to "Any" value of an attribute was refused with "<attribute> is a required field".

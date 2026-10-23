@@ -119,6 +119,14 @@
 	box-sizing: border-box;
 }
 
+.anchor-bar__thumb {
+	flex: 0 0 auto;
+	width: 40px;
+	height: 40px;
+	object-fit: cover;
+	border-radius: 4px;
+}
+
 .anchor-bar__info {
 	flex: 1 1 auto;
 	min-width: 0;
@@ -241,6 +249,12 @@
 .anchor-bar :focus-visible {
 	outline: 2px solid var( --anchor-brass-bright );
 	outline-offset: 2px;
+}
+
+@media ( max-width: 360px ) {
+	.anchor-bar__thumb {
+		display: none;
+	}
 }
 
 @media ( max-width: 768px ) {

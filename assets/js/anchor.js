@@ -123,6 +123,46 @@
 		} );
 	}
 
+	/* ---- Quantity from the main form --------------------------------------- */
+
+	// The bar has no quantity control of its own, so it sends whatever the
+	// shopper set in the product form, clamped to that input's min/max/step.
+	// No main quantity input (sold individually, grouped) leaves the default 1.
+	function mainQuantity() {
+		var field = document.querySelector( 'form.cart input.qty[name="quantity"]' );
+		if ( ! field ) {
+			return 1;
+		}
+		var min = parseFloat( field.min );
+		var max = parseFloat( field.max );
+		var step = parseFloat( field.step );
+		var qty = parseFloat( field.value );
+		if ( isNaN( min ) || min < 1 ) {
+			min = 1;
+		}
+		if ( isNaN( step ) || step <= 0 ) {
+			step = 1;
+		}
+		if ( isNaN( qty ) || qty < min ) {
+			qty = min;
+		}
+		qty = min + Math.round( ( qty - min ) / step ) * step;
+		if ( ! isNaN( max ) && max > 0 && qty > max ) {
+			qty = max;
+		}
+		return qty;
+	}
+
+	Array.prototype.forEach.call( bar.querySelectorAll( '[data-anchor-form]' ), function ( barForm ) {
+		var qtyInput = barForm.querySelector( '[data-anchor-qty]' );
+		if ( ! qtyInput ) {
+			return;
+		}
+		barForm.addEventListener( 'submit', function () {
+			qtyInput.value = mainQuantity();
+		} );
+	} );
+
 	/* ---- Variation sync -------------------------------------------------- */
 
 	if ( bar.getAttribute( 'data-product-type' ) !== 'variable' ) {

@@ -27,6 +27,7 @@ if (! $product instanceof \WC_Product) {
 $isVariable = $product->is_type('variable');
 
 $productUrl   = $product->get_permalink();
+$thumbnailId  = (int) $product->get_image_id();
 ?>
 <div
     class="anchor-bar"
@@ -40,6 +41,22 @@ $productUrl   = $product->get_permalink();
     hidden
 >
     <div class="anchor-bar__inner">
+        <?php if ($thumbnailId > 0) : ?>
+            <?php
+            echo wp_get_attachment_image(
+                $thumbnailId,
+                'woocommerce_gallery_thumbnail',
+                false,
+                [
+                    'class'    => 'anchor-bar__thumb',
+                    'alt'      => $product->get_name(),
+                    'loading'  => 'lazy',
+                    'decoding' => 'async',
+                    'sizes'    => '40px',
+                ]
+            );
+            ?>
+        <?php endif; ?>
         <div class="anchor-bar__info">
             <a class="anchor-bar__title" href="<?php echo esc_url($productUrl); ?>">
                 <?php echo esc_html($product->get_name()); ?>
@@ -78,6 +95,7 @@ $productUrl   = $product->get_permalink();
                     <input type="hidden" name="add-to-cart" value="<?php echo esc_attr((string) $product->get_id()); ?>" />
                     <input type="hidden" name="product_id" value="<?php echo esc_attr((string) $product->get_id()); ?>" />
                     <input type="hidden" name="variation_id" value="0" data-anchor-variation-id />
+                    <input type="hidden" name="quantity" value="1" data-anchor-qty />
                     <button
                         type="submit"
                         class="button alt anchor-bar__button"
@@ -97,6 +115,7 @@ $productUrl   = $product->get_permalink();
                 data-anchor-form
             >
                 <input type="hidden" name="add-to-cart" value="<?php echo esc_attr((string) $product->get_id()); ?>" />
+                <input type="hidden" name="quantity" value="1" data-anchor-qty />
                 <button type="submit" class="button alt anchor-bar__button" data-anchor-add>
                     <?php echo esc_html($product->single_add_to_cart_text()); ?>
                 </button>
